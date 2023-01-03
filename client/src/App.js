@@ -4,8 +4,11 @@ import ProfileCard from './components/featurs/lawyerProfile/ProfileCard/ProfileC
 
 function App() {
   return (
+    <div>
+      <ProfileCard/>
 
-    <ProfileCard/>
+    </div>
+
   );
 }
 
