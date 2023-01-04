@@ -41,6 +41,7 @@ const ProfileCard = () => {
         <span>עבודה מוכנה תוך</span>
         <span>זמן</span>
       </div>
+      <hr />
      
       <div className="butten-container">
       <a href="#!" class="btn btn-primary">Button1</a>
