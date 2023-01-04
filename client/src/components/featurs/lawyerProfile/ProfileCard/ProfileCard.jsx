@@ -27,24 +27,24 @@ const ProfileCard = () => {
       <hr />
       <div className="details-list">
         <span>מאיפה</span>
-        <span>כ</span>
+        <span>icon</span>
       </div>
       <div className="details-list">
-        <span>מאיפה</span>
-        <span>כ</span>
+        <span>ניסיון בתחום</span>
+        <span>מספר שנים</span>
       </div>
       <div className="details-list">
-        <span>מאיפה</span>
-        <span>כ</span>
+        <span>זמן תגובה ממוצע</span>
+        <span>זמן</span>
       </div>
       <div className="details-list">
-        <span>מאיפה</span>
-        <span>כ</span>
+        <span>עבודה מוכנה תוך</span>
+        <span>זמן</span>
       </div>
-      <hr />
+     
       <div className="butten-container">
-        <div>butten1</div>
-        <div>butten2</div>
+      <a href="#!" class="btn btn-primary">Button1</a>
+      <a href="#!" class="btn btn-primary">Button2</a>
       </div>
     </div>
     </div> 
