@@ -6,14 +6,18 @@
   height: 140px;
   width: 140px;
   justify-content: center;
+  
+}
+.card-for-home-page :hover{
+  scale: 1.03;
 }
 .textInCard {
   height: 50px;
-  width: 160px;
+  width: 150px;
   color: white;
   background-color: rgba(12, 12, 12, 0.525);
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
 }

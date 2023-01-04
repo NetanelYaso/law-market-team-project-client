@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <HomeCardPage />
-        <ProfileCard />
+        {/* <ProfileCard /> */}
         <Footer />
       </BrowserRouter>
     </div>
