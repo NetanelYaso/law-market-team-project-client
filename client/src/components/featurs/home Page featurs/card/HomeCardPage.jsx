@@ -13,8 +13,10 @@ export default function HomeCardPage() {
     //   <CardActions>
     //   </CardActions>
     // </Card>
+    <container className = "cardsContainer">
     <div className="card-for-home-page">
       <div className="textInCard"> CATEGORY</div>
     </div>
+    </container>
   );
 }
