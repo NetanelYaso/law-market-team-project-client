@@ -5,7 +5,6 @@ import TitleCard from '../../featurs/lawyerProfile/TitleCard/TitleCard'
 const LawyerProfile = () => {
   return (
     <div className='lawyerContainer'>
-      <TitleCard/>
       <ProfileCard/>
     </div>
   )
