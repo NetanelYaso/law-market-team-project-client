@@ -1,7 +1,7 @@
 import "./Footer.css";
 import React from "react";
 
-function template() {
+function Footer() {
   return (
     <div className="footer">
       <h1>Footer</h1>
@@ -9,4 +9,4 @@ function template() {
   );
 };
 
-export default template;
+export default Footer;

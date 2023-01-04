@@ -1,7 +1,7 @@
 import "./Header.css";
 import React from "react";
 
-function template() {
+function Header() {
   return (
     <div className="header">
       <h1>Header</h1>
@@ -9,4 +9,4 @@ function template() {
   );
 };
 
-export default template;
+export default Header;
