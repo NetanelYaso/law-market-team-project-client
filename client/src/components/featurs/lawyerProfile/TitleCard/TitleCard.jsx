@@ -4,7 +4,8 @@ import './TitleCard.css'
 const TitleCard = () => {
   return (
     <div>
-      
+      <h1>lawyer profile</h1>
+      <div></div>
       <div className="cards-container">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
         dolor cum cupiditate vero fugit veniam, totam quasi hic consectetur

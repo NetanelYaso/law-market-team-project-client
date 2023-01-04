@@ -1,4 +1,5 @@
 .lawyerContainer{
   display: flex;
   background-color: antiquewhite;
+  gap: 5px;
 }
