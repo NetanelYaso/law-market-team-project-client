@@ -5,6 +5,7 @@
   align-items: flex-end;
   height: 140px;
   width: 140px;
+  justify-content: center;
 }
 .textInCard {
   height: 50px;
