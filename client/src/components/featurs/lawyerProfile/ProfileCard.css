@@ -5,8 +5,6 @@
   border-radius: 10px;
   box-shadow: 0px 1px 10px 10x black;
   border: 2px solid black;
-  position: absolute;
-  left: 65%;
 }
 .profilePic {
   border-radius: 50%;
@@ -45,71 +43,3 @@ hr {
   display: flex;
   justify-content: space-around;
 }
-/* 
-.ProfileCard{
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  gap: 1rem;
-  
-
-
-}
-.ProfileImgs{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.ProfileImgs>img:nth-of-type(1){
-  width: 100vw;
-}
-.ProfileImgs>img:nth-of-type(2){
-  width: 6rem;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 0rem;
-  height: 6rem;
-  margin-left: 15rem;
-  border: 3px solid lightgray;
-}
-.profileText{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 3rem;
-  gap: 10px;
-}
-.profileText>span:nth-of-type(1){
-  font:bold;
-
-}
-
-.profileList{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 3rem;
-}
-
-  
-.profileText{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-
-}
-.profileText>hr{
-  width: 85%;
-  border: 1px solid gray;
-}
-.profileText>div{
-  display: flex;
-  gap: 1rem;
-} */
