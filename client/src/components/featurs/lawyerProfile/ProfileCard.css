@@ -5,8 +5,8 @@
   border-radius: 10px;
   box-shadow: 0px 1px 10px 10x black;
   border: 2px solid black;
-  position: absolute;
-  left: 65%;
+  /* position: absolute;
+  left: 65%; */
 }
 .profilePic {
   border-radius: 50%;
