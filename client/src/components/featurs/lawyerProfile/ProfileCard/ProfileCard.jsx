@@ -1,6 +1,10 @@
 import "../ProfileCard.css";
 import React from "react";
+import { useState } from "react";
 const ProfileCard = () => {
+  const [name, setName] = useState('')
+  const [title, setTitle] = useState('')
+
   return (
     <div className="Card">
     <div className="upper-container">
@@ -15,7 +19,7 @@ const ProfileCard = () => {
     </div>
     <div className="lower-container">
       <h3>
-        Full Name<span>Title</span>
+        {name}<span>{title}</span>
       </h3>
       <h4>rating</h4>
       <hr />
