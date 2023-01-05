@@ -6,11 +6,12 @@
   height: 140px;
   width: 140px;
   justify-content: center;
-  
 }
+
 .card-for-home-page :hover{
   scale: 1.03;
 }
+
 .textInCard {
   height: 50px;
   width: 150px;
@@ -19,25 +20,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+}
 
+ul{
+  list-style:none;
+  /* padding-right: 80px; */
+  padding-left: 4rem;
 }
-.img-fluid{
-  background-image: url("https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg");
-  background-position: center;
+
+ul li::before{
+  content: "\2022";
+  color: rgb(119, 196, 228);
+  font-weight: bold;
+  display: inline-block; 
+  width: 1rem;
+  /* padding-left: 4rem; */
+}
+
+.textInModle {
+  height: 50px;
+  width: 150px;
+  color: white;
   display: flex;
-  align-items: flex-end;
-  height: 140px;
-  width: 140px;
   justify-content: center;
+  align-items: center;
+  font-size: x-large;
 }
+
 .PopUpModel{
   background-image: url("https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg");
   background-position: center;
   display: flex;
   align-items: flex-end;
   height: 140px;
-  width: 500px;
-  justify-content: end;
-  padding-right: 40px
+  /* width: 437px; */
+  justify-content: start;
+  padding-left: 40px;
 }
