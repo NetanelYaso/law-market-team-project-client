@@ -18,30 +18,18 @@ export default function HomeCardPage() {
 
   return (
     <>
-      <MDBModalBody className="card-for-home-page" onClick={toggleShow}>
-        <div className="textInCard">
-          CATEGORY 
-        </div>       
-      </MDBModalBody>
+      <MDBModalTitle className="card-for-home-page" onClick={toggleShow}>
+        <div className="textInCard">CATEGORY</div>
+      </MDBModalTitle>
 
       <MDBModal tabIndex="-1" show={centredModal} setShow={setCentredModal}>
         <MDBModalDialog centered>
           <MDBModalContent>
-            <MDBModalHeader>
-              <MDBModalTitle>Modal title</MDBModalTitle>
-              <MDBBtn
-                className="btn-close"
-                color="none"
-                onClick={toggleShow}
-              ></MDBBtn>
-            </MDBModalHeader>
-            <MDBModalBody>
-              <p>
-                Cras mattis consectetur purus sit amet fermentum. Cras justo
-                odio, dapibus ac facilisis in, egestas eget quam. Morbi leo
-                risus, porta ac consectetur ac, vestibulum at eros.
-              </p>
-            </MDBModalBody>
+
+            <figure className="PopUpModel">
+              <div className="textInCard">CATEGORY</div>
+
+            </figure>
             <MDBModalFooter>
               <MDBBtn color="secondary" onClick={toggleShow}>
                 Close

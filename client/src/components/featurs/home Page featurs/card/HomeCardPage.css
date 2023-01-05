@@ -20,4 +20,24 @@
   justify-content: center;
   align-items: center;
   
+
+}
+.img-fluid{
+  background-image: url("https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg");
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  height: 140px;
+  width: 140px;
+  justify-content: center;
+}
+.PopUpModel{
+  background-image: url("https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg");
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  height: 140px;
+  width: 500px;
+  justify-content: end;
+  padding-right: 40px
 }
