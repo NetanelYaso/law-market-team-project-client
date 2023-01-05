@@ -10,11 +10,12 @@ import {
   MDBInput,
   MDBBtn
 } from 'mdb-react-ui-kit';
-
-
+import ConfirmPayment from './../confirmPayment/ConfirmPayment';
+import { useNavigate } from "react-router-dom";
 
 
 const PaymentCard = ()=> {
+  const navigate = useNavigate();
   const [basicActive, setBasicActive] = useState('tab1');
   const handleBasicClick = (value: string) => {
     if (value === basicActive) {
@@ -25,7 +26,7 @@ const PaymentCard = ()=> {
   };
   return (
     <div className="payment-card">
-        <MDBContainer className=' w-100'>
+        <MDBContainer className=' w-100 '>
       <MDBTabs className='mb-4  d-flex justify-content-center'>
         <MDBTabsItem>
           <MDBTabsLink onClick={() => handleBasicClick('tab1')} active={basicActive === 'tab1'}>
@@ -46,9 +47,9 @@ const PaymentCard = ()=> {
           </MDBTabsLink>
         </MDBTabsItem>
       </MDBTabs>
-      <MDBTabsContent className=''>
+      <MDBTabsContent className='text-center'>
         <MDBTabsPane show={basicActive === 'tab1'}>
-        <p className=' fs-5 text-center'>Prenuptial agreement between the parties<span>$100</span></p>
+        <p className=' fs-5'>Prenuptial agreement between the parties<span>$100</span></p>
         <ul>
           <li>Severance pay</li>
           <li>convalescence pay</li>
@@ -79,7 +80,7 @@ const PaymentCard = ()=> {
           <li>holding back wages</li>
           <li>overtime</li>
         </ul>
-        <MDBBtn type='submit' className='mb-4 w-25' block>
+        <MDBBtn onClick={()=>navigate(<ConfirmPayment/>)} type='submit' className='mb-4 w-25' block>
         Continue payment
       </MDBBtn>
         </MDBTabsPane>
@@ -90,4 +91,6 @@ const PaymentCard = ()=> {
 };
 
 export default PaymentCard;
+
+
 
