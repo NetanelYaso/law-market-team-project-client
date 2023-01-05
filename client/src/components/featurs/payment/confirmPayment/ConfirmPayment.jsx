@@ -20,7 +20,7 @@ const  ConfirmPayment = ({price})=> {
   return (
     <div>
       <MDBContainer className='text-center'>
-        <PayPalScriptProvider options={{ "client-id":"test"}}>
+        <PayPalScriptProvider options={{"client-id": process.env.PUBLIC_ID}}>
             <PayPalButtons 
             createOrder={(data, actions)=>{
               return actions.order.create({
