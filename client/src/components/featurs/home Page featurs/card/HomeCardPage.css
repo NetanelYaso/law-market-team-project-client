@@ -19,17 +19,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
-
 }
-.img-fluid{
-  background-image: url("https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg");
-  background-position: center;
+.cardLi{
+  color: aqua;
+} 
+.textInModle {
+  height: 50px;
+  width: 150px;
+  color: white;
   display: flex;
-  align-items: flex-end;
-  height: 140px;
-  width: 140px;
   justify-content: center;
+  align-items: center;
+  font-size: x-large;
 }
 .PopUpModel{
   background-image: url("https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg");
@@ -38,6 +39,6 @@
   align-items: flex-end;
   height: 140px;
   width: 500px;
-  justify-content: end;
-  padding-right: 40px
+  justify-content: start;
+  padding-left: 40px;
 }
