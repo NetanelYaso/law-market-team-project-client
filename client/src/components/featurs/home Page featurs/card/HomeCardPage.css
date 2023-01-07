@@ -4,17 +4,25 @@
   height: 130px;
   margin-left: 50px;
 }
+.cc{
+  width: 150px;
+  background-color: beige;
+}
 .imag{
-
- background-image: url("https://mdbootstrap.com/img/new/slides/017.webp");
+  
+  background-image: url("https://mdbootstrap.com/img/new/slides/017.webp");
   background-position: center;
- height: 140px;
+  height: 140px;
   width: 14px;
-
+  margin-bottom: 0px;
+  
 }
 .myText{
-  display: flex;
-  align-items: flex-end;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.543);
+  height: 50px;
 }
 
 ul{
@@ -39,6 +47,7 @@ ul li::before{
   align-items: center;
   font-size: x-large;
 }
+
 
 .PopUpModel{
   background-image: url("https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg");

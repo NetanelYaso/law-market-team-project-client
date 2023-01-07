@@ -22,10 +22,11 @@ export default function HomeCardPage() {
       <>
     <MDBCard background='dark' className='text-white imagStyle'>
       <MDBCardImage className="imag" overlay src='https://mdbootstrap.com/img/new/slides/017.webp' alt='...' />
-      <MDBCardOverlay className= "boxTitel myText ">
+      <div className="cc"><MDBCardOverlay className= "boxTitel myText  ">
+        
         <MDBCardTitle className="textInCard" onClick={toggleShow}>Card title</MDBCardTitle>
 
-      </MDBCardOverlay>
+      </MDBCardOverlay></div>
     </MDBCard>
 
       <MDBModalTitle className=" card-for-home-page " >
