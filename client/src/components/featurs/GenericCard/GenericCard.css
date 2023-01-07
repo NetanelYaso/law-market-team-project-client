@@ -1,0 +1,11 @@
+.generiCard_div {
+    margin: 10%;
+}
+
+.generiCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: aqua;
+}
