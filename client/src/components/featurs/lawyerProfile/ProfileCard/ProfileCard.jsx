@@ -1,84 +1,105 @@
 import "../ProfileCard.css";
 import React from "react";
 import { useState } from "react";
+
+
 const ProfileCard = () => {
-  const [name, setName] = useState('')
-  const [title, setTitle] = useState('')
+  const [name, setName] = useState("");
+  const [title, setTitle] = useState("");
 
   return (
-    <div className="Card">
-    <div className="upper-container">
-      <div className="image-container">
-        <img
-          src="https://i0.wp.com/alawyerandhermoney.com/wp-content/uploads/2019/09/pexels-photo-2381069.jpeg?fit=1024%2C682&ssl=1"
-          height="100px"
-          width="100px"
-          alt=""
-        />
-      </div>
-    </div>
-    <div className="lower-container">
-      <h3>
-        {name}<span>{title}</span>
-      </h3>
-      <h4>rating</h4>
-      <hr />
-      <ul>
-        <li>נדלן</li>
-        <li>תביעות ביטוח לאומי</li>
-        <li>פיצויים</li>
-      </ul>
-      <hr />
-      <div className="details-list">
-        <span>מאיפה</span>
-        <span>icon</span>
-      </div>
-      <div className="details-list">
-        <span>ניסיון בתחום</span>
-        <span>מספר שנים</span>
-      </div>
-      <div className="details-list">
-        <span>זמן תגובה ממוצע</span>
-        <span>זמן</span>
-      </div>
-      <div className="details-list">
-        <span>עבודה מוכנה תוך</span>
-        <span>זמן</span>
-      </div>
-      <hr />
-     
-      <div className="butten-container">
-      <a href="#!" class="btn btn-primary">Button1</a>
-      <a href="#!" class="btn btn-primary">Button2</a>
-      </div>
-    </div>
-    </div> 
+    <>
+      <section class="col col-md-5  card-container gradient-custom-2">
+        
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-md-7 col-sm-8">
+              <div class="card">
+                <div class="coverImag rounded-top text-white d-flex flex-row">
+                  <div class="profPic ms-4 mt-5 d-flex flex-column">
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                      alt="Generic placeholder image"
+                      class="MainPhotoProfile img-fluid rounded-circle  mt-4 mb-2"
+                    />
+                  </div>
+                  <div class="nameTxt ms-3">
+                    <h5>Andy Horwitz</h5>
+                    <p>Title</p>
+                  </div>
+                </div>
+                <div class=" text-black"></div>
+                <div className="p-2 d-flex justify-content-between">
+                  <h5>rating</h5>
+                    <div class="rating d-flex " >
+                      <span>
+                        <i class="fa-star fa-sm far"></i>
+                      </span>
+                      <span>
+                        <i class="fa-star fa-sm far"></i>
+                      </span>
+                      <span>
+                        <i class="fa-star fa-sm far"></i>
+                      </span>
+                      <span>
+                        <i class="fa-star fa-sm far"></i>
+                      </span>
+                      <span>
+                        <i class="fa-star fa-sm far"></i>
+                      </span>
+                    </div>
+                 
+                </div>
+                <hr />
+                <div class="card-body p-0 text-black">
+                  <div class="list-group list-group-flush rounded-3">
+                    <span class="list-group-item  d-flex justify-content-between align-items-center ">
+                      
+                      <p class=""><i class="fas fa-map-marker-alt"></i> location</p>
+                      <p>8 km</p>
+                    </span>
+
+                    <span class="list-group-item d-flex justify-content-between align-items-center ">
+                     
+                      <p class=""> <i class="far fa-calendar-check"></i> experience</p>
+                      <p>8 years</p>
+                    </span>
+
+                    <span class="list-group-item  d-flex justify-content-between align-items-center ">
+                     
+                      <p class=""> <i class="fas fa-reply"></i> response</p>
+                      <p>1 day</p>
+                    </span>
+                    <span class="list-group-item  d-flex justify-content-between align-items-center ">
+                      
+                      <p class=""><i class="fas fa-calendar-check"></i> work done by</p>
+                      <p>8 km</p>
+                    </span>
+                  </div>
+                </div>
+                <hr />
+                <div className="buttens mb-3 d-flex justify-content-around">
+                  <button
+                    type="button"
+                    class="btn btn-outline-dark"
+                    data-mdb-ripple-color="dark"
+                  >
+                    <a href="">butten2</a>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-dark"
+                    data-mdb-ripple-color="dark"
+                  >
+                    <a href="">butten1</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      </section>
+    </>
   );
 };
 
 export default ProfileCard;
-
-
-
-{/* <div class="card">
-<div>
-
-<img className="profilePic" src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp"  height='30px' class="card-img-top" alt="Fissure in Sandstone"/>
-<img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp"  height='100px' class="card-img-top" alt="Fissure in Sandstone"/>
-</div>
-<div class="card-body">
-<p>
-<h3 class="card-title">שם מלא</h3>
-<h3 class="card-title">תפקיד</h3>
-</p>
-<hr />
-<p>
-<li>פיצויים</li>
-<li>נדלן</li>
-<li>גירושים</li>
-</p>
-<h5 class="card-title">Card title</h5>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-<a href="#!" class="btn btn-primary">Button</a>
-</div>
-</div> */}
