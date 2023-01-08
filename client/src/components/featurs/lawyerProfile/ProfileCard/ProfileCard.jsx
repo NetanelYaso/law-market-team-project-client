@@ -38,51 +38,51 @@ const ProfileCard = () => {
                 <div class=" text-black"></div>
                 <div className="p-2 d-flex justify-content-between">
                   <h5>rating</h5>
-                    <ul class="rating d-flex w-50" >
-                      <li>
-                        <i class="fa-star fa-sm text-warning far"></i>
-                      </li>
-                      <li>
-                        <i class="fa-star fa-sm text-warning far"></i>
-                      </li>
-                      <li>
-                        <i class="fa-star fa-sm text-warning far"></i>
-                      </li>
-                      <li>
-                        <i class="fa-star fa-sm text-warning far"></i>
-                      </li>
-                      <li>
-                        <i class="fa-star fa-sm text-warning far"></i>
-                      </li>
-                    </ul>
+                    <div class="rating d-flex " >
+                      <span>
+                        <i class="fa-star fa-sm far"></i>
+                      </span>
+                      <span>
+                        <i class="fa-star fa-sm far"></i>
+                      </span>
+                      <span>
+                        <i class="fa-star fa-sm far"></i>
+                      </span>
+                      <span>
+                        <i class="fa-star fa-sm far"></i>
+                      </span>
+                      <span>
+                        <i class="fa-star fa-sm far"></i>
+                      </span>
+                    </div>
                  
                 </div>
                 <hr />
                 <div class="card-body p-0 text-black">
-                  <ul class="list-group list-group-flush rounded-3">
-                    <li class="list-group-item  d-flex justify-content-between align-items-center ">
+                  <div class="list-group list-group-flush rounded-3">
+                    <span class="list-group-item  d-flex justify-content-between align-items-center ">
                       
                       <p class=""><i class="fas fa-map-marker-alt"></i> location</p>
                       <p>8 km</p>
-                    </li>
+                    </span>
 
-                    <li class="list-group-item d-flex justify-content-between align-items-center ">
+                    <span class="list-group-item d-flex justify-content-between align-items-center ">
                      
                       <p class=""> <i class="far fa-calendar-check"></i> experience</p>
                       <p>8 years</p>
-                    </li>
+                    </span>
 
-                    <li class="list-group-item  d-flex justify-content-between align-items-center ">
+                    <span class="list-group-item  d-flex justify-content-between align-items-center ">
                      
                       <p class=""> <i class="fas fa-reply"></i> response</p>
                       <p>1 day</p>
-                    </li>
-                    <li class="list-group-item  d-flex justify-content-between align-items-center ">
+                    </span>
+                    <span class="list-group-item  d-flex justify-content-between align-items-center ">
                       
                       <p class=""><i class="fas fa-calendar-check"></i> work done by</p>
                       <p>8 km</p>
-                    </li>
-                  </ul>
+                    </span>
+                  </div>
                 </div>
                 <hr />
                 <div className="buttens mb-3 d-flex justify-content-around">

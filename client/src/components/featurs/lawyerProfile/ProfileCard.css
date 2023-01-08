@@ -1,5 +1,5 @@
 .card-container {
-  background-color: #a9b4b9;
+height: 100%;
   
 }
 .card {
@@ -22,10 +22,11 @@
 .nameTxt{
   margin-top:110px
 }
-ul {
-  list-style-type: none;
+.rating {
+  list-style:none;
+  color: #f8e825;
 }
-.rating{
-  list-style-type: none;
 
+.list-group{
+  list-style: none;
 }
