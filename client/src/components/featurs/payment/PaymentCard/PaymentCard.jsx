@@ -8,13 +8,25 @@ import {
   MDBTabsContent,
   MDBTabsPane,
   MDBInput,
-  MDBBtn
+  MDBBtn,
+  MDBIcon,
+  MDBListGroup,
+  MDBListGroupItem,
+  MDBModal,
+  MDBModalDialog,
+  MDBModalContent,
+  MDBModalHeader,
+  MDBModalTitle,
+  MDBModalBody,
+  MDBModalFooter,
+
 } from 'mdb-react-ui-kit';
 import ConfirmPayment from './../confirmPayment/ConfirmPayment';
 import { useNavigate } from "react-router-dom";
 
 
 const PaymentCard = ()=> {
+  const [scrollableModal, setScrollableModal] = useState(false);
   const navigate = useNavigate();
   const [basicActive, setBasicActive] = useState('tab1');
   const handleBasicClick = (value: string) => {
@@ -27,7 +39,7 @@ const PaymentCard = ()=> {
   return (
     <div className="payment-card">
         <MDBContainer className=' w-100 '>
-      <MDBTabs className='mb-4  d-flex justify-content-center'>
+      <MDBTabs className='mb-4  d-flex justify-content-center text-center'>
         <MDBTabsItem>
           <MDBTabsLink onClick={() => handleBasicClick('tab1')} active={basicActive === 'tab1'}>
           <p className=''>Basic</p>
@@ -47,50 +59,75 @@ const PaymentCard = ()=> {
           </MDBTabsLink>
         </MDBTabsItem>
       </MDBTabs>
-      <MDBTabsContent className='text-center'>
+      <MDBTabsContent className='d-flex justify-content-center w-100 '>
         <MDBTabsPane show={basicActive === 'tab1'}>
-        <p className=' fs-5'>Prenuptial agreement between the parties<span>$100</span></p>
-        <ul>
-          <li>Severance pay</li>
-          <li>convalescence pay</li>
-          <li>holding back wages</li>
-          <li>overtime</li>
-        </ul>
-        <MDBBtn type='submit' className='mb-4 w-25' block>
-        Continue payment
+        <p className=' fs-5'>Prenuptial agreement between the parties<span> $100 </span></p>
+        <MDBListGroup style={{ minWidth: '22rem' }} light className="d-flex justify-content-center">
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />Severance pay</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />convalescence pay</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />holding back wages</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />overtime</MDBListGroupItem>
+        </MDBListGroup>
+        <MDBBtn rounded onClick={() => setScrollableModal(!scrollableModal)}>
+        Continue to payment
       </MDBBtn>
         </MDBTabsPane>
         <MDBTabsPane show={basicActive === 'tab2'}>
-        <p className=' fs-5 text-center'>Prenuptial agreement between the parties<span>$175</span></p>
-        <ul>
-          <li>Severance pay</li>
-          <li>convalescence pay</li>
-          <li>holding back wages</li>
-          <li>overtime</li>
-        </ul>
-        <MDBBtn type='submit' className='mb-4 w-25' block>
-        Continue payment
+        <p className=' fs-5 '>Prenuptial agreement between the parties<span> $175 </span></p>
+        <MDBListGroup style={{ minWidth: '22rem' }} light className="d-flex justify-content-center">
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />Severance pay</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />convalescence pay</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />holding back wages</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />overtime</MDBListGroupItem>
+        </MDBListGroup>
+        <MDBBtn rounded onClick={() => setScrollableModal(!scrollableModal)}>
+        Continue to payment
       </MDBBtn>
         </MDBTabsPane>
         <MDBTabsPane show={basicActive === 'tab3'}>
-        <p className=' fs-5 text-center'>Prenuptial agreement between the parties<span>$250</span></p>
-        <ul>
-          <li>Severance pay</li>
-          <li>convalescence pay</li>
-          <li>holding back wages</li>
-          <li>overtime</li>
-        </ul>
-        <MDBBtn onClick={()=>navigate(<ConfirmPayment/>)} type='submit' className='mb-4 w-25' block>
-        Continue payment
+        <p className=' fs-5 '>Prenuptial agreement between the parties<span> $250 </span></p>
+        <MDBListGroup style={{ minWidth: '22rem' }} light className="d-flex justify-content-center">
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />Severance pay</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />convalescence pay</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />holding back wages</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />overtime</MDBListGroupItem>
+        </MDBListGroup>
+        <MDBBtn rounded onClick={() => setScrollableModal(!scrollableModal)}>
+        Continue to payment
       </MDBBtn>
         </MDBTabsPane>
       </MDBTabsContent>
+      <MDBModal show={scrollableModal} setShow={setScrollableModal} tabIndex='-1'>
+        <MDBModalDialog scrollable>
+          <MDBModalContent>
+            <MDBModalHeader>
+              <MDBModalTitle>Modal title</MDBModalTitle>
+              <MDBBtn
+                className='btn-close'
+                color='none'
+                onClick={() => setScrollableModal(!scrollableModal)}
+              ></MDBBtn>
+            </MDBModalHeader>
+            <MDBModalBody>
+              <ConfirmPayment price="200"/>
+            </MDBModalBody>
+            <MDBModalFooter>
+              <MDBBtn color='secondary' onClick={() => setScrollableModal(!setScrollableModal)}>
+                Close
+              </MDBBtn>
+            </MDBModalFooter>
+          </MDBModalContent>
+        </MDBModalDialog>
+      </MDBModal>
       </MDBContainer>
     </div>
   );
 };
 
 export default PaymentCard;
+
+
+
 
 
 

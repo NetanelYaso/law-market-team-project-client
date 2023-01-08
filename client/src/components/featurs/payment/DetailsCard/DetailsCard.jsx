@@ -1,5 +1,7 @@
 import "./DetailsCard.css";
 import React, { useState } from 'react';
+import LawyerCard from './../LawyerCard/LawyerCard';
+import PaymentCard from './../PaymentCard/PaymentCard';
 import {
   MDBContainer,
   MDBTabs,
@@ -10,7 +12,10 @@ import {
   MDBInput,
   MDBCheckbox,
   MDBRadio,
-  MDBBtn
+  MDBTextArea,
+  MDBBtn,
+  MDBRow,
+  MDBCol
 } from 'mdb-react-ui-kit';
 
 
@@ -25,7 +30,9 @@ const  DetailsCard = ()=> {
   };
   return (
     <div className="details-card  justify-content-center">
-      <MDBContainer className=' w-50'>
+      <MDBContainer className=' w-100 '>
+        <MDBRow className=" mb-3">
+        <MDBCol className="" md="6">
       <img className="img-details w-100" height='200' src='https://www.schindlers.co.za/wp-content/uploads/2020/06/person-signing-paper-955393.jpg' alt='...' />
       <span className=' fs-5'>agreement between the sides</span>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quia animi molestiae sit debitis nihil totam iusto distinctio natus perferendis, reiciendis, pariatur non amet, ex vitae quod quas facilis expedita!</p>
@@ -52,7 +59,7 @@ const  DetailsCard = ()=> {
       <br/>
       <MDBRadio name='inlineRadio' id='inlineRadio1' value='option1' label='male' inline />
       <MDBRadio name='inlineRadio' id='inlineRadio2' value='option2' label='female' inline />
-      <MDBInput wrapperClass='mb-4' textarea id='form4Example3' rows={4} label='Message' />
+      <MDBTextArea label='Message' id='textAreaExample' rows={4} />
       <MDBBtn type='submit' className='mb-4 m' block>
         save
       </MDBBtn>
@@ -66,12 +73,18 @@ const  DetailsCard = ()=> {
       <br/>
       <MDBRadio name='inlineRadio' id='inlineRadio1' value='option1' label='male' inline />
       <MDBRadio name='inlineRadio' id='inlineRadio2' value='option2' label='female' inline />
-      <MDBInput wrapperClass='mb-4' textarea id='form4Example3' rows={4} label='Message' />
+      <MDBTextArea label='Message' id='textAreaExample' rows={4} />
       <MDBBtn type='submit' className='mb-4' block>
         save
       </MDBBtn>
     </form></MDBTabsPane>
       </MDBTabsContent>
+      </MDBCol>
+      <MDBCol md="6">
+      <LawyerCard/>
+      <PaymentCard/>
+      </MDBCol>
+      </MDBRow>
       </MDBContainer>
     </div>
   );
