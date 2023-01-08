@@ -13,9 +13,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        {/* <HomeCardPage /> */}
+        <HomeCardPage />
         <LawyerProfile />
-        <GenericCard/>
+        {/* <GenericCard/> */}
         <Footer />
       </BrowserRouter>
     </div>
