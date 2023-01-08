@@ -2,7 +2,7 @@
 .imagStyle{
   width: 150px;
   height: 130px;
-  margin-left: 50px;
+  margin: 2px;
 }
 .cc{
   width: 150px;
@@ -37,7 +37,10 @@ ul{
   list-style:none;
   padding-left: 4rem;
 }
-
+.d-flex{
+  flex-wrap: wrap;
+  margin-right: 10px;
+}
 ul li::before{
   content: "\2022";
   color: rgb(119, 196, 228);

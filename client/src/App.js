@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <HomeCardPage />
-        <LawyerProfile />
+        {/* <LawyerProfile /> */}
         {/* <GenericCard/> */}
         <Footer />
       </BrowserRouter>

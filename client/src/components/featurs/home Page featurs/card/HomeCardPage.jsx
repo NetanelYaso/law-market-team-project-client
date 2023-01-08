@@ -16,10 +16,11 @@ export default function HomeCardPage() {
   const toggleShow = () => setCentredModal(!centredModal);
   return (
     <>
+    <div className="d-flex flex-wrap: wrap;">
         {departnentArray.map((item, key) => {
           return(
-            <div key={key} className= "d-flex " >
-      <MDBCard background="dark" className="text-white imagStyle hover-overlay">
+            <div key={key}>
+      <MDBCard  className="text-white imagStyle hover-overlay col-ms-12 col-md-4">
         <MDBCardImage
           className="imag "
           overlay
@@ -28,7 +29,7 @@ export default function HomeCardPage() {
         />
         <div>
           <MDBCardOverlay className="boxTitel myText ">
-            <MDBCardTitle className="textInCard " onMouseOver={toggleShow}>
+            <MDBCardTitle className="textInCard " onClick={toggleShow}>
               {item.name}
             </MDBCardTitle>
           </MDBCardOverlay>
@@ -55,6 +56,7 @@ export default function HomeCardPage() {
       </MDBModal>
       </div>)
         })}
+    </div>
     </>
   );
 }
