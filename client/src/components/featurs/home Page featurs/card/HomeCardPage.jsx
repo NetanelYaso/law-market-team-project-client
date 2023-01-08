@@ -1,25 +1,24 @@
 import "../card/HomeCardPage.css";
+import { departnentArray } from "../../../../services/departments";
 import React, { useState } from "react";
 import {
-  MDBBtn,
   MDBModal,
   MDBModalDialog,
   MDBModalContent,
-  MDBModalTitle,
-  MDBModalFooter,
   MDBCard,
   MDBCardTitle,
-  MDBCardText,
   MDBCardOverlay,
   MDBCardImage,
 } from "mdb-react-ui-kit";
 
 export default function HomeCardPage() {
   const [centredModal, setCentredModal] = useState(false);
-
   const toggleShow = () => setCentredModal(!centredModal);
   return (
     <>
+        {departnentArray.map((item, key) => {
+          return(
+            <div key={key} className= "d-flex " >
       <MDBCard background="dark" className="text-white imagStyle hover-overlay">
         <MDBCardImage
           className="imag "
@@ -30,12 +29,11 @@ export default function HomeCardPage() {
         <div>
           <MDBCardOverlay className="boxTitel myText ">
             <MDBCardTitle className="textInCard " onMouseOver={toggleShow}>
-              title
+              {item.name}
             </MDBCardTitle>
           </MDBCardOverlay>
         </div>
       </MDBCard>
-
       {/* <MDBModalTitle className=" card-for-home-page " >
       </MDBModalTitle> */}
 
@@ -43,18 +41,20 @@ export default function HomeCardPage() {
         <MDBModalDialog centered>
           <MDBModalContent>
             <figure className="PopUpModel">
-              <div className="textInModle">Card title</div>
+              <div className="textInModle">{item.name}</div>
             </figure>
             <ul className="cardul">
-              <li className="cardLi">kkkkkkkk</li>
-              <li className="cardLi">nnnnnnnnnn</li>
-              <li className="cardLi">bbbbbbbbbbb</li>
-              <li className="cardLi">kkkkkkk</li>
-              <li className="cardLi">kkkkk</li>
+              <li className="cardLi">{item.name}</li>
+              <li className="cardLi">{item.name}</li>
+              <li className="cardLi">{item.name}</li>
+              <li className="cardLi">{item.name}</li>
+              <li className="cardLi">{item.name}</li>
             </ul>
           </MDBModalContent>
         </MDBModalDialog>
       </MDBModal>
+      </div>)
+        })}
     </>
   );
 }

@@ -12,9 +12,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        {/* <HomeCardPage /> */}
+        <HomeCardPage />
         {/* <ProfileCard /> */}
-        <GenericCard/>
+        {/* <GenericCard/> */}
         <Footer />
       </BrowserRouter>
     </div>
