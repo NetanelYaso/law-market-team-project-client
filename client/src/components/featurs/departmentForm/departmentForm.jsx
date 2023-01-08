@@ -22,7 +22,7 @@ function DepartmentForm() {
     coverImage: coverImage,
     categories: categories,
     active: active,
-    lawyers: lawyers,
+    // lawyers: lawyers,
   };
 
   const TransformFileData = (file) => {
@@ -43,9 +43,7 @@ function DepartmentForm() {
         <form
           onSubmit={(e) => {
             e.preventDefault()
-            console.log(department);
             create(department);
-            console.log('gdgfgf');
           }}
         >
           <MDBInput
@@ -59,7 +57,7 @@ function DepartmentForm() {
             id="typeText"
             className="categories"
             type="text"
-            onSubmit={(e) => setCategories([...categories, e.target.value])}
+            onChange={(e) => setCategories([...categories, e.target.value])}
           />
           <MDBFile
             label="cover pic"

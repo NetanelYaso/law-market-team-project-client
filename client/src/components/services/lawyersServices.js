@@ -44,10 +44,13 @@ const getById = async (lawyer) => {
 };
 
 const create = async (lawyer) => {
-  return await fetch(`${basicAPI}/saveData`, {
+  console.log(lawyer);
+  return await fetch(`${basicAPI}/create`, {
     method: "POST",
+    mode: 'cors',
+    cache: 'default',
     headers: { "Content-Type": "application/json" },
-    body: { lawyer },
+    body: JSON.stringify(lawyer),
   })
     .then((res) => res.json())
     .then((res) => console.log(res))

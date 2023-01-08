@@ -44,21 +44,16 @@ const getById = async (department) => {
 };
 
 const create = async (department) => {
-  console.log("edfdfdf");
-  try {
-    return await fetch(`http://localhost:8080/departments/saveData`, {
-      mode: "no-cors",
-      method: "POST",
-      headers:{
-        "content-type":"application/json"
-      },
-      body: JSON.stringify({ department }),
+  debugger
+    return await fetch(`${basicAPI}/create`, {
+      method: 'POST',
+      mode: 'cors',
+      cache: 'default',
+      headers:{"Content-Type": "application/json"},
+      body: JSON.stringify(department)
     })
-      // .then((res) => res.json())
+      .then((res) => res.json())
       .then((res) => console.log(res, "success"));
-  } catch (error) {
-    console.log(error, "you failed");
-  }
-};
+  } ;
 
 export { getAll, update, deleteObj, getById, create };

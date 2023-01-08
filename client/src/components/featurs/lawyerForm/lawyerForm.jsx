@@ -41,7 +41,8 @@ function LawyerForm() {
     <div className="department-form">
       <MDBContainer className="w-75">
         <form
-          onSubmit={() => {
+          onSubmit={(e) => {
+            e.preventDefault()
             create(lawyer);
           }}
         >
