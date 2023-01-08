@@ -1,0 +1,31 @@
+.card-container {
+  background-color: #a9b4b9;
+  
+}
+.card {
+  border-radius: 15px;
+  
+}
+.MainPhotoProfile {
+  width: 180px;
+  border-radius: 10px;
+  z-index: 1;
+  border: 3px solid gray;
+}
+.coverImag{
+  background: #000;
+}
+.profPic{
+  width:150px;
+  z-index: 1;
+}
+.nameTxt{
+  margin-top:110px
+}
+ul {
+  list-style-type: none;
+}
+.rating{
+  list-style-type: none;
+
+}
