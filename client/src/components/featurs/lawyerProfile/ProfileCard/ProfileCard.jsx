@@ -17,8 +17,8 @@ const ProfileCard = () => {
 
   return (
     <>
-      <section class="h-100 col col-md-7 col-sm-7 card-container gradient-custom-2">
-        <div class="container py-5 h-100">
+      <section class="col col-md-5  card-container gradient-custom-2">
+        
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col col-md-7 col-sm-8">
               <div class="card">
@@ -104,7 +104,7 @@ const ProfileCard = () => {
               </div>
             </div>
           </div>
-        </div>
+        
       </section>
     </>
   );

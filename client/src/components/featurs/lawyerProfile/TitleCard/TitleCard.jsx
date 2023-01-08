@@ -5,22 +5,14 @@ const TitleCard = () => {
   return (
     <div className="container">
       <div className="row g-2 mb-3 ">
-        <div className=" cardCol col col-md-6 col-sm-12">
+        <div className=" cardCol col col-md-6 col-sm-6">
           <div className="lawyerCard">
             <h1>hello</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
           </div>
         </div>
 
-        <div className="col col-md-6 col-sm-12">
-          <div className="lawyerCard">
-            <h1>hello</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-
-          </div>
-        </div>
-
-        <div className="col col-md-6 col-sm-12">
+        <div className="col col-md-6 col-sm-6">
           <div className="lawyerCard">
             <h1>hello</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
@@ -28,7 +20,15 @@ const TitleCard = () => {
           </div>
         </div>
 
-        <div className="col col-md-6 col-sm-12">
+        <div className="col col-md-6 col-sm-6">
+          <div className="lawyerCard">
+            <h1>hello</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+          </div>
+        </div>
+
+        <div className="col col-md-6 col-sm-6">
           <div className="lawyerCard">
             <h1>hello</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
