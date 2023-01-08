@@ -1,15 +1,7 @@
 import "../ProfileCard.css";
 import React from "react";
 import { useState } from "react";
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardImage,
-  MDBBtn,
-} from "mdb-react-ui-kit";
-import { MDBListGroup, MDBListGroupItem, MDBBadge } from "mdb-react-ui-kit";
+
 
 const ProfileCard = () => {
   const [name, setName] = useState("");
