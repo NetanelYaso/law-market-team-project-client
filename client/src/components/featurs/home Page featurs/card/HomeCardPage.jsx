@@ -20,11 +20,11 @@ export default function HomeCardPage() {
   const toggleShow = () => setCentredModal(!centredModal);
   return (
       <>
-    <MDBCard background='dark' className='text-white imagStyle'>
-      <MDBCardImage className="imag" overlay src='https://mdbootstrap.com/img/new/slides/017.webp' alt='...' />
-      <div className="cc"><MDBCardOverlay className= "boxTitel myText  ">
+    <MDBCard background='dark' className='text-white imagStyle hover-overlay'>
+      <MDBCardImage className="imag " overlay  src='https://mdbootstrap.com/img/new/slides/017.webp' alt='...' />
+      <div className="cc "><MDBCardOverlay className= "boxTitel myText ">
         
-        <MDBCardTitle className="textInCard" onClick={toggleShow}>Card title</MDBCardTitle>
+        <MDBCardTitle className="textInCard " onMouseOver={toggleShow}>  title</MDBCardTitle>
 
       </MDBCardOverlay></div>
     </MDBCard>
