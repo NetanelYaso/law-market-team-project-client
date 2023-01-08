@@ -14,7 +14,7 @@ MDBIcon
 const LawyerCard = ()=> {
   return (
     <div className="lawyer-card">
-      <MDBContainer className=' d-flex justify-content-center d-sm-flex text-center'>
+      <MDBContainer className=' d-flex justify-content-center text-center'>
         <MDBRow>
         <MDBCol md="4">
       <MDBCardImage className='rounded-circle' width='140' height='140' src="https://i.pinimg.com/originals/b7/49/47/b74947543e3a30e0b6b2522033d0562b.jpg" alt="" />
