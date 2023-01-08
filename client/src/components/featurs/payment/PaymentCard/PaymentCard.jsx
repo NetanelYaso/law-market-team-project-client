@@ -101,7 +101,7 @@ const PaymentCard = ()=> {
         <MDBModalDialog scrollable>
           <MDBModalContent>
             <MDBModalHeader>
-              <MDBModalTitle>Modal title</MDBModalTitle>
+              <MDBModalTitle>Checkout</MDBModalTitle>
               <MDBBtn
                 className='btn-close'
                 color='none'
@@ -109,7 +109,7 @@ const PaymentCard = ()=> {
               ></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody>
-              <ConfirmPayment price="200"/>
+              <ConfirmPayment price="10"/>
             </MDBModalBody>
             <MDBModalFooter>
               <MDBBtn color='secondary' onClick={() => setScrollableModal(!setScrollableModal)}>

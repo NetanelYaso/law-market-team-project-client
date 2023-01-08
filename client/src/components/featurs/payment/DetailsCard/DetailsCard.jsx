@@ -33,7 +33,7 @@ const  DetailsCard = ()=> {
       <MDBContainer className=' w-100 '>
         <MDBRow className=" mb-3">
         <MDBCol className="" md="6">
-      <img className="img-details w-100" height='200' src='https://www.schindlers.co.za/wp-content/uploads/2020/06/person-signing-paper-955393.jpg' alt='...' />
+      <img className="img-details w-100 rounded" height='200' src='https://www.schindlers.co.za/wp-content/uploads/2020/06/person-signing-paper-955393.jpg' alt='...' />
       <span className=' fs-5'>agreement between the sides</span>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quia animi molestiae sit debitis nihil totam iusto distinctio natus perferendis, reiciendis, pariatur non amet, ex vitae quod quas facilis expedita!</p>
       <MDBTabs className='mb-3 d-flex justify-content-center'>
@@ -57,9 +57,9 @@ const  DetailsCard = ()=> {
       <MDBInput type='date' wrapperClass='mb-4' label='date of birth' />
       gender 
       <br/>
-      <MDBRadio name='inlineRadio' id='inlineRadio1' value='option1' label='male' inline />
-      <MDBRadio name='inlineRadio' id='inlineRadio2' value='option2' label='female' inline />
-      <MDBTextArea label='Message' id='textAreaExample' rows={4} />
+      <MDBRadio className='mb-4' name='inlineRadio' id='inlineRadio1' value='option1' label='male' inline />
+      <MDBRadio className='mb-4' name='inlineRadio' id='inlineRadio2' value='option2' label='female' inline />
+      <MDBTextArea label='Message' id='textAreaExample' rows={4} className='mb-4'/>
       <MDBBtn type='submit' className='mb-4 m' block>
         save
       </MDBBtn>
@@ -71,9 +71,9 @@ const  DetailsCard = ()=> {
       <MDBInput type='date' wrapperClass='mb-4' label='date of birth' />
       gender 
       <br/>
-      <MDBRadio name='inlineRadio' id='inlineRadio1' value='option1' label='male' inline />
-      <MDBRadio name='inlineRadio' id='inlineRadio2' value='option2' label='female' inline />
-      <MDBTextArea label='Message' id='textAreaExample' rows={4} />
+      <MDBRadio className='mb-4' name='inlineRadio' id='inlineRadio1' value='option1' label='male' inline />
+      <MDBRadio className='mb-4' name='inlineRadio' id='inlineRadio2' value='option2' label='female' inline />
+      <MDBTextArea label='Message' id='textAreaExample' rows={4} className='mb-4' />
       <MDBBtn type='submit' className='mb-4' block>
         save
       </MDBBtn>
