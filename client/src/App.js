@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Header from './components/featurs/Header/Header';
 import Footer from './components/featurs/Footer/Footer';
 import DetailsCard from './components/featurs/payment/DetailsCard/index';
+// import HomeCardPage from './components/featurs/home Page featurs/card/HomeCardPage';
+// import LawyerProfile from './components/pages/LawyerProfile/LawyerProfile';
 
 function App() {
   return (
@@ -12,6 +14,9 @@ function App() {
         <Header />
         {/* <ProfileCard /> */}
         <DetailsCard/>
+        {/* <HomeCardPage /> */}
+        {/* <LawyerProfile /> */}
+        {/* <GenericCard/> */}
         <Footer />
       </BrowserRouter>
     </div>
