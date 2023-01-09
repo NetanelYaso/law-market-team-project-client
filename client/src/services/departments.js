@@ -12,12 +12,3 @@ export const departnentArray = [
     {name:"קריאטיב",age:9},
 
 ]
-// export const getDepartments = async () => {
-//     try {
-        // return await fetch(departnentArray)
-        //     .then(()=>{console.log(departnentArray);})
-        //     .then(res => res.json());
-//     } catch (error) {
-//         console.error(error);
-//     }
-// }

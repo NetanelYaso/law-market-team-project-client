@@ -12,19 +12,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        {/* <ProfileCard /> */}
-        <DetailsCard/>
-        {/* <HomeCardPage /> */}
-        {/* <LawyerProfile /> */}
+        <HomeCardPage />
+        <LawyerProfile />
         {/* <GenericCard/> */}
         <Footer />
       </BrowserRouter>
     </div>
-
-// function App() {
-//   return (
-//     <LawyerProfile/>
-   
   );
-};
+}
 export default App;
