@@ -61,3 +61,7 @@ ul li::before{
   height: 140px;
   justify-content:start;
 }
+
+.modal_popUp{
+  background-color: black;
+}
