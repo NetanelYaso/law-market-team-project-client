@@ -1,21 +1,15 @@
 import "./GenericCard.css";
-import { Card, Container } from 'react-bootstrap';
+import { Card, Container, Row, Col } from 'react-bootstrap';
 import { useState } from "react";
 import { useEffect } from "react";
-
+import { data } from "./data"
 function GenericCard() {
-  const [lawSubject, setLawSubject] = useState([]);
-
-  useEffect(() => {
-    
-  }, [])
-
   return (
-    <Container className="generiCard_div ">
-      <Card style={{ width: '15rem', height: '10rem' }}>
+    <Container className="generiCard_div">
+      <Card className="main_card" style={{ width: '15rem', height: '10rem' }}>
         <Card.Body className="generiCard">
           <Card.Title><i className="far fa-heart"></i></Card.Title>
-          <Card.Title className="">
+          <Card.Title>
             family law
           </Card.Title>
         </Card.Body>
