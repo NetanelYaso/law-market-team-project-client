@@ -21,7 +21,7 @@
   display: flex; 
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.564);
+  background-color: rgba(0, 0, 0, 0.815);
   height: 50px;
 }
 
@@ -52,9 +52,12 @@ ul li::before{
   font-size: x-large;
   
 }
+.raper{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
 .PopUpModel{
-  background-image: url("https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg");
   background-position: center;
   display: flex;
   align-items: flex-end;
@@ -62,6 +65,3 @@ ul li::before{
   justify-content:start;
 }
 
-.modal_popUp{
-  background-color: black;
-}

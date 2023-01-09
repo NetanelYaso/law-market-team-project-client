@@ -47,12 +47,6 @@ export default function BottomCard() {
           <MDBBtn color="link" rippleColor="primary" className="text-reset m-0">
             Message <MDBIcon fas icon="envelope" />
           </MDBBtn>
-        {/* <MDBCardFooter
-          background="light"
-          border="0"
-          className="p-2 d-flex justify-content-around"
-        >
-        </MDBCardFooter> */}
       </MDBCol>
       <MDBCol xl={6} className="mb-4">
         <MDBCardBody className="singalCard">
@@ -83,17 +77,12 @@ export default function BottomCard() {
           <MDBBtn color="link" rippleColor="primary" className="text-reset m-0">
             Message <MDBIcon fas icon="envelope" />
           </MDBBtn>
-        {/* <MDBCardFooter
-          background="light"
-          border="0"
-          className="p-2 d-flex justify-content-around"
-        >
-        </MDBCardFooter> */}
+
       </MDBCol>
-      <MDBCol xl={6} className="mb-4">
+     <MDBCol xl={6} className="mb-4 singalCard">
         <MDBCardBody className="singalCard">
-          <div className="d-flex justify-content-between align-items-center">
-            <div className="d-flex align-items-center">
+          <div className="d-flex justify-content-between align-items-center row  ">
+            <div className="d-flex align-items-center col-12 ">
               <img
                 src="https://mdbootstrap.com/img/new/avatars/7.jpg"
                 alt=""
@@ -101,30 +90,24 @@ export default function BottomCard() {
                 className="rounded-circle"
               />
               <div className="ms-3">
-                <p className="fw-bold mb-1">סבינה בן נתן</p>
+                <p className="fw-bold mb-1">ן</p>
                 <p className="text-muted mb-0"> עו"ד בענייני תעבורה</p>
                 <p className="text-muted mb-0">עלות השירות: 100$</p>
               </div>
             </div>
             <div>
               <ul>
-                <li>גגגגג</li>
+              <li>גגגגג</li>
                 <li>עעעעע</li>
                 <li>חחחחח</li>
                 <li>טטטטט</li>
               </ul>
-          <MDBBtn color="link" rippleColor="primary" className="text-reset m-0">
-            Message <MDBIcon fas icon="envelope" />
-          </MDBBtn>
             </div>
           </div>
         </MDBCardBody>
-        {/* <MDBCardFooter
-          background="light"
-          border="0"
-          className="p-2 d-flex justify-content-around"
-        >
-        </MDBCardFooter> */}
+          <MDBBtn color="link" rippleColor="primary" className="text-reset m-0">
+            Message <MDBIcon fas icon="envelope" />
+          </MDBBtn>
       </MDBCol>
     </div>
     </div>
