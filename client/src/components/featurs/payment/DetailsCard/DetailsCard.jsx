@@ -1,5 +1,5 @@
 import "./DetailsCard.css";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import LawyerCard from './../LawyerCard/LawyerCard';
 import PaymentCard from './../PaymentCard/PaymentCard';
 import {
@@ -21,11 +21,17 @@ import {
 
 const  DetailsCard = ()=> {
   const [basicActive, setBasicActive] = useState('tab1');
-  const [firstName, setFirstName] = useState('');
+  const [firstName, setFirstName] = useState(() => {
+    // getting stored value
+    const saved = localStorage.getItem("firstName, lastName");
+    const initialValue = JSON.parse(saved);
+    return initialValue || "";
+  });
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [birth, setBirth] = useState('');
-  const [gender, setGender] = useState(null);
+  const [male, setMale] = useState(null);
+  const [female, setFemale] = useState(null);
   const [message, setMessage] = useState('');
 
   const handleBasicClick = (value: string) => {
@@ -52,14 +58,26 @@ const  DetailsCard = ()=> {
   const onChangeBirth=(e)=>{
     setBirth(e.target.value)
   }
-  const onChangeGender=(e)=>{
-    setGender(e.target.value)
+  const onClickMale=(e)=>{
+    setMale(e.target.value)
   }
+
+  const onClickFemale=(e)=>{
+    setFemale(e.target.value)
+  }
+
 
   const onChangeMessage=(e)=>{
     setMessage(e.target.value)
   }
+  localStorage.setItem("key", "value")
 
+  useEffect(() => {
+    // storing input name
+    localStorage.setItem("firstName, lastName", JSON.stringify(firstName, lastName));
+  }, [firstName, lastName]);
+
+  
   return (
     <div className="details-card  justify-content-center ">
       <MDBContainer className=' w-100 '>
@@ -86,11 +104,11 @@ const  DetailsCard = ()=> {
       <MDBInput id='firstName' wrapperClass='mb-4' label='firstName' value={firstName} onChange={onChangeFirstName}/>
       <MDBInput id='lastName' wrapperClass='mb-4' label='lastName' value={lastName} onChange={onChangeLastName}/>
       <MDBInput type='email' id='form4Example2' wrapperClass='mb-4' label='Email address' value={email} onChange={onChangeEmail}/>
-      <MDBInput type='date' wrapperClass='mb-4' label='date of birth' value={birth}/>
+      <MDBInput type='date' wrapperClass='mb-4' label='date of birth' value={birth} onChange={onChangeBirth}/>
       gender 
       <br/>
-      <MDBRadio className='mb-4' name='inlineRadio' id='inlineRadio1' value='option1' label='male' inline value={gender} onChange={onChangeGender}/>
-      <MDBRadio className='mb-4' name='inlineRadio' id='inlineRadio2' value='option2' label='female' inline value={gender} onChange={onChangeGender}/>
+      <MDBRadio className='mb-4' name='inlineRadio' id='inlineRadio1'  label='male' inline value={male} onClick={onClickMale}/>
+      <MDBRadio className='mb-4' name='inlineRadio' id='inlineRadio2'  label='female' inline value={female} onClick={onClickFemale}/>
       <MDBTextArea label='Message' id='textAreaExample' rows={4} className='mb-4' value={message} onChange={onChangeMessage}/>
       <MDBBtn type='submit' className='mb-4 m' block>
         save

@@ -123,7 +123,6 @@ const PaymentCard = ()=> {
               ></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody>
-             
               <ConfirmPayment price={`${price}`}/>
             </MDBModalBody>
             <MDBModalFooter>
