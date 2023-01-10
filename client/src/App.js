@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/featurs/Header/Header";
 import Footer from "./components/featurs/Footer/Footer";
 import SubCategory from "./components/pages/SubCategory/SubCategory";
+import LawyerProfile from './components/pages/LawyerProfile/LawyerProfile'
 
 function App() {
   return (
@@ -13,9 +14,9 @@ function App() {
       <BrowserRouter>
         <Header />
         {/* <HomeCardPage /> */}
-        {/* <ProfileCard /> */}
+   <LawyerProfile/>
         <SubCategory/>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );
