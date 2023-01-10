@@ -5,7 +5,8 @@ import ProfileCard from "./components/featurs/lawyerProfile/ProfileCard/ProfileC
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/featurs/Header/Header";
 import Footer from "./components/featurs/Footer/Footer";
-import SubCategory from "./components/pages/SubCategory/SubCategory";
+import GenericCard from "./components/featurs/GenericCard/GenericCard";
+import LawyerProfile from "./components/pages/LawyerProfile/LawyerProfile";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Header />
         {/* <HomeCardPage /> */}
+        <BottomCard/>
         {/* <ProfileCard /> */}
         <SubCategory/>
         <Footer />
