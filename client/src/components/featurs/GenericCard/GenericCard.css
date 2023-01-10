@@ -2,7 +2,7 @@
     margin: 10%;
 }
 
-.generiCard {
+.genericCard {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,19 +10,15 @@
     color: #08b9e3;
 }
 
-#first_card {
-    /* background-color: blueviolet; */
+.first_card {
     position: absolute;
-    left: 0px;
-    top: 0px;
     z-index: -1;
+    border: 2px solid #08b9e3;
+
 }
 
 
 
 .second_card:hover {
-    /* background-color: yellow; */
-    border: 2px solid #08b9e3;
     display: none;
-
 }

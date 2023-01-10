@@ -5,17 +5,20 @@ import ProfileCard from "./components/featurs/lawyerProfile/ProfileCard/ProfileC
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/featurs/Header/Header";
 import Footer from "./components/featurs/Footer/Footer";
+import GenericCard from "./components/featurs/GenericCard/GenericCard";
+import LawyerProfile from "./components/pages/LawyerProfile/LawyerProfile";
+import BottomCard from "./components/featurs/home Page featurs/card/bottom-cards/BottomCard";
 import SubCategory from "./components/pages/SubCategory/SubCategory";
-
+import HomePage from "./components/pages/Home/homePage"
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
-        {/* <HomeCardPage /> */}
+        {/* <HomePage/> */}
         {/* <ProfileCard /> */}
         <SubCategory/>
-        {/* <Footer /> */}
+        <Footer   />
       </BrowserRouter>
     </div>
   );

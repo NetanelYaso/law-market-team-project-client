@@ -4,23 +4,23 @@ export const data = [
         discription: ["lior", "natan", "abbay"]
     },
     {
-        name: "family law",
+        name: "accc",
         discription: ["lior", "natan", "abbay"]
     },
     {
-        name: "family law",
+        name: "fdgnh",
         discription: ["lior", "natan", "abbay"]
     },
     {
-        name: "family law",
+        name: "xcdvxbfgnh",
         discription: ["lior", "natan", "abbay"]
     },
     {
-        name: "family law",
+        name: "vcxbgnh",
         discription: ["lior", "natan", "abbay"]
     },
     {
-        name: "family law",
+        name: "vfbghj",
         discription: ["lior", "natan", "abbay"]
     },
  
