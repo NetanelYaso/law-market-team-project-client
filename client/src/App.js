@@ -8,16 +8,19 @@ import Footer from "./components/featurs/Footer/Footer";
 import GenericCard from "./components/featurs/GenericCard/GenericCard";
 import LawyerProfile from "./components/pages/LawyerProfile/LawyerProfile";
 import BottomCard from "./components/featurs/home Page featurs/card/bottom-cards/BottomCard";
+import SubCategory from "./components/pages/SubCategory/SubCategory";
+import HomePage from "./components/pages/Home/HomePage";
+import BottomCard from "./components/featurs/home Page featurs/card/bottom-cards/BottomCard";
 import SubCategory from "./components/pages/SubCategory/SubCategory"
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
-        <HomeCardPage />
+        {/* <HomeCardPage /> */}
         <BottomCard/>
         {/* <ProfileCard /> */}
-        {/* <SubCategory/> */}
+        <SubCategory/>
         <Footer />
       </BrowserRouter>
     </div>
