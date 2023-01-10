@@ -7,5 +7,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: aqua;
+    color: #08b9e3;
+}
+
+.main_card:hover {
+    border: 2px solid #08b9e3 ;
 }
