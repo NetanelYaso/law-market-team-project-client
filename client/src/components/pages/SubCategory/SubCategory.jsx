@@ -10,7 +10,7 @@ function SubCategory() {
       <Row>
         {data.map((item) => (
           <Col md={4}>
-            <GenericCard key={item}/>
+            <GenericCard  name={item.name} discription={item.discription}/>
           </Col>
         ))}
       </Row>

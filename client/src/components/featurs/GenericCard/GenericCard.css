@@ -10,6 +10,19 @@
     color: #08b9e3;
 }
 
-.main_card:hover {
-    border: 2px solid #08b9e3 ;
+#first_card {
+    /* background-color: blueviolet; */
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+
+
+.second_card:hover {
+    /* background-color: yellow; */
+    border: 2px solid #08b9e3;
+    display: none;
+
 }

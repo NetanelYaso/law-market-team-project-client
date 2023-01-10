@@ -15,7 +15,7 @@ function App() {
         {/* <HomeCardPage /> */}
         {/* <ProfileCard /> */}
         <SubCategory/>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

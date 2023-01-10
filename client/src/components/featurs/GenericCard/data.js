@@ -1,27 +1,27 @@
 export const data = [
     {
         name: "family law",
-        discription: ["sdafg", "dsvfb", "dsvfb"]
+        discription: ["lior", "natan", "abbay"]
     },
     {
         name: "family law",
-        discription: ["sdafg", "dsvfb", "dsvfb"]
+        discription: ["lior", "natan", "abbay"]
     },
     {
         name: "family law",
-        discription: ["sdafg", "dsvfb", "dsvfb"]
+        discription: ["lior", "natan", "abbay"]
     },
     {
         name: "family law",
-        discription: ["sdafg", "dsvfb", "dsvfb"]
+        discription: ["lior", "natan", "abbay"]
     },
     {
         name: "family law",
-        discription: ["sdafg", "dsvfb", "dsvfb"]
+        discription: ["lior", "natan", "abbay"]
     },
     {
         name: "family law",
-        discription: ["sdafg", "dsvfb", "dsvfb"]
+        discription: ["lior", "natan", "abbay"]
     },
  
    
