@@ -1,4 +1,4 @@
-import "../card/HomeCardPage.css";
+import "./HomeCardPage.css";
 import { departnentArray } from "../../../../services/departments";
 import React, { useState } from "react";
 import {
@@ -28,11 +28,11 @@ const someFunc = (key)=>{
   return (
 
     <div className="d-flex justify-content-center raper">
-      <div className="d-flex justify-content-center col-md-6">
+      <div className="d-flex justify-content-center col-md-8">
         {departnentArray.map((item, key) => {
           return (
             <div key={key}>
-              <MDBCard className="text-white imagStyle hover-overlay align-items-center bg-red">
+              <MDBCard className="text-white imagStyle hover-overlay align-items-center ">
                 <MDBCardImage
                   className="imag"
                   overlay
@@ -40,8 +40,8 @@ const someFunc = (key)=>{
                   alt="..."
                 />
                 <div>
-                  <MDBCardOverlay className="boxTitel myText ">
-                    <MDBCardTitle className="textInCard " onClick={()=>someFunc(key)}>
+                  <MDBCardOverlay className="boxTitel myText "onClick={()=>someFunc(key)}>
+                    <MDBCardTitle className="textInCard " >
                       {item.name}
                     </MDBCardTitle>
                   </MDBCardOverlay>
