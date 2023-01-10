@@ -40,8 +40,8 @@ const someFunc = (key)=>{
                   alt="..."
                 />
                 <div>
-                  <MDBCardOverlay className="boxTitel myText ">
-                    <MDBCardTitle className="textInCard " onClick={()=>someFunc(key)}>
+                  <MDBCardOverlay className="boxTitel myText "onClick={()=>someFunc(key)}>
+                    <MDBCardTitle className="textInCard " >
                       {item.name}
                     </MDBCardTitle>
                   </MDBCardOverlay>
