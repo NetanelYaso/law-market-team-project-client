@@ -50,63 +50,63 @@ const PaymentCard = ()=> {
       <MDBTabs className='mb-4  d-flex justify-content-center text-center row-cols-3'>
         <MDBTabsItem>
           <MDBTabsLink onClick={() => handleBasicClick('tab1')} active={basicActive === 'tab1'}>
-          <p className=''>Basic</p>
+          <p className=''>שירות בסיס</p>
           <p className=''>$100</p>
           </MDBTabsLink>
         </MDBTabsItem>
         <MDBTabsItem>
           <MDBTabsLink onClick={() => handleBasicClick('tab2')} active={basicActive === 'tab2'}>
-          <p className=''>standard</p>
+          <p className=''>שירות סטנדרט</p>
           <p className=''>$175</p>
           </MDBTabsLink>
         </MDBTabsItem>
         <MDBTabsItem>
           <MDBTabsLink onClick={() => handleBasicClick('tab3')} active={basicActive === 'tab3'}>
-          <p className=''>Premium </p>
+          <p className=''>שירות פרימיום </p>
           <p className=''>$250</p>
           </MDBTabsLink>
         </MDBTabsItem>
       </MDBTabs>
       <MDBTabsContent className='d-flex justify-content-center w-100 '>
         <MDBTabsPane show={basicActive === 'tab1'} className="text-sm-start">
-        <p className='fs-5 fw-bold'>Prenuptial agreement between the parties<span id="one"> $100 </span></p>
+        <p className='fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<span id="one"> $100 </span></p>
         <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center">
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />Severance pay</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />convalescence pay</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />holding back wages</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />overtime</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />פיצויי פיטורין</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />דמי הבראה</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />הלנת שכר</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
         <MDBBtn className=" mx-auto" center rounded onClick={() => setScrollableModal(!scrollableModal)}>
-        Continue to payment
+        המשך לתשלום
       </MDBBtn>
       </div>
         </MDBTabsPane>
         <MDBTabsPane show={basicActive === 'tab2'}>
-        <p className=' fs-5 fw-bold'>Prenuptial agreement between the parties<span id="one"> $175 </span></p>
+        <p className=' fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<span id="one"> $175 </span></p>
         <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center">
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />Severance pay</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />convalescence pay</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />holding back wages</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />overtime</MDBListGroupItem>
+        <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />פיצויי פיטורין</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />דמי הבראה</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />הלנת שכר</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
         <MDBBtn className=" mx-auto" center rounded onClick={() => setScrollableModal(!scrollableModal)}>
-        Continue to payment
+        המשך לתשלום
       </MDBBtn>
       </div>
         </MDBTabsPane>
         <MDBTabsPane show={basicActive === 'tab3'}>
-        <p className=' fs-5 fw-bold'>Prenuptial agreement between the parties<span id="one"> $250 </span></p>
+        <p className=' fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<span id="one"> $250 </span></p>
         <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center">
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />Severance pay</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />convalescence pay</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />holding back wages</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />overtime</MDBListGroupItem>
+        <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />פיצויי פיטורין</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />דמי הבראה</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />הלנת שכר</MDBListGroupItem>
+      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
         <MDBBtn className=" mx-auto" center rounded onClick={() => setScrollableModal(!scrollableModal)}>
-        Continue to payment
+        המשך לתשלום
       </MDBBtn>
       </div>
         </MDBTabsPane>
@@ -115,7 +115,7 @@ const PaymentCard = ()=> {
         <MDBModalDialog scrollable>
           <MDBModalContent>
             <MDBModalHeader>
-              <MDBModalTitle>Checkout</MDBModalTitle>
+              <MDBModalTitle>דף תשלום</MDBModalTitle>
               <MDBBtn
                 className='btn-close'
                 color='none'
@@ -127,7 +127,7 @@ const PaymentCard = ()=> {
             </MDBModalBody>
             <MDBModalFooter>
               <MDBBtn color='secondary' onClick={() => setScrollableModal(!setScrollableModal)}>
-                Close
+                סגור
               </MDBBtn>
             </MDBModalFooter>
           </MDBModalContent>
