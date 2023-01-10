@@ -11,8 +11,8 @@ import LawyerProfile from "./components/pages/LawyerProfile/LawyerProfile";
 import SubCategory from "./components/pages/SubCategory/SubCategory";
 import DetailsCard from './components/featurs/payment/DetailsCard/index';
 function App() {
-  console.log(JSON.parse(localStorage.getItem("details"))) 
-  console.log(JSON.parse(localStorage.getItem("inputs"))) 
+  // console.log(JSON.parse(localStorage.getItem("details"))) 
+  // console.log(JSON.parse(localStorage.getItem("inputs"))) 
   return (
     <div className="App">
       <BrowserRouter>
