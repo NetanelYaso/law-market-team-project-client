@@ -20,7 +20,7 @@ export default function BottomCard() {
       <div className="d-flex row-cols-md-4 cardRaper justify-content-center ">
       <MDBCol xl={6} className="mb-4 singalCard">
         <MDBCardBody className="singalCard">
-          <div className="d-flex justify-content-between align-items-center row  ">
+          <div className="d-flex justify-content-between align-items-center   ">
             <div className="d-flex align-items-center col-12 ">
               <img
                 src="https://mdbootstrap.com/img/new/avatars/8.jpg"
