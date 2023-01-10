@@ -7,17 +7,19 @@ import Header from "./components/featurs/Header/Header";
 import Footer from "./components/featurs/Footer/Footer";
 import GenericCard from "./components/featurs/GenericCard/GenericCard";
 import LawyerProfile from "./components/pages/LawyerProfile/LawyerProfile";
+import BottomCard from "./components/featurs/home Page featurs/card/bottom-cards/BottomCard";
+import SubCategory from "./components/pages/SubCategory/SubCategory";
+import HomePage from "./components/pages/Home/HomePage";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
-        {/* <HomeCardPage /> */}
-        <BottomCard/>
+        <HomePage/>
         {/* <ProfileCard /> */}
-        <SubCategory/>
-        <Footer />
+        {/* <SubCategory/> */}
+        <Footer   />
       </BrowserRouter>
     </div>
   );
