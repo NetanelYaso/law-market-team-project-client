@@ -1,5 +1,5 @@
-.generiCard_div {
-    margin: 10%;
+.sub_category{
+    margin: 5%;
 }
 
 .genericCard {
@@ -17,8 +17,7 @@
 
 }
 
-
-
 .second_card:hover {
     display: none;
 }
+

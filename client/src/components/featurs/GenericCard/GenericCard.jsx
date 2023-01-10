@@ -20,17 +20,16 @@ function GenericCard({ name, discription }) {
                 <li>{discription[2]}</li>
               </ul>
             </Card.Text>
-
           </Card.Body>
         </Card>
-        <Card className="second_card" style={{ width: '15rem', height: '10rem' }} >
+        {/* <Card className="second_card" style={{ width: '15rem', height: '10rem' }} >
           <Card.Body className="genericCard">
             <Card.Title><i className="far fa-heart"></i></Card.Title>
             <Card.Title>
               {name}
             </Card.Title>
           </Card.Body>
-        </Card>
+        </Card> */}
     </div>
   );
 }

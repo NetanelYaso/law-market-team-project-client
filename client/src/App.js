@@ -15,9 +15,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        {/* <HomePage/> */}
+        <HomePage/>
         {/* <ProfileCard /> */}
-        <SubCategory/>
+        {/* <SubCategory/> */}
         <Footer   />
       </BrowserRouter>
     </div>

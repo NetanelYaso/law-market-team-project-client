@@ -7,11 +7,13 @@ import BottomCard from "../../featurs/home Page featurs/card/bottom-cards/Bottom
 
 function SubCategory() {
   return (
-    <div>
-      <Container className="sub-category">
+    <>
+    <div className="d-flex justify-content-center mt-3">
+    </div>
+      <Container className="sub_category">
         <Row>
           {data.map((item) => (
-            <Col md={4}>
+            <Col className="g-3" xl={4}>
               <GenericCard name={item.name} discription={item.discription} />
             </Col>
           ))}
@@ -22,7 +24,7 @@ function SubCategory() {
           <BottomCard />
         </Row>
       </Container>
-    </div>
+    </>
   );
 };
 
