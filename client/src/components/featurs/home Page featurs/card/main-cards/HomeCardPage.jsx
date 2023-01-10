@@ -28,7 +28,7 @@ const someFunc = (key)=>{
   return (
 
     <div className="d-flex justify-content-center raper">
-      <div className="d-flex justify-content-center col-md-6">
+      <div className="d-flex justify-content-center col-lg-6 col-md-4">
         {departnentArray.map((item, key) => {
           return (
             <div key={key}>
