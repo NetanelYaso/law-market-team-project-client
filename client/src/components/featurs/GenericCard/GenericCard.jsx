@@ -1,8 +1,6 @@
 import "./GenericCard.css";
-import { Card, Container, Row, Col } from 'react-bootstrap';
-import { useState } from "react";
-import { useEffect } from "react";
-import { data } from "./data"
+import { Card, Container } from 'react-bootstrap';
+
 function GenericCard() {
   return (
     <Container className="generiCard_div">

@@ -18,11 +18,6 @@ function App() {
         <Footer />
       </BrowserRouter>
     </div>
-
-// function App() {
-//   return (
-//     <LawyerProfile/>
-   
   );
-};
+}
 export default App;

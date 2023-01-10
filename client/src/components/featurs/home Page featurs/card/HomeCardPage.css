@@ -1,31 +1,37 @@
-.card-for-home-page {
-  background-image: url("https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg");
+
+.imagStyle{
+  width: 150px;
+  height: 130px;
+  margin: 2px;
+}
+
+.imag{ 
+  background-image: url("https://mdbootstrap.com/img/new/slides/017.webp");
   background-position: center;
-  display: flex;
-  align-items: flex-end;
   height: 140px;
   width: 140px;
-  justify-content: center;
+  margin-bottom: 0px;
 }
 
-.card-for-home-page :hover{
-  scale: 1.03;
+.card-img-overlay{
+  margin-top: 80px;
 }
 
-.textInCard {
-  height: 50px;
-  width: 150px;
-  color: white;
-  background-color: rgba(12, 12, 12, 0.525);
-  display: flex;
-  justify-content: center;
+.myText{
+  display: flex; 
   align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.564);
+  height: 50px;
 }
 
 ul{
   list-style:none;
-  /* padding-right: 80px; */
   padding-left: 4rem;
+}
+
+.d-flex{
+  flex-wrap: wrap;
 }
 
 ul li::before{
@@ -34,7 +40,6 @@ ul li::before{
   font-weight: bold;
   display: inline-block; 
   width: 1rem;
-  /* padding-left: 4rem; */
 }
 
 .textInModle {
@@ -45,6 +50,7 @@ ul li::before{
   justify-content: center;
   align-items: center;
   font-size: x-large;
+  
 }
 
 .PopUpModel{
@@ -53,7 +59,5 @@ ul li::before{
   display: flex;
   align-items: flex-end;
   height: 140px;
-  /* width: 437px; */
-  justify-content: start;
-  padding-left: 40px;
+  justify-content:start;
 }

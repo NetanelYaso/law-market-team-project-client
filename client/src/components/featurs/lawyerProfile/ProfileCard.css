@@ -1,45 +1,32 @@
-.Card {
-  width: 300px;
-  height: 550px;
-  background-color: white;
+.card-container {
+height: 100%;
+  
+}
+.card {
+  border-radius: 15px;
+  
+}
+.MainPhotoProfile {
+  width: 180px;
   border-radius: 10px;
-  box-shadow: 0px 1px 10px 10x black;
-  border: 2px solid black;
+  z-index: 1;
+  border: 3px solid gray;
 }
-.profilePic {
-  border-radius: 50%;
+.coverImag{
+  background: #000;
 }
-a .upper-container {
-  height: 100px;
-  background-size: cover;
-  background-image: url("https://www.careeraddict.com/uploads/article/60648/choosing-career-types-of-lawyers.jpg");
+.profPic{
+  width:150px;
+  z-index: 1;
 }
-.image-container {
-  background: rgb(169, 167, 167);
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  padding: 5px;
-  transform: translate(95px, 45px);
+.nameTxt{
+  margin-top:110px
 }
-.image-container > img {
-  border-radius: 50%;
+.rating {
+  list-style:none;
+  color: #f8e825;
 }
-.lower-container {
-  margin-top: 60px;
-  height: 100px;
-  background: white;
-  text-align: center;
-}
-hr {
-  width: 85%;
-  border: 1px solid gray;
-}
-.details-list {
-  display: flex;
-  justify-content: space-around;
-}
-.butten-container {
-  display: flex;
-  justify-content: space-around;
+
+.list-group{
+  list-style: none;
 }
