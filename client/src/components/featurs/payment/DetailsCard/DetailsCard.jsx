@@ -20,15 +20,14 @@ import {
 
 const  DetailsCard = ()=> {
   const [basicActive, setBasicActive] = useState('tab1');
-  const [firstName, setFirstName] = useState('');
-
+  const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [birth, setBirth] = useState('');
   const [male, setMale] = useState(null);
   const [female, setFemale] = useState(null);
   const [message, setMessage] = useState('');
-
+  
   const handleBasicClick = (value: string) => {
     if (value === basicActive) {
       return;
@@ -36,6 +35,7 @@ const  DetailsCard = ()=> {
 
     setBasicActive(value);
   };
+
 
   return (
     <div className="details-card  justify-content-center mt-4">
@@ -86,7 +86,8 @@ const  DetailsCard = ()=> {
       <MDBBtn type='submit' className='mb-4' block >
         שמור
       </MDBBtn>
-    </form></MDBTabsPane>
+    </form>
+    </MDBTabsPane>
       </MDBTabsContent>
       </MDBCol>
       <MDBCol md="6" className="">
