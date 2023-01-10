@@ -1,26 +1,25 @@
-import "./App.css";
-// import Home from "./components/pages/Home/HomePageCard"
-import HomeCardPage from "./components/featurs/home Page featurs/card/main-cards/HomeCardPage";
-import ProfileCard from "./components/featurs/lawyerProfile/ProfileCard/ProfileCard";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from "./components/featurs/Header/Header";
-import Footer from "./components/featurs/Footer/Footer";
-import GenericCard from "./components/featurs/GenericCard/GenericCard";
-import LawyerProfile from "./components/pages/LawyerProfile/LawyerProfile";
-import BottomCard from "./components/featurs/home Page featurs/card/bottom-cards/BottomCard";
-import SubCategory from "./components/pages/SubCategory/SubCategory";
+import logo from './logo.svg';
+import './App.css';
+
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header />
-        <HomeCardPage />
-        <BottomCard/>
-        {/* <ProfileCard /> */}
-        <SubCategory/>
-        <Footer />
-      </BrowserRouter>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
+
 export default App;
