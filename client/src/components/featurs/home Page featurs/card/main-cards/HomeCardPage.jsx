@@ -1,5 +1,5 @@
 import "./HomeCardPage.css";
-import { departnentArray } from "../../../../services/departments";
+import { departnentArray } from "../../../../../services/departments";
 import React, { useState } from "react";
 import {
   MDBModal,
@@ -32,15 +32,15 @@ const someFunc = (key)=>{
         {departnentArray.map((item, key) => {
           return (
             <div key={key}>
-              <MDBCard className="text-white imagStyle hover-overlay align-items-center ">
+              <MDBCard className="text-white imagStyle hover-overlay align-items-center bg-red">
                 <MDBCardImage
                   className="imag"
                   overlay
                   src="https://mdbootstrap.com/img/new/slides/017.webp"
                   alt="..."
                 />
-                <div onClick={()=>someFunc(key)}>
-                  <MDBCardOverlay className="boxTitel myText ">
+                <div>
+                  <MDBCardOverlay className="boxTitel myText "onClick={()=>someFunc(key)}>
                     <MDBCardTitle className="textInCard " >
                       {item.name}
                     </MDBCardTitle>
