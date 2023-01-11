@@ -21,7 +21,7 @@ import {
   MDBModalFooter,
 
 } from 'mdb-react-ui-kit';
-import ConfirmPayment from './../confirmPayment/ConfirmPayment';
+import ConfirmPayment from './../ConfirmPayment/ConfirmPayment';
 import { useNavigate } from "react-router-dom";
 
 
@@ -48,8 +48,8 @@ const PaymentCard = ()=> {
     <div className="payment-card square border border-3">
         <MDBContainer className=' w-100 '>
       <MDBTabs className='mb-4  d-flex justify-content-center text-center row-cols-3'>
-        <MDBTabsItem>
-          <MDBTabsLink onClick={() => handleBasicClick('tab1')} active={basicActive === 'tab1'}>
+        <MDBTabsItem className="">
+          <MDBTabsLink className="" onClick={() => handleBasicClick('tab1')} active={basicActive === 'tab1'}>
           <p className=''>שירות בסיס</p>
           <p className=''>$100</p>
           </MDBTabsLink>
@@ -68,13 +68,13 @@ const PaymentCard = ()=> {
         </MDBTabsItem>
       </MDBTabs>
       <MDBTabsContent className='d-flex justify-content-center w-100 '>
-        <MDBTabsPane show={basicActive === 'tab1'} className="text-sm-start">
+        <MDBTabsPane show={basicActive === 'tab1'} className="text-md-center text-lg-end">
         <p className='fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<span id="one"> $100 </span></p>
-        <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center">
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />פיצויי פיטורין</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />דמי הבראה</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />הלנת שכר</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />שעות נוספות</MDBListGroupItem>
+        <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center small">
+      <MDBListGroupItem noBorders>פיצויי פיטורין</MDBListGroupItem>
+      <MDBListGroupItem noBorders>דמי הבראה</MDBListGroupItem>
+      <MDBListGroupItem noBorders>הלנת שכר</MDBListGroupItem>
+      <MDBListGroupItem noBorders>שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
         <MDBBtn className=" mx-auto" center rounded onClick={() => setScrollableModal(!scrollableModal)}>
@@ -82,13 +82,13 @@ const PaymentCard = ()=> {
       </MDBBtn>
       </div>
         </MDBTabsPane>
-        <MDBTabsPane show={basicActive === 'tab2'}>
+        <MDBTabsPane show={basicActive === 'tab2'} className=" text-md-center text-lg-end">
         <p className=' fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<span id="one"> $175 </span></p>
-        <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center">
-        <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />פיצויי פיטורין</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />דמי הבראה</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />הלנת שכר</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />שעות נוספות</MDBListGroupItem>
+        <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center small">
+        <MDBListGroupItem noBorders>פיצויי פיטורין</MDBListGroupItem>
+      <MDBListGroupItem noBorders>דמי הבראה</MDBListGroupItem>
+      <MDBListGroupItem noBorders>הלנת שכר</MDBListGroupItem>
+      <MDBListGroupItem noBorders>שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
         <MDBBtn className=" mx-auto" center rounded onClick={() => setScrollableModal(!scrollableModal)}>
@@ -96,13 +96,13 @@ const PaymentCard = ()=> {
       </MDBBtn>
       </div>
         </MDBTabsPane>
-        <MDBTabsPane show={basicActive === 'tab3'}>
+        <MDBTabsPane show={basicActive === 'tab3'} className=" text-md-center text-lg-end">
         <p className=' fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<span id="one"> $250 </span></p>
-        <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center">
-        <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />פיצויי פיטורין</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />דמי הבראה</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />הלנת שכר</MDBListGroupItem>
-      <MDBListGroupItem noBorders><MDBIcon icon='check-circle' className='me-2 text-primary' />שעות נוספות</MDBListGroupItem>
+        <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center small">
+        <MDBListGroupItem noBorders>פיצויי פיטורין</MDBListGroupItem>
+      <MDBListGroupItem noBorders>דמי הבראה</MDBListGroupItem>
+      <MDBListGroupItem noBorders>הלנת שכר</MDBListGroupItem>
+      <MDBListGroupItem noBorders>שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
         <MDBBtn className=" mx-auto" center rounded onClick={() => setScrollableModal(!scrollableModal)}>
@@ -111,16 +111,16 @@ const PaymentCard = ()=> {
       </div>
         </MDBTabsPane>
       </MDBTabsContent>
-      <MDBModal show={scrollableModal} setShow={setScrollableModal} tabIndex='-1'>
+      <MDBModal className="payment-modal" show={scrollableModal} setShow={setScrollableModal} tabIndex='-1'>
         <MDBModalDialog scrollable>
           <MDBModalContent>
             <MDBModalHeader>
-              <MDBModalTitle>דף תשלום</MDBModalTitle>
               <MDBBtn
                 className='btn-close'
                 color='none'
                 onClick={() => setScrollableModal(!scrollableModal)}
               ></MDBBtn>
+              <MDBModalTitle>דף תשלום</MDBModalTitle>
             </MDBModalHeader>
             <MDBModalBody>
               <ConfirmPayment price={`${price}`}/>

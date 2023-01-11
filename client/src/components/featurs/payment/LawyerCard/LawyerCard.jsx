@@ -19,13 +19,15 @@ const LawyerCard = ()=> {
         <MDBCol md="4" className="">
       <MDBCardImage className='rounded-circle' width='140' height='140' src="https://i.pinimg.com/originals/b7/49/47/b74947543e3a30e0b6b2522033d0562b.jpg" alt="" />
       </MDBCol>
-      <MDBCol className=" text-lg-start" height="" md="8">
-      <h5 className=" fs-4">jasmine dina</h5>
-      <span className="">Lawyer on prenuptial agreements</span>
-      <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente officia alias.</p>
-      <MDBListGroup style={{ minWidth: '18rem' }} light className=" pe-sm-0 pe-lg-5">
-      <MDBListGroupItem noBorders className="me-5"><MDBIcon icon='check-circle' className='me-2 text-primary' />Severance pay</MDBListGroupItem>
-      <MDBListGroupItem noBorders className="me-5"><MDBIcon icon='check-circle' className='me-2 text-primary' />convalescence pay</MDBListGroupItem>
+      <MDBCol className="text-lg-end" height="" md="8">
+      <h5 className=" fs-4">דינה יסמין</h5>
+      <span className="">עורך דין בנושא הסכמי ממון</span>
+      <p className="">הסכם ממון הינו הסכם בענייני רכוש, בין בני זוג נשואים, לא נשואים (ידועים בציבור) או בני זוג העומדים להינשא, בו מוסדרים ביניהם כל ענייני הרכוש והממון, בהתאם להעדפותיהם האישיות..</p>
+      </MDBCol>
+      <MDBCol>
+      <MDBListGroup style={{ minWidth: '18rem' }} light className=" pe-sm-0 text-lg-end text-md-end ps-5">
+      <MDBListGroupItem noBorders className="me-5">פיצוי פיטורין</MDBListGroupItem>
+      <MDBListGroupItem noBorders className="me-5">דמי תברואה </MDBListGroupItem>
         </MDBListGroup>
       </MDBCol>
       </MDBRow>
