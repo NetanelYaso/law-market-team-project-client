@@ -14,10 +14,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <HomeCardPage />
-        <BottomCard/>
+        {/* <HomeCardPage /> */}
+        {/* <BottomCard/> */}
         {/* <ProfileCard /> */}
-        {/* <SubCategory/> */}
+        <SubCategory/>
         <Footer />
       </BrowserRouter>
     </div>

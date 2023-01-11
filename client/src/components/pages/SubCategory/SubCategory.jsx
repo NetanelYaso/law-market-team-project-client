@@ -21,7 +21,7 @@ function SubCategory() {
       </Container>
       <Container>
         <Row>
-          <BottomCard />
+          {/* <BottomCard /> */}
         </Row>
       </Container>
     </>
