@@ -18,7 +18,7 @@ import {
 import { useState } from "react";
 import { useEffect } from "react";
 // const GOOGLE_MAPS_API_KEY = 'AIzaSyBuymyezM5emJbmNyCmLLr3bLL7U3oMIu0'
-// const center = { lat: 31.949181, lng: 34.893261 };
+
 function Map({ address }) {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: "AIzaSyBuymyezM5emJbmNyCmLLr3bLL7U3oMIu0",
@@ -51,7 +51,6 @@ function Map({ address }) {
   }, []);
   async function calculateRoute(userPosition) {
     if (!userPosition) return;
-    console.log(userPosition, center);
     const directionService = new window.google.maps.DirectionsService();
     const result = await directionService.route({
       origin: userPosition,
@@ -63,13 +62,13 @@ function Map({ address }) {
     setDistance(result.routes[0].legs[0].distance.text);
     setDuration(result.routes[0].legs[0].duration.text);
   }
-  const getPosition = () => {
+  const getUserPosition = () => {
     return new Promise((res, rej) => {
       navigator.geolocation.getCurrentPosition(res, rej);
     });
   };
   const getCurrentLocation = async () => {
-    const position = await getPosition();
+    const position = await getUserPosition();
     return { lat: position.coords.latitude, lng: position.coords.longitude };
   };
   return (
