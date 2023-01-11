@@ -1,20 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-const basicAPI = "http://localhost:8080/departments";
+const basicAPI = "http://localhost:8080/users";
 
-const getAll =  createAsyncThunk( "departments/getAll",() => {
-  return fetch(`${basicAPI}`)
-    .then((res) => res.json())
-    .catch((error) => {
-      console.log(error);
-    });
-});
-
-const update = createAsyncThunk("departments/update",(department) => {
-  return fetch(`${basicAPI}/byId/${department.id}/update`, {
+const update = createAsyncThunk("users/update",(user) => {
+  return fetch(`${basicAPI}/byId/${user.id}/update`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: { department },
+    body: { user },
   })
     .then((res) => res.json())
     .then((res) => console.log(res))
@@ -23,11 +15,11 @@ const update = createAsyncThunk("departments/update",(department) => {
     });
 })
 
-const deleteObj = createAsyncThunk("departments/deleteObj",(department) => {
+const deleteObj = createAsyncThunk("users/deleteObj",(user) => {
   return fetch(`${basicAPI}/delete`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: { department },
+    body: { user },
   })
     .then((res) => res.json())
     .then((res) => console.log(res))
@@ -36,8 +28,8 @@ const deleteObj = createAsyncThunk("departments/deleteObj",(department) => {
     });
 });
 
-const getById = createAsyncThunk("departments/getById",(department) => {
-  return fetch(`${basicAPI}/byId/${department}`)
+const getById = createAsyncThunk("users/getById",(user) => {
+  return fetch(`${basicAPI}/byId/${user}`)
     .then((res) => res.json())
     .then((res) => console.log(res))
     .catch((error) => {
@@ -45,16 +37,16 @@ const getById = createAsyncThunk("departments/getById",(department) => {
     });
 });
 
-const create = createAsyncThunk("departments/create",async (department) => {
-    return await fetch(`${basicAPI}/create`, {
+const logInOrRegister = createAsyncThunk("users/logInOrRegister",(user) => {
+    return fetch(`${basicAPI}/logIn__rgister`, {
       method: 'POST',
       mode: 'cors',
       cache: 'default',
       headers:{"Content-Type": "application/json"},
-      body: JSON.stringify(department)
+      body: JSON.stringify(user)
     })
       .then((res) => res.json())
       .then((res) => console.log(res, "success"));
   } );
 
-export { getAll, update, deleteObj, getById, create };
+export { update, deleteObj, getById, logInOrRegister };

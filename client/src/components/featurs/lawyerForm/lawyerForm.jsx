@@ -11,6 +11,9 @@ import { create } from "../../services/lawyersServices";
 function LawyerForm() {
   const [avatar, setAvatar] = useState("");
   const [name, setName] = useState("");
+  const [location, setLocation] = useState("");
+  const [workTime, setWorkTime] = useState("");
+  const [responseTime, setResponseTime] = useState("");
   const [experience, setExperience] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -23,6 +26,9 @@ function LawyerForm() {
     phone: phone,
     email: email,
     departments: departments,
+    location:location,
+    workTime:workTime,
+    responseTime:responseTime
   };
 
   const TransformFileData = (file) => {
@@ -51,6 +57,24 @@ function LawyerForm() {
             id="typeText"
             type="text"
             onChange={(e) => setName(e.target.value)}
+          />
+          <MDBInput
+            label="lawyer location"
+            id="typeText"
+            type="text"
+            onChange={(e) => setLocation(e.target.value)}
+          />
+          <MDBInput
+            label="lawyer work time"
+            id="typeText"
+            type="text"
+            onChange={(e) => setWorkTime(e.target.value)}
+          />
+          <MDBInput
+            label="lawyer response time"
+            id="typeText"
+            type="text"
+            onChange={(e) => setResponseTime(e.target.value)}
           />
           <MDBInput
             label="Email"

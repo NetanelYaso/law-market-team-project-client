@@ -1,6 +1,7 @@
 import "./departmentForm.css";
-import React,{useState} from "react";
+import React, { useState } from "react";
 import {
+  MDBTextArea,
   MDBContainer,
   MDBInput,
   MDBFile,
@@ -8,19 +9,30 @@ import {
   MDBBtn,
 } from "mdb-react-ui-kit";
 import { create } from "../../services/departmentsServices";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
 
 function DepartmentForm() {
-
+  
   const [coverImage, setCoverImage] = useState("");
   const [name, setName] = useState("");
-  const [categories, setCategories] = useState([]);
+  const [description, setDescription] = useState("");
+  const [subDepartments, setSubDepartments] = useState([]);
   const [lawyers, setLawyers] = useState([]);
   const [active, setActive] = useState(true);
+  // const [loading, setLoading]= useState(false)
+
+  let loading=useSelector((state)=>state.department.value)
+  const dispatch= useDispatch()
+
+  // useEffect(()=>{
+  //   console.log(loading);
+  // },[loading])
 
   const department = {
     name: name,
     coverImage: coverImage,
-    categories: categories,
+    subDepartments: { name: subDepartments, description: description },
     active: active,
     // lawyers: lawyers,
   };
@@ -35,6 +47,7 @@ function DepartmentForm() {
     } else {
       setCoverImage("");
     }
+
   };
 
   return (
@@ -42,8 +55,8 @@ function DepartmentForm() {
       <MDBContainer className="w-75">
         <form
           onSubmit={(e) => {
-            e.preventDefault()
-            create(department);
+            e.preventDefault();
+            dispatch(create(department));
           }}
         >
           <MDBInput
@@ -51,13 +64,6 @@ function DepartmentForm() {
             id="typeText"
             type="text"
             onChange={(e) => setName(e.target.value)}
-          />
-          <MDBInput
-            label="sub category"
-            id="typeText"
-            className="categories"
-            type="text"
-            onChange={(e) => setCategories([...categories, e.target.value])}
           />
           <MDBFile
             label="cover pic"
@@ -70,11 +76,28 @@ function DepartmentForm() {
             label=" does the department is active or not?"
             onChange={(e) => setActive(!active)}
           />
+          <MDBInput
+            label="sub category"
+            id="typeText"
+            className="subDepartments"
+            type="text"
+            onChange={
+              (e) => (setSubDepartments(e.target.value))
+              // (e) => (subDepartments[0] = e.target.value)
+              // setSubDepartments([...subDepartments, e.target.value])
+            }
+          />
+          <MDBTextArea
+            label="description for sub catrgory"
+            id="textAreaExample"
+            rows={4}
+            onChange={(e) => setDescription(e.target.value)}
+          />
           <MDBBtn>UPLOAD</MDBBtn>
         </form>
       </MDBContainer>
-      </div>
+    </div>
   );
-};
+}
 
 export default DepartmentForm;
