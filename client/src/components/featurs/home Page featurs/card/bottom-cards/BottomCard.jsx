@@ -1,5 +1,5 @@
 import React from "react";
-import "./BottomCard.css";
+import "./bottomCard.css";
 import {
   MDBCard,
   MDBCardBody,
@@ -17,19 +17,19 @@ export default function BottomCard() {
   return (
     <div>
       <div><h2 className=" d-flex justify-content-center">עורכי דין שלנו</h2></div>
-      <div className="d-flex row-cols-md-4 cardRaper justify-content-center ">
-      <MDBCol xl={6} className="mb-4 singalCard">
+      <div className="cardRaper d-flex  justify-content-center ">
+      <MDBCol xl={4} md={4} className="mb-4 singalCard">
         <MDBCardBody className="singalCard">
-          <div className="d-flex justify-content-between align-items-center   ">
+          <div className="d-flex justify-content-between align-items-center row  ">
             <div className="d-flex align-items-center col-12 ">
               <img
-                src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                src="https://mdbootstrap.com/img/new/avatars/7.jpg"
                 alt=""
                 style={{ width: "55px", height: "55px" }}
                 className="rounded-circle"
               />
               <div className="ms-3">
-                <p className="fw-bold mb-1">דן אברהמי</p>
+                <p className="fw-bold mb-1">דנה בננה</p>
                 <p className="text-muted mb-0"> עו"ד בענייני תעבורה</p>
                 <p className="text-muted mb-0">עלות השירות: 100$</p>
               </div>
@@ -48,7 +48,7 @@ export default function BottomCard() {
             Message <MDBIcon fas icon="envelope" />
           </MDBBtn>
       </MDBCol>
-      <MDBCol xl={6} className="mb-4">
+      <MDBCol xl={4} md={4} className="mb-4">
         <MDBCardBody className="singalCard">
           <div className="d-flex justify-content-between align-items-center row">
             <div className="d-flex align-items-center">
@@ -74,12 +74,12 @@ export default function BottomCard() {
             </div>
           </div>
         </MDBCardBody>
-          <MDBBtn color="link" rippleColor="primary" className="text-reset m-0">
+          <MDBBtn color="link" rippleColor="primary" className="text-reset ">
             Message <MDBIcon fas icon="envelope" />
           </MDBBtn>
 
       </MDBCol>
-     <MDBCol xl={6} className="mb-4 singalCard">
+     <MDBCol xl={4} md={4} className="mb-4 singalCard">
         <MDBCardBody className="singalCard">
           <div className="d-flex justify-content-between align-items-center row  ">
             <div className="d-flex align-items-center col-12 ">
