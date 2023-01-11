@@ -1,5 +1,5 @@
 import React from "react";
-import "./BottomCard.css";
+import "./bottomCard.css";
 import {
   MDBCard,
   MDBCardBody,
