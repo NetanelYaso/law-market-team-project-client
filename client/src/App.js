@@ -7,17 +7,21 @@ import Header from "./components/featurs/Header/Header";
 import Footer from "./components/featurs/Footer/Footer";
 import GenericCard from "./components/featurs/GenericCard/GenericCard";
 import LawyerProfile from "./components/pages/LawyerProfile/LawyerProfile";
-import BottomCard from "./components/featurs/home Page featurs/card/bottom-cards/BottomCard";
+// import BottomCard from "./components/featurs/home Page featurs/card/bottom-cards/BottomCard";
 import SubCategory from "./components/pages/SubCategory/SubCategory";
+import DetailsCard from './components/featurs/payment/DetailsCard/index';
 function App() {
+  // console.log(JSON.parse(localStorage.getItem("details"))) 
+  // console.log(JSON.parse(localStorage.getItem("inputs"))) 
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
         {/* <HomeCardPage /> */}
+        <DetailsCard/>
         {/* <BottomCard/> */}
         {/* <ProfileCard /> */}
-        <SubCategory/>
+        {/* <SubCategory/> */}
         <Footer />
       </BrowserRouter>
     </div>

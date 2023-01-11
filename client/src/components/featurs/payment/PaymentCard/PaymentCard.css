@@ -1,0 +1,8 @@
+.payment-card{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    direction: rtl;
+}
+
+.btn-pay{
+    background-color: #08b9e3 !important;
+}
