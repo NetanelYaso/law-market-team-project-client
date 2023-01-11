@@ -1,0 +1,14 @@
+/* .details-col{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+.details-card{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.details-span{
+    direction: rtl;
+}
+.details-p{
+    direction: rtl;
+    
+}
