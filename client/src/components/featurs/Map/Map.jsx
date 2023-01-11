@@ -16,20 +16,39 @@ import {
   DirectionsRenderer,
 } from "@react-google-maps/api";
 import { useState } from "react";
+import { useEffect } from "react";
 // const GOOGLE_MAPS_API_KEY = 'AIzaSyBuymyezM5emJbmNyCmLLr3bLL7U3oMIu0'
-const center = { lat: 31.949181, lng: 34.893261 };
-function Map() {
+// const center = { lat: 31.949181, lng: 34.893261 };
+function Map({ address }) {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: "AIzaSyBuymyezM5emJbmNyCmLLr3bLL7U3oMIu0",
   });
+  async function getGeocodeCoords(address) {
+    const result = await geocodingLocationConvert(address);
+    return {
+      lat: result.results[0].geometry.location.lat(),
+      lng: result.results[0].geometry.location.lng(),
+    };
+  }
+  function geocodingLocationConvert(address) {
+    return new window.google.maps.Geocoder().geocode({ address });
+  }
   const [map, setMap] = useState(null);
+  const [center, setCenter] = useState(null);
   const [infoWindowVisible, setInfoWindowVisible] = useState(false);
   const [directionResponse, setDirectionResponse] = useState(null);
   const [duration, setDuration] = useState("");
   const [distance, setDistance] = useState("");
-  if (!isLoaded) {
-    return <div>Map cannot be loaded right now</div>;
-  }
+  useEffect(() => {
+    async function startMap() {
+      const temp = await getGeocodeCoords(address);
+      setCenter(temp);
+      if (!isLoaded) {
+        return <div>Map cannot be loaded right now</div>;
+      }
+    }
+    startMap();
+  }, []);
   async function calculateRoute(userPosition) {
     if (!userPosition) return;
     console.log(userPosition, center);

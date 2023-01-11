@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Header />
         {/* <ProfileCard /> */}
-        <Map />
+        <Map address="ירושלים" />
         <Footer />
       </BrowserRouter>
     </div>
