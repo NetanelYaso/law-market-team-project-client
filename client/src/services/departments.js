@@ -10,5 +10,4 @@ export const departnentArray = [
     {name:"פלילי",age:7},
     {name:"הנהלת חשבונות ",age:8},
     {name:"קריאטיב",age:9},
-
 ]
