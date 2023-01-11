@@ -1,6 +1,6 @@
 import "./App.css";
 // import Home from "./components/pages/Home/HomePageCard"
-import HomeCardPage from "./components/featurs/home Page featurs/card/HomeCardPage";
+import HomeCardPage from "./components/featurs/home Page featurs/card/main-cards/HomeCardPage";
 import ProfileCard from "./components/featurs/lawyerProfile/ProfileCard/ProfileCard";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/featurs/Header/Header";
