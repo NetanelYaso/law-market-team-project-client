@@ -77,7 +77,7 @@ const PaymentCard = ()=> {
       <MDBListGroupItem noBorders>שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
-        <MDBBtn className=" mx-auto" center rounded onClick={() => setScrollableModal(!scrollableModal)}>
+        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center  onClick={() => setScrollableModal(!scrollableModal)}>
         המשך לתשלום
       </MDBBtn>
       </div>
@@ -91,7 +91,7 @@ const PaymentCard = ()=> {
       <MDBListGroupItem noBorders>שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
-        <MDBBtn className=" mx-auto" center rounded onClick={() => setScrollableModal(!scrollableModal)}>
+        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center  onClick={() => setScrollableModal(!scrollableModal)}>
         המשך לתשלום
       </MDBBtn>
       </div>
@@ -105,7 +105,7 @@ const PaymentCard = ()=> {
       <MDBListGroupItem noBorders>שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
-        <MDBBtn className=" mx-auto" center rounded onClick={() => setScrollableModal(!scrollableModal)}>
+        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center  onClick={() => setScrollableModal(!scrollableModal)}>
         המשך לתשלום
       </MDBBtn>
       </div>

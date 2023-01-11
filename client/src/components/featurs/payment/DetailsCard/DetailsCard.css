@@ -9,6 +9,8 @@
     direction: rtl;
 }
 .details-p{
-    direction: rtl;
-    
+    direction: rtl; 
+}
+.btn-save{
+    background-color:  #08b9e3 !important;
 }

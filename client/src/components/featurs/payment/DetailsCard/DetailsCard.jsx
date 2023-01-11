@@ -159,7 +159,7 @@ const handleInputs =()=>{
                     required
                     onChange={(e) => changeDetails(e)}
                   />
-                  <MDBBtn onClick={()=>handleSubmit()} type="submit" className="mb-4 m" block>
+                  <MDBBtn onClick={()=>handleSubmit()} type="submit" className="mb-4 btn-save" block>
                     שמור
                   </MDBBtn>
                 </form>
@@ -231,7 +231,7 @@ const handleInputs =()=>{
                     required
                     onChange={(e) => changeInputs(e)}
                   />
-                  <MDBBtn onClick={()=>handleInputs()} type="submit" className="mb-4" block>
+                  <MDBBtn onClick={()=>handleInputs()} type="submit" className="mb-4 btn-save" block>
                     שמור
                   </MDBBtn>
                 </form>
