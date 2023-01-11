@@ -9,15 +9,17 @@ import GenericCard from "./components/featurs/GenericCard/GenericCard";
 import LawyerProfile from "./components/pages/LawyerProfile/LawyerProfile";
 import BottomCard from "./components/featurs/home Page featurs/card/bottom-cards/BottomCard";
 import SubCategory from "./components/pages/SubCategory/SubCategory";
+import LawyersSelection from "./components/pages/LawyersSelection/LawyersSelection";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
-        <HomeCardPage />
-        <BottomCard/>
+        {/* <HomeCardPage /> */}
+        {/* <BottomCard/> */}
         {/* <ProfileCard /> */}
-        <SubCategory/>
+        {/* <SubCategory/> */}
+        <LawyersSelection />
         <Footer />
       </BrowserRouter>
     </div>
