@@ -15,9 +15,7 @@ import {
   InfoWindowF,
   DirectionsRenderer,
 } from "@react-google-maps/api";
-import { useState } from "react";
-import { useEffect } from "react";
-// const GOOGLE_MAPS_API_KEY = 'AIzaSyBuymyezM5emJbmNyCmLLr3bLL7U3oMIu0'
+import { useState, useEffect } from "react";
 
 function Map({ address }) {
   const { isLoaded } = useJsApiLoader({
