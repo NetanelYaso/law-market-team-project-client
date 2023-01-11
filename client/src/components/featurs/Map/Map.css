@@ -1,0 +1,10 @@
+#map_container {
+  height: 500px;
+}
+#on_map_elements {
+  z-index: 1;
+  transform: translateX(-50%);
+}
+#infowindow_con {
+  max-width: 60%;
+}
