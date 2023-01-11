@@ -7,7 +7,7 @@ import Header from "./components/featurs/Header/Header";
 import Footer from "./components/featurs/Footer/Footer";
 import GenericCard from "./components/featurs/GenericCard/GenericCard";
 import LawyerProfile from "./components/pages/LawyerProfile/LawyerProfile";
-import BottomCard from "./components/featurs/home Page featurs/card/bottom-cards/BottomCard";
+// import BottomCard from "./components/featurs/home Page featurs/card/bottom-cards/BottomCard";
 import SubCategory from "./components/pages/SubCategory/SubCategory";
 
 function App() {
@@ -16,8 +16,8 @@ function App() {
       <BrowserRouter>
         <Header />
         {/* <HomeCardPage /> */}
-        {/* <ProfileCard /> */}
-        <SubCategory/>
+        <LawyerProfile />
+        {/* <SubCategory/> */}
         <Footer />
       </BrowserRouter>
     </div>
