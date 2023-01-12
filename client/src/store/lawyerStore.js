@@ -2,8 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 import { getAll, update, deleteObj, getById, create } from "../components/services/lawyersServices"
 
 const initialState = {
-    value: false,
-  };
+    isLoading:false,
+    error:"",
+    allLawyers:[]  };
   
   export const lawyersSlice = createSlice({
     name: "lawyers",
