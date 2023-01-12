@@ -6,17 +6,21 @@ import GenericCard from "./components/featurs/GenericCard/GenericCard";
 import LawyerProfile from "./components/pages/LawyerProfile/LawyerProfile";
 import BottomCard from "./components/featurs/home Page featurs/card/bottom-cards/BottomCard";
 import SubCategory from "./components/pages/SubCategory/SubCategory";
+import Login from "./components/pages/Login/Login";
+import SignUp from "./components/pages/SignUp/SignUp";
 function App() {
 
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
-        <HomeCardPage />
-        <BottomCard/>
+        {/* <HomeCardPage /> */}
+        {/* <BottomCard/> */}
+        <SignUp/>
+        <Login/>
         {/* <ProfileCard /> */}
-        <SubCategory/>
-        <Footer />
+        {/* <SubCategory/> */}
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

@@ -1,6 +1,6 @@
 export const data = [
     {
-<<<<<<< HEAD
+
         name: "real estate",
         discription: ["sdafg", "dsvfb", "dsvfb"],
         id:1

@@ -1,20 +1,17 @@
 import React, { useState } from "react";
-import "../Login/login.css";
-import GoogleButton from "react-google-button";
 import { useUserAuth } from "../../../context/googleAuth";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { logInOrRegister } from "../../services/usersServices";
 import { useDispatch } from "react-redux";
 
-const Login = () => {
+import { Link } from "react-router-dom";
+import GoogleButton from "react-google-button";
+
+const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { logIn, googleSignIn } = useUserAuth();
-  const navigate = useNavigate();
   const dispatch = useDispatch();
-
+  const { signUpGoogle } = useUserAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,8 +30,8 @@ const Login = () => {
   const handlegoogleIn = async (e) => {
     e.preventDefault();
     try {
-      await googleSignIn();
-      alert("login with google success")
+      await signUpGoogle();
+      alert('sign up with google success')
       // navigate("/Home");
     } catch (err) {
       setError(err.message);
@@ -52,7 +49,7 @@ const Login = () => {
             />
           </div>
           <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-            <h3 className="text-center fs-2">התחברות</h3>
+            <h3 className="text-center">signUp</h3>
             <form onSubmit={handleSubmit}>
               <div className="form mb-4">
                 <input
@@ -75,19 +72,21 @@ const Login = () => {
               </div>
 
               <button type="submit" className="btn logInBtn">
-                Login
+                SignUp
               </button>
-              <hr />
 
               <div>
+                <h4>or</h4>
                 <GoogleButton
                   className="g-btn w-100"
                   type="dark"
                   onClick={handlegoogleIn}
                 />
               </div>
+
+              <hr />
               <div className="p-4 box mt-3 text-center">
-                Don't have an account? <Link to="/SignUp">Sign Up</Link>
+                Already have an account? <Link to="/LogIn">Log In</Link>
               </div>
 
               {/* <div className="divider d-flex align-items-center my-4">
@@ -106,4 +105,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
