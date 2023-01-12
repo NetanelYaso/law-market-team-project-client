@@ -1,5 +1,5 @@
 import "./GenericCard.css";
-import { Card, Container } from 'react-bootstrap';
+import { Card, Container } from "react-bootstrap";
 
 function GenericCard({ name, discription }) {
 
