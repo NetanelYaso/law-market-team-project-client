@@ -3,28 +3,32 @@ import { useUserAuth } from "../../../context/googleAuth";
 import { logInOrRegister } from "../../services/usersServices";
 import { useDispatch } from "react-redux";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GoogleButton from "react-google-button";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
   const [error, setError] = useState("");
   const dispatch = useDispatch();
   const { signUpGoogle } = useUserAuth();
+  const navigate = useNavigate()
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await dispatch(
         logInOrRegister({ email, password })
-
-        // navigate("/")
       );
+      navigate("/")
       setEmail(" ");
       setPassword(" ");
     } catch (err) {
       setError(err.message);
+      navigate('/signUp')
     }
   };
   const handlegoogleIn = async (e) => {
@@ -60,6 +64,26 @@ const SignUp = () => {
                   className="form-control form-control-lg"
                 />
               </div>
+              <div className="form mb-4">
+                <input
+                  type="fullName"
+                  id="formFullName"
+                  placeholder="enter your full name"
+                  onChange={(e) => setFullName(e.target.value)}
+                  className="form-control form-control-lg"
+                />
+              </div>
+              <div className="form mb-4">
+                <input
+                  type="phoneNumber"
+                  id="formPhoneNumber"
+                  placeholder="enter your phoneNumber"
+                  onChange={(e) => setPhone(e.target.value)}
+                  className="form-control form-control-lg"
+                />
+              </div>
+
+              
 
               <div className="form mb-4">
                 <input

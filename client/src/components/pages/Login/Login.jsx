@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { logInOrRegister } from "../../services/usersServices";
 import { useDispatch } from "react-redux";
+import { Alert } from "react-bootstrap";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -22,12 +24,15 @@ const Login = () => {
       await dispatch(
         logInOrRegister({ email, password })
 
-        // navigate("/")
+   
       );
+      navigate("/")
       setEmail(" ");
       setPassword(" ");
     } catch (err) {
       setError(err.message);
+      navigate("/login")
+
     }
   };
   const handlegoogleIn = async (e) => {
@@ -35,9 +40,12 @@ const Login = () => {
     try {
       await googleSignIn();
       alert("login with google success")
-      // navigate("/Home");
+      navigate("/");
     } catch (err) {
       setError(err.message);
+      
+      navigate("/login")
+
     }
   };
   return (
