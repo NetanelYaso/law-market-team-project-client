@@ -97,15 +97,6 @@ const Login = () => {
               <div className="p-4 box mt-3 text-center">
                 Don't have an account? <Link to="/SignUp">Sign Up</Link>
               </div>
-
-              {/* <div className="divider d-flex align-items-center my-4">
-            <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-          </div> */}
-
-              {/* <a className="btn btn-primary btn-lg btn-block"  href="#!"
-            role="button">
-            <i className="fab fa-facebook-f me-2"></i>Continue with Facebook
-          </a> */}
             </form>
           </div>
         </div>
