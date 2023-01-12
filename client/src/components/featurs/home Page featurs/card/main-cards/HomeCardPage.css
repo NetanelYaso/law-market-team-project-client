@@ -1,11 +1,10 @@
-
-.imagStyle{
+.imagStyle {
   width: 200px;
   height: 180px;
   margin: 2px;
 }
 
-.imag{ 
+.imag {
   background-image: url("https://mdbootstrap.com/img/new/slides/017.webp");
   background-position: center;
   height: 200px;
@@ -13,32 +12,32 @@
   margin-bottom: 0px;
 }
 
-.card-img-overlay{
+.card-img-overlay {
   margin-top: 130px;
 }
 
-.myText{
-  display: flex; 
+.myText {
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.564);
   height: 50px;
 }
 
-ul{
-  list-style:none;
+ul {
+  list-style: none;
   padding-left: 4rem;
 }
 
-.d-flex{
+.d-flex {
   flex-wrap: wrap;
 }
 
-ul li::before{
+ul li::before {
   content: "\2022";
   color: rgb(119, 196, 228);
   font-weight: bold;
-  display: inline-block; 
+  display: inline-block;
   width: 1rem;
 }
 
@@ -50,14 +49,14 @@ ul li::before{
   justify-content: center;
   align-items: center;
   font-size: x-large;
-  
+
 }
 
-.PopUpModel{
+.PopUpModel {
   background-image: url("https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg");
   background-position: center;
   display: flex;
   align-items: flex-end;
   height: 140px;
-  justify-content:start;
+  justify-content: start;
 }
