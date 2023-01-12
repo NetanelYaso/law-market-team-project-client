@@ -1,15 +1,19 @@
 import "./SubCategory.css";
-import React from "react";
 import GenericCard from "../../featurs/GenericCard/GenericCard";
 import { Row, Col, Container } from 'react-bootstrap';
 import { data } from "../../featurs/GenericCard/data"
 import BottomCard from "../../featurs/home Page featurs/card/bottom-cards/BottomCard";
+import { useDispatch, useSelector } from "react-redux"
 
 function SubCategory() {
+  const dispatch = useDispatch()
+  // const subCategory = useSelector(state => state.subCategory)
+  // const {loading,error } = subCategory
+
   return (
     <>
-    <div className="d-flex justify-content-center mt-3">
-    </div>
+      <div className="d-flex justify-content-center mt-3">
+      </div>
       <Container className="sub_category">
         <Row>
           {data.map((item) => (
