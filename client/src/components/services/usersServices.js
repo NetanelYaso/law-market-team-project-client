@@ -38,7 +38,8 @@ const getById = createAsyncThunk("users/getById",(user) => {
 });
 
 const logInOrRegister = createAsyncThunk("users/logInOrRegister",(user) => {
-    return fetch(`${basicAPI}/logIn__rgister`, {
+   console.log(user);
+  return fetch(`${basicAPI}/logIn__register`, {
       method: 'POST',
       mode: 'cors',
       cache: 'default',
@@ -46,7 +47,9 @@ const logInOrRegister = createAsyncThunk("users/logInOrRegister",(user) => {
       body: JSON.stringify(user)
     })
       .then((res) => res.json())
-      .then((res) => console.log(res, "success"));
+      .then((res) => console.log(res, "success"))
+      .catch((res) => console.log(res, "false"));
+
   } );
 
 export { update, deleteObj, getById, logInOrRegister };

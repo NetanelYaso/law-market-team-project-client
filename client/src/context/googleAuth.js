@@ -16,10 +16,10 @@ export function UserAuthProvider({children}){
   const [user, setUser] = useState('');
   
 
-  const signUp =(email,password)=>{
+  const signUpGoogle =(email,password)=>{
     return createUserWithEmailAndPassword(auth,email,password)
   }
-  const logIn = (email,password)=>{
+  const logInGoogle = (email,password)=>{
     return signInWithEmailAndPassword(auth,email,password)
 
   }
@@ -40,7 +40,7 @@ export function UserAuthProvider({children}){
    },[])
  
    return(
-     <userAuthContext.Provider value={{user,signUp ,logIn , logOut ,googleSignIn}}>
+     <userAuthContext.Provider value={{user,signUpGoogle ,logInGoogle , logOut ,googleSignIn}}>
        {children}
      </userAuthContext.Provider>
    )

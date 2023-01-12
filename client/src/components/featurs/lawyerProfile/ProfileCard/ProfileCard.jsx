@@ -58,45 +58,49 @@ const ProfileCard = () => {
                       <p>8 km</p>
                     </span>
 
-                    <span class="list-group-item d-flex justify-content-between align-items-center ">
-                     
-                      <p class=""> <i class="far fa-calendar-check"></i> experience</p>
-                      <p>8 years</p>
-                    </span>
+                  <span class="list-group-item d-flex justify-content-between align-items-center ">
+                    <p>8 שנים</p>
+                    <p class="">
+                      {" "}
+                      <i class="far fa-calendar-check"></i> ניסיון
+                    </p>
+                  </span>
 
-                    <span class="list-group-item  d-flex justify-content-between align-items-center ">
-                     
-                      <p class=""> <i class="fas fa-reply"></i> response</p>
-                      <p>1 day</p>
-                    </span>
-                    <span class="list-group-item  d-flex justify-content-between align-items-center ">
-                      
-                      <p class=""><i class="fas fa-calendar-check"></i> work done by</p>
-                      <p>8 km</p>
-                    </span>
-                  </div>
+                  <span class="list-group-item  d-flex justify-content-between align-items-center ">
+                    <p>1 יום</p>
+                    <p class="">
+                      {" "}
+                      <i class="fas fa-reply"></i> תגובה תוך
+                    </p>
+                  </span>
+                  <span class="list-group-item  d-flex justify-content-between align-items-center ">
+                    <p>10 ימים</p>
+                    <p class="">
+                      <i class="fas fa-calendar-check"></i> עבודה מוכנה תוך
+                    </p>
+                  </span>
                 </div>
-                <hr />
-                <div className="buttens mb-3 d-flex justify-content-around">
-                  <button
-                    type="button"
-                    class="btn btn-outline-dark"
-                    data-mdb-ripple-color="dark"
-                  >
-                    <a href="">butten2</a>
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-outline-dark"
-                    data-mdb-ripple-color="dark"
-                  >
-                    <a href="">butten1</a>
-                  </button>
-                </div>
+              </div>
+              <hr />
+              <div className="buttens mb-3 d-flex justify-content-around">
+                <button
+                  type="button"
+                  class="btn btn-outline-dark"
+                  data-mdb-ripple-color="dark"
+                >
+                  <a href="">צור קשר</a>
+                </button>
+                <button
+                  type="button"
+                  class="btn text-primary btn-outline-dark"
+                  data-mdb-ripple-color="dark"
+                >
+                  <a href="">קבל הצעה</a>
+                </button>
               </div>
             </div>
           </div>
-        
+        </div>
       </section>
     </>
   );
