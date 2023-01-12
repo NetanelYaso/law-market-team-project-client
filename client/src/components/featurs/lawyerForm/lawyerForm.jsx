@@ -1,15 +1,12 @@
 import "./lawyerForm.css";
-import React,{useState} from "react";
-import {
-  MDBContainer,
-  MDBInput,
-  MDBFile,
-  MDBBtn,
-} from "mdb-react-ui-kit";
-import { create } from "../../services/lawyersServices";
+import React, { useState } from "react";
+import { MDBContainer, MDBInput, MDBFile, MDBBtn } from "mdb-react-ui-kit";
+import { update } from "../../services/lawyersServices";
 
+// ../../services/lawyersServices
 function LawyerForm() {
   const [avatar, setAvatar] = useState("");
+  const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [workTime, setWorkTime] = useState("");
@@ -20,15 +17,16 @@ function LawyerForm() {
   const [departments, setDepartments] = useState([]);
 
   const lawyer = {
-    name: name,
+    id: id,
+    // name: name,
     avatar: avatar,
-    experience: experience,
-    phone: phone,
-    email: email,
-    departments: departments,
-    location:location,
-    workTime:workTime,
-    responseTime:responseTime
+    // experience: experience,
+    // phone: phone,
+    // email: email,
+    // departments: departments,
+    // location:location,
+    // workTime:workTime,
+    // responseTime:responseTime
   };
 
   const TransformFileData = (file) => {
@@ -48,8 +46,9 @@ function LawyerForm() {
       <MDBContainer className="w-75">
         <form
           onSubmit={(e) => {
-            e.preventDefault()
-            create(lawyer);
+            e.preventDefault();
+            console.log(lawyer);
+            update(lawyer);
           }}
         >
           <MDBInput
@@ -57,6 +56,12 @@ function LawyerForm() {
             id="typeText"
             type="text"
             onChange={(e) => setName(e.target.value)}
+          />
+          <MDBInput
+            label="lawyer objId"
+            id="typeText"
+            type="text"
+            onChange={(e) => setId(e.target.value)}
           />
           <MDBInput
             label="lawyer location"
