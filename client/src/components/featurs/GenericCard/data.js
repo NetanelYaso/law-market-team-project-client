@@ -1,5 +1,6 @@
 export const data = [
     {
+<<<<<<< HEAD
         name: "real estate",
         discription: ["sdafg", "dsvfb", "dsvfb"],
         id:1
@@ -7,8 +8,11 @@ export const data = [
     },
     {
         name: "family law",
-        discription: ["sdafg", "dsvfb", "dsvfb"],
-        id:2
+        discription: ["sdafg", "dsvfb", "dsvfb"]
+    },
+    {
+        name: "family law",
+        discription: ["sdafg", "dsvfb", "dsvfb"]
     },
     {
         name: "financial agreements",

@@ -1,8 +1,8 @@
-.generiCard_div {
-    margin: 10%;
+.sub_category{
+    margin: 5%;
 }
 
-.generiCard {
+.genericCard {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,6 +10,14 @@
     color: #08b9e3;
 }
 
-.main_card:hover {
-    border: 2px solid #08b9e3 ;
+.first_card {
+    position: absolute;
+    z-index: -1;
+    border: 2px solid #08b9e3;
+
 }
+
+.second_card:hover {
+    display: none;
+}
+
