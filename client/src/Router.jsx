@@ -7,10 +7,7 @@ import SubCategory from "./components/pages/SubCategory/SubCategory"
 import Login from "./components/pages/Login/Login"
 import SignUp from "./components/pages/SignUp/SignUp"
 
-
-
 const Router = () => {
-    
     return (
         <Routes>
             <Route path="/" element={<HomePage />} />
@@ -19,7 +16,6 @@ const Router = () => {
             <Route path="/signUp" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
             {/* <Route path="/payment" element={<PaymentCard/> } /> */}
-            {/* <Route path="/" element={ } /> */}
             <Route path="*" element={<PageNotFound/> } />
         </Routes>
     )
