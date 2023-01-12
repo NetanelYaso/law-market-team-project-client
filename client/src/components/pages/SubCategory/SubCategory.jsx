@@ -1,11 +1,12 @@
 import "./SubCategory.css";
 import GenericCard from "../../featurs/GenericCard/GenericCard";
-import { Row, Col, Container,Button } from 'react-bootstrap';
+import { Row, Col, Container, Button } from 'react-bootstrap';
 import { data } from "../../featurs/GenericCard/data"
 import BottomCard from "../../featurs/home Page featurs/card/bottom-cards/BottomCard";
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react";
 import { getAll } from "../../services/departmentsServices";
+import { useParams } from "react-router-dom";
 
 function SubCategory() {
   const dispatch = useDispatch()
@@ -13,7 +14,7 @@ function SubCategory() {
   useEffect(() => {
     dispatch(getAll())
   })
-  
+
   console.log(departments);
   return (
     <>
@@ -30,7 +31,7 @@ function SubCategory() {
       </Container>
       <Container>
         <Row>
-          {/* <BottomCard /> */}
+          <BottomCard />
         </Row>
       </Container>
     </>
