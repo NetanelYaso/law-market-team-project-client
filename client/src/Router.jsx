@@ -10,6 +10,7 @@ import SignUp from "./components/pages/SignUp/SignUp"
 
 
 const Router = () => {
+    
     return (
         <Routes>
             <Route path="/" element={<HomePage />} />
