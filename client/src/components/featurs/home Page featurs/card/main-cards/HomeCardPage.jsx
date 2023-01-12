@@ -19,7 +19,7 @@ export default function HomeCardPage() {
   'https://www.קנאביס.com/wp-content/uploads/2012/09/monkey-baby.jpg'
 ]
 
-const someFunc = (key)=>{
+const popUpValue = (key)=>{
   setIndex(key)
  return toggleShow()
 
@@ -27,12 +27,12 @@ const someFunc = (key)=>{
 
   return (
 
-    <div className="d-flex justify-content-center raper">
+    <div className="d-flex justify-content-center raper mt-5">
       <div className="d-flex justify-content-center col-lg-6 col-sm-4">
         {departnentArray.map((item, key) => {
           return (
             <div key={key}>
-              <MDBCard className="text-white imagStyle hover-overlay align-items-center bg-red">
+              <MDBCard className="text-white imagStyle hover-overlay align-items-center ">
                 <MDBCardImage
                   className="imag"
                   overlay
@@ -40,7 +40,7 @@ const someFunc = (key)=>{
                   alt="..."
                 />
                 <div>
-                  <MDBCardOverlay className="boxTitel myText "onClick={()=>someFunc(key)}>
+                  <MDBCardOverlay className="boxTitel myText "onClick={()=>popUpValue(key)}>
                     <MDBCardTitle className="textInCard " >
                       {item.name}
                     </MDBCardTitle>
