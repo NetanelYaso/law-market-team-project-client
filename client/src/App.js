@@ -9,6 +9,7 @@ import GenericCard from "./components/featurs/GenericCard/GenericCard";
 import LawyerProfile from "./components/pages/LawyerProfile/LawyerProfile";
 // import BottomCard from "./components/featurs/home Page featurs/card/bottom-cards/BottomCard";
 import SubCategory from "./components/pages/SubCategory/SubCategory";
+import Login from './components/pages/Login/Login'
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
       <BrowserRouter>
         <Header />
         {/* <HomeCardPage /> */}
-        <LawyerProfile />
+        {/* <LawyerProfile /> */}
+        <Login/>
         {/* <SubCategory/> */}
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );
