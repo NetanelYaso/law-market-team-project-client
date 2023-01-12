@@ -11,10 +11,12 @@ const getAll =  createAsyncThunk( "lawyers/getAll",(arg,{rejectWithValue}) => {
 });
 
 const update = createAsyncThunk("lawyers/update",(lawyer) => {
-  return fetch(`${basicAPI}/byId/${lawyer.id}/update`, {
+  console.log(lawyer);
+  return fetch(`${basicAPI}/update/${lawyer.id}`, {
     method: "PUT",
+    cors:"cors",
     headers: { "Content-Type": "application/json" },
-    body: { lawyer },
+    body: { avatar:lawyer.avatar },
   })
     .then((res) => res.json())
     .then((res) => console.log(res))

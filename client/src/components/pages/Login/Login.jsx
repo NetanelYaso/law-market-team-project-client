@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { logInOrRegister } from "../../services/usersServices";
 import { useDispatch } from "react-redux";
+import { Alert } from "react-bootstrap";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -22,12 +24,15 @@ const Login = () => {
       await dispatch(
         logInOrRegister({ email, password })
 
-        // navigate("/")
+   
       );
+      navigate("/")
       setEmail(" ");
       setPassword(" ");
     } catch (err) {
       setError(err.message);
+      navigate("/login")
+
     }
   };
   const handlegoogleIn = async (e) => {
@@ -35,9 +40,12 @@ const Login = () => {
     try {
       await googleSignIn();
       alert("login with google success")
-      // navigate("/Home");
+      navigate("/");
     } catch (err) {
       setError(err.message);
+      
+      navigate("/login")
+
     }
   };
   return (
@@ -89,15 +97,6 @@ const Login = () => {
               <div className="p-4 box mt-3 text-center">
                 Don't have an account? <Link to="/SignUp">Sign Up</Link>
               </div>
-
-              {/* <div className="divider d-flex align-items-center my-4">
-            <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-          </div> */}
-
-              {/* <a className="btn btn-primary btn-lg btn-block"  href="#!"
-            role="button">
-            <i className="fab fa-facebook-f me-2"></i>Continue with Facebook
-          </a> */}
             </form>
           </div>
         </div>

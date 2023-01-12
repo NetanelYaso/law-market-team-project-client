@@ -2,36 +2,38 @@ import React, { useState } from "react";
 import { useUserAuth } from "../../../context/googleAuth";
 import { logInOrRegister } from "../../services/usersServices";
 import { useDispatch } from "react-redux";
+import "../SignUp/SignUp.css";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GoogleButton from "react-google-button";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
   const [error, setError] = useState("");
   const dispatch = useDispatch();
   const { signUpGoogle } = useUserAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await dispatch(
-        logInOrRegister({ email, password })
-
-        // navigate("/")
-      );
+      await dispatch(logInOrRegister({ email, password }));
+      navigate("/");
       setEmail(" ");
       setPassword(" ");
     } catch (err) {
       setError(err.message);
+      navigate("/signUp");
     }
   };
   const handlegoogleIn = async (e) => {
     e.preventDefault();
     try {
       await signUpGoogle();
-      alert('sign up with google success')
+      alert("sign up with google success");
       // navigate("/Home");
     } catch (err) {
       setError(err.message);
@@ -53,10 +55,29 @@ const SignUp = () => {
             <form onSubmit={handleSubmit}>
               <div className="form mb-4">
                 <input
+                  type="fullName"
+                  id="formFullName"
+                  placeholder="enter your full name"
+                  onChange={(e) => setFullName(e.target.value)}
+                  className="form-control form-control-lg"
+                />
+              </div>
+
+              <div className="form mb-4">
+                <input
                   type="email"
                   id="form1Example13"
                   placeholder="Email Address"
                   onChange={(e) => setEmail(e.target.value)}
+                  className="form-control form-control-lg"
+                />
+              </div>
+              <div className="form mb-4">
+                <input
+                  type="phoneNumber"
+                  id="formPhoneNumber"
+                  placeholder="enter your phoneNumber"
+                  onChange={(e) => setPhone(e.target.value)}
                   className="form-control form-control-lg"
                 />
               </div>
@@ -86,17 +107,8 @@ const SignUp = () => {
 
               <hr />
               <div className="p-4 box mt-3 text-center">
-                Already have an account? <Link to="/LogIn">Log In</Link>
+                Already have an account? <Link to="/login">Log In</Link>
               </div>
-
-              {/* <div className="divider d-flex align-items-center my-4">
-            <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-          </div> */}
-
-              {/* <a className="btn btn-primary btn-lg btn-block"  href="#!"
-            role="button">
-            <i className="fab fa-facebook-f me-2"></i>Continue with Facebook
-          </a> */}
             </form>
           </div>
         </div>
