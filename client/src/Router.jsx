@@ -5,10 +5,8 @@ import HomePage from "./components/pages/Home/HomePage"
 import PageNotFound from "./components/pages/PageNotFound/PageNotFound.test"
 import SubCategory from "./components/pages/SubCategory/SubCategory"
 
-
-
-
 const Router = () => {
+    
     return (
         <Routes>
             <Route path="/" element={<HomePage />} />
