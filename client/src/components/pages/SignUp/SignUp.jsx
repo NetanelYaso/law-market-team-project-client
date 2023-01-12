@@ -86,7 +86,7 @@ const SignUp = () => {
 
               <hr />
               <div className="p-4 box mt-3 text-center">
-                Already have an account? <Link to="/LogIn">Log In</Link>
+                Already have an account? <Link to="/login">Log In</Link>
               </div>
 
               {/* <div className="divider d-flex align-items-center my-4">
