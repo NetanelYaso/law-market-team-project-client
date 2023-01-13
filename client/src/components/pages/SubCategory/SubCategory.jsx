@@ -13,8 +13,8 @@ function SubCategory() {
   const departments = useSelector(state => state.department.allDepartments)
   useEffect(() => {
     dispatch(getAll())
-  })
-
+  },[])
+  
   console.log(departments);
   return (
     <>

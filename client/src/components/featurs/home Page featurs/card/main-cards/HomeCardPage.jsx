@@ -10,6 +10,9 @@ import {
   MDBCardOverlay,
   MDBCardImage,
 } from "mdb-react-ui-kit";
+import { useDispatch, useSelector } from "react-redux"
+import { useEffect } from "react";
+import { getAll } from "../../../../services/departmentsServices"
 
 export default function HomeCardPage() {
   const [centredModal, setCentredModal] = useState(false);
@@ -18,8 +21,13 @@ export default function HomeCardPage() {
   const images = ["https://i.ytimg.com/vi/2hwZQvOG-NU/maxresdefault.jpg",
   'https://www.קנאביס.com/wp-content/uploads/2012/09/monkey-baby.jpg'
 ]
-
-const someFunc = (key)=>{
+const dispatch = useDispatch()
+const departments = useSelector(state => state.department.allDepartments)
+useEffect(() => {
+  dispatch(getAll())
+},[])
+console.log(departments);
+const popUpValue = (key)=>{
   setIndex(key)
  return toggleShow()
 
@@ -27,20 +35,20 @@ const someFunc = (key)=>{
 
   return (
 
-    <div className="d-flex justify-content-center raper">
+    <div className="d-flex justify-content-center raper mt-5">
       <div className="d-flex justify-content-center col-lg-6 col-sm-4">
-        {departnentArray.map((item, key) => {
+        {departments.map((item, key) => {
           return (
             <div key={key}>
-              <MDBCard className="text-white imagStyle hover-overlay align-items-center bg-red">
+              <MDBCard className="text-white imagStyle hover-overlay align-items-center ">
                 <MDBCardImage
                   className="imag"
                   overlay
-                  src="https://mdbootstrap.com/img/new/slides/017.webp"
+                  src ={ item.coverImage.url}
                   alt="..."
                 />
                 <div>
-                  <MDBCardOverlay className="boxTitel myText "onClick={()=>someFunc(key)}>
+                  <MDBCardOverlay className="boxTitel myText "onClick={()=>popUpValue(key)}>
                     <MDBCardTitle className="textInCard " >
                       {item.name}
                     </MDBCardTitle>
@@ -61,14 +69,14 @@ className="modal_popUp bg-opacity-50"
   <MDBModalDialog centered>
     <MDBModalContent>
       <figure className="PopUpModel" style={{backgroundImage:`url(${images[index]})`}}>
-        <div className="textInModle">{departnentArray[index].name}</div>
+        <div className="textInModle">{departments[index].name}</div>
       </figure>
       <ul className="cardul">
-        <li className="cardLi">{departnentArray[index].name}</li>
-        <li className="cardLi">{departnentArray[index].name}</li>
-        <li className="cardLi">{departnentArray[index].name}</li>
-        <li className="cardLi">{departnentArray[index].name}</li>
-        <li className="cardLi">{departnentArray[index].name}</li>
+        <li className="cardLi">{departments[index].name}</li>
+        <li className="cardLi">{departments[index].name}</li>
+        <li className="cardLi">{departments[index].name}</li>
+        <li className="cardLi">{departments[index].name}</li>
+        <li className="cardLi">{departments[index].name}</li>
       </ul>
     </MDBModalContent>
   </MDBModalDialog>
