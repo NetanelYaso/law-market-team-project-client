@@ -16,7 +16,7 @@ function Header() {
           </Navbar.Brand>
           <Nav>
             <Nav.Link className="text-white">צור קשר</Nav.Link>
-            <Nav.Link className="text-white">התחבר</Nav.Link>
+            <Nav.Link href="/login" className="text-white">התחבר</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

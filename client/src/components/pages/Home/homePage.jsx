@@ -5,7 +5,7 @@ import Explanation from '../../featurs/home Page featurs/home-page-explanationDi
 function  HomePage (){
     return (
       <>
-      <Explanation/>
+      {/* <Explanation/> */}
       <HomeCardPage/>
       <BottomCard/>
       </>
