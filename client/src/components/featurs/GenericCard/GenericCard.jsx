@@ -1,9 +1,10 @@
 import "./GenericCard.css";
 import { Card, Button } from 'react-bootstrap';
-import { Link } from "react-router-dom"
-function GenericCard({name,discription}) {
-  const navigate = () => {
-    <Link to={"/lawyersCards"}></Link>
+import { Link, useNavigate } from "react-router-dom"
+function GenericCard({ name, discription }) {
+  const navigate = useNavigate()
+  const navigateTo = () => {
+    navigate("/login")
   }
   return (
     <Card className="mainCard">
@@ -12,7 +13,7 @@ function GenericCard({name,discription}) {
       </div>
       <div className="mainCardBody">
         <p>{discription}</p>
-        <Button onClick={()=>navigate}>עוד</Button>
+        <Button onClick={navigateTo}>עוד</Button>
       </div>
     </Card>
 
