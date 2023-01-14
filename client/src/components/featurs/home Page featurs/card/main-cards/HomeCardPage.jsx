@@ -1,5 +1,4 @@
 import "./HomeCardPage.css";
-import { departnentArray } from "../../../../../services/departments";
 import React, { useState } from "react";
 import {
   MDBModal,
@@ -60,7 +59,7 @@ const popUpValue = (key)=>{
           );
         })}
 
-<MDBModal
+{/* <MDBModal
 className="modal_popUp bg-opacity-50"
   tabIndex="-1"
   show={centredModal}
@@ -80,7 +79,7 @@ className="modal_popUp bg-opacity-50"
       </ul>
     </MDBModalContent>
   </MDBModalDialog>
-</MDBModal>
+</MDBModal> */}
       </div>
     </div>
     
