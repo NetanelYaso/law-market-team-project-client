@@ -6,14 +6,20 @@ import BottomCard from "../../featurs/home Page featurs/card/bottom-cards/Bottom
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react";
 import { getAll } from "../../services/departmentsServices";
+import { useParams } from "react-router-dom";
 
 function SubCategory() {
+  const { id } = useParams()
   const dispatch = useDispatch()
   const departments = useSelector(state => state.department.allDepartments)
+  const subDepartments = useSelector(state => state.subDepartment)
+  console.log(subDepartments)
 
   useEffect(() => {
     dispatch(getAll())
   }, [])
+  const subDepartment = departments
+  console.log(subDepartment);
 
   return (
     <>
@@ -23,7 +29,7 @@ function SubCategory() {
         <Row>
           {departments.slice(0, 6).map((item, key) => (
             <Col className="g-3" xl={4}>
-              <GenericCard key={key} name={item.name} discription={item.discription} />
+              <GenericCard key={key} name={item.name} discription={item.name} />
             </Col>
           ))}
         </Row>
