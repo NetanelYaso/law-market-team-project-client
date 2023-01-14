@@ -23,16 +23,16 @@ function Explanation() {
           />
         </Col>
         <Col md={6} className=" p-0">
-          <div className="description p-5 h-100 w-100 cl d-flex pe-0">
-            <h2> ליווי משפטי מקצועי- Law market 
+          <div className="description    ">
+            <div className="d-flex  justify-content-center align-content-center  ss"> <h2> ליווי משפטי מקצועי- Law market 
             </h2>
             <span>
             חברתנו עוסקת במתן ליווי משפטי מהימן מקצועי ומוכח בשלל תחומים </span>
               <span> זקוקים לסיוע משפטי ? נדאג לספק לכם אותו בצורה הנוחה ביותר </span>
-            
+            <div>
             <Button onClick={()=>navigate} className ="me-3 bg-">עורכי הדין שלנו </Button>
-            <Button onClick={()=>navigate}>לקוחות מספרים</Button>
-          </div>
+            <Button onClick={()=>navigate}>לקוחות מספרים</Button></div>
+          </div></div>
         </Col>
       </Row>
     </>

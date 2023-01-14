@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./BottomCard.css";
 import {
   MDBCard,
@@ -10,106 +10,65 @@ import {
   MDBBadge,
   MDBListGroup,
   MDBListGroupItem,
-  MDBRow,
+  MDBRow,MDBCardImage,
 } from "mdb-react-ui-kit";
+import { getAll } from "../../../../services/lawyersServices";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function BottomCard() {
+  const dispatch = useDispatch();
+  const lawyers = useSelector((state) => state.lawyer.allLawyers);
+  useEffect(() => {
+    dispatch(getAll());
+  }, []);
+
+  console.log(lawyers);
   return (
     <div>
-      <div><h2 className=" d-flex justify-content-center">עורכי דין שלנו</h2></div>
-      <div className="cardRaper d-flex  justify-content-center ">
-      <MDBCol xl={4} md={4} className="mb-4 singalCard">
-        <MDBCardBody className="singalCard">
-          <div className="d-flex justify-content-between align-items-center row  ">
-            <div className="d-flex align-items-center col-12 ">
-              <img
-                src="https://mdbootstrap.com/img/new/avatars/7.jpg"
-                alt=""
-                style={{ width: "55px", height: "55px" }}
-                className="rounded-circle"
-              />
-              <div className="ms-3">
-                <p className="fw-bold mb-1">דנה בננה</p>
-                <p className="text-muted mb-0"> עו"ד בענייני תעבורה</p>
-                <p className="text-muted mb-0">עלות השירות: 100$</p>
-              </div>
-            </div>
-            <div>
-              <ul>
-              <li>גגגגג</li>
-                <li>עעעעע</li>
-                <li>חחחחח</li>
-                <li>טטטטט</li>
-              </ul>
-            </div>
-          </div>
-        </MDBCardBody>
-          <MDBBtn color="link" rippleColor="primary" className="text-reset m-0">
-            Message <MDBIcon fas icon="envelope" />
-          </MDBBtn>
-      </MDBCol>
-      <MDBCol xl={4} md={4} className="mb-4">
-        <MDBCardBody className="singalCard">
-          <div className="d-flex justify-content-between align-items-center row">
-            <div className="d-flex align-items-center">
-              <img
-                src="https://mdbootstrap.com/img/new/avatars/6.jpg"
-                alt=""
-                style={{ width: "55px", height: "55px" }}
-                className="rounded-circle"
-              />
-              <div className="ms-3">
-                <p className="fw-bold mb-1">סבינה בן נתן</p>
-                <p className="text-muted mb-0"> עו"ד בענייני תעבורה</p>
-                <p className="text-muted mb-0">עלות השירות: 100$</p>
-              </div>
-            </div>
-            <div>
-              <ul>
-              <li>גגגגג</li>
-                <li>עעעעע</li>
-                <li>חחחחח</li>
-                <li>טטטטט</li>
-              </ul>
-            </div>
-          </div>
-        </MDBCardBody>
-          <MDBBtn color="link" rippleColor="primary" className="text-reset ">
-            Message <MDBIcon fas icon="envelope" />
-          </MDBBtn>
+      <div className="mt-4">
+        <h2 className=" d-flex justify-content-center">מומלצי החודש</h2>
+      </div>
+      <div className="cardRaper d-flex justify-content-evenly ">
 
-      </MDBCol>
-     <MDBCol xl={4} md={4} className="mb-4 singalCard">
-        <MDBCardBody className="singalCard">
-          <div className="d-flex justify-content-between align-items-center row  ">
-            <div className="d-flex align-items-center col-12 ">
-              <img
-                src="https://mdbootstrap.com/img/new/avatars/7.jpg"
-                alt=""
-                style={{ width: "55px", height: "55px" }}
-                className="rounded-circle"
-              />
-              <div className="ms-3">
-                <p className="fw-bold mb-1">דנה בננה</p>
-                <p className="text-muted mb-0"> עו"ד בענייני תעבורה</p>
-                <p className="text-muted mb-0">עלות השירות: 100$</p>
+
+        {lawyers.slice(0,3).map((item) => (
+          <MDBCol xl={4} md={4} className="mb-4 singalCard justify-content-center ">
+            <MDBCard className="singalCard d-flex justify-content-between m-2 h-100">
+              <div className="d-flex justify-content-between align-items-center row  ">
+                <div className="d-flex align-items-center col-12 ">
+                   <MDBCardImage
+                    className="rounded-circle"
+                    src={ item.avatar.url}
+                    alt=""
+                    style={{ width: "55px", height: "55px" }}
+                  />
+                  <div className="ms-3">
+                    <h3>עו"ד {item.name}</h3>
+                    <p className="fw-bold mb-1">{item.className}</p>
+                    <p className="text-muted mb-0"> {item.departments}</p>
+                  </div>
+                </div>
+                <div>
+                  <ul>
+                    <li>עלות השירות: 100$</li>
+                    <li>{item.location}</li>
+                    <li>{item.phone}</li>
+                    <li>{item.responseTime}</li>
+                    <li>{item.experience}</li>
+                  </ul>
+                </div>
+            <MDBBtn
+              color="link"
+              rippleColor="primary"
+              className="text-reset m-0"
+             >
+              Message <MDBIcon fas icon="envelope" />
+            </MDBBtn>
               </div>
-            </div>
-            <div>
-              <ul>
-              <li>גגגגג</li>
-                <li>עעעעע</li>
-                <li>חחחחח</li>
-                <li>טטטטט</li>
-              </ul>
-            </div>
-          </div>
-        </MDBCardBody>
-          <MDBBtn color="link" rippleColor="primary" className="text-reset m-0">
-            Message <MDBIcon fas icon="envelope" />
-          </MDBBtn>
-      </MDBCol>
-    </div>
+            </MDBCard>
+          </MDBCol>
+        ))}
+      </div>
     </div>
   );
 }
