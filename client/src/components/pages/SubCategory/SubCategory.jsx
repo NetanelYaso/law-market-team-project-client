@@ -32,7 +32,7 @@ function SubCategory() {
               <GenericCard key={key} name={item.name} discription={item.name} />
             </Col>
           ))}
-        </Row>
+        </Row> 
       </Container>
       <Container>
         <Row>

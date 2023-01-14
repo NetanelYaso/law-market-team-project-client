@@ -4,11 +4,12 @@ import HomeCardPage from "../../featurs/home Page featurs/card/main-cards/HomeCa
 import Explanation from '../../featurs/home Page featurs/home-page-explanationDiv/Explanation';
 function  HomePage (){
     return (
-      <>
-      {/* <Explanation/> */}
+      <div className=' container-fluid'>
+    
+       <Explanation/>
       <HomeCardPage/>
       <BottomCard/>
-      </>
+      </div>
     )
 }
 export default HomePage;
