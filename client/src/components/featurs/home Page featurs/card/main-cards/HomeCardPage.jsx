@@ -1,83 +1,81 @@
 import "./HomeCardPage.css";
-import { departnentArray } from "../../../../../services/departments";
-import React, { useState } from "react";
-import {
-  MDBModal,
-  MDBModalDialog,
-  MDBModalContent,
-  MDBCard,
-  MDBCardTitle,
-  MDBCardOverlay,
-  MDBCardImage,
-} from "mdb-react-ui-kit";
+import GenericCard from "../../../GenericCard";
+import { Row, Col, Container, Button ,Card} from 'react-bootstrap';
+import BottomCard from "../bottom-cards/BottomCard"
+import { useDispatch, useSelector } from "react-redux"
+import { useEffect } from "react";
+import { getAll } from "../../../../services/departmentsServices";
+import { useNavigate } from "react-router-dom";
 
-export default function HomeCardPage() {
-  const [centredModal, setCentredModal] = useState(false);
-  const [index, setIndex] = useState(0);
-  const toggleShow = () => setCentredModal(!centredModal);
-  const images = ["https://i.ytimg.com/vi/2hwZQvOG-NU/maxresdefault.jpg",
-  'https://www.קנאביס.com/wp-content/uploads/2012/09/monkey-baby.jpg'
-]
-
-const someFunc = (key)=>{
-  setIndex(key)
- return toggleShow()
-
-}
-
+function HomeCardPage() {
+  const navigate = useNavigate()
+  const linkTo = () => {
+    navigate("/SubCategory")
+  }
+  const dispatch = useDispatch()
+  const departments = useSelector(state => state.department.allDepartments)
+  useEffect(() => {
+    dispatch(getAll())
+  },[])
+  
+  console.log(departments);
   return (
-
-    <div className="d-flex justify-content-center raper">
-      <div className="d-flex justify-content-center col-lg-6 col-sm-4">
-        {departnentArray.map((item, key) => {
-          return (
-            <div key={key}>
-              <MDBCard className="text-white imagStyle hover-overlay align-items-center bg-red">
-                <MDBCardImage
-                  className="imag"
-                  overlay
-                  src="https://mdbootstrap.com/img/new/slides/017.webp"
-                  alt="..."
-                />
-                <div>
-                  <MDBCardOverlay className="boxTitel myText "onClick={()=>someFunc(key)}>
-                    <MDBCardTitle className="textInCard " >
-                      {item.name}
-                    </MDBCardTitle>
-                  </MDBCardOverlay>
-                </div>
-              </MDBCard>
-
-            </div>
-          );
-        })}
-
-<MDBModal
-className="modal_popUp bg-opacity-50"
-  tabIndex="-1"
-  show={centredModal}
-  setShow={setCentredModal}
->
-  <MDBModalDialog centered>
-    <MDBModalContent>
-      <figure className="PopUpModel" style={{backgroundImage:`url(${images[index]})`}}>
-        <div className="textInModle">{departnentArray[index].name}</div>
-      </figure>
-      <ul className="cardul">
-        <li className="cardLi">{departnentArray[index].name}</li>
-        <li className="cardLi">{departnentArray[index].name}</li>
-        <li className="cardLi">{departnentArray[index].name}</li>
-        <li className="cardLi">{departnentArray[index].name}</li>
-        <li className="cardLi">{departnentArray[index].name}</li>
-      </ul>
-    </MDBModalContent>
-  </MDBModalDialog>
-</MDBModal>
+    <>
+      <div className="d-flex justify-content-center mt-3">
       </div>
-    </div>
-    
+      <Container className="sub_category">
+        <Row>
+          {departments.map((item) => (
+            <Col className="g-3" xl={4}>
+                <Card className="mainCard">
+              <div>
+        <img className="homePage_card_img" src={item.coverImage.url}/>
+      </div>
+      <div className="mainCardBody">
+        <p>{item.discription}</p>
+        <Button onClick={linkTo}>עוד</Button>
+      </div>
+    </Card>           
+      </Col>
+          ))}
+        </Row> 
+      </Container>
+      <Container>
+        <Row>
+          </Row>
+      </Container>
+    </>
   );
-}
+};
+
+export default HomeCardPage;
+
+//  <MDBModal
+// className="modal_popUp bg-opacity-50"
+//   tabIndex="-1"
+//   show={centredModal}
+//   setShow={setCentredModal}
+// >
+//   <MDBModalDialog centered>
+//     <MDBModalContent>
+//       <figure className="PopUpModel" style={{backgroundImage:`url(${images[index]})`}}>
+//          <div className="textInModle">{departments[index].name}</div> 
+//        </figure>
+//        <ul className="cardul">
+//          <li className="cardLi">{departments[index].name}</li>
+//          <li className="cardLi">{departments[index].name}</li>
+//          <li className="cardLi">{departments[index].name}</li>
+//          <li className="cardLi">{departments[index].name}</li>
+//          <li className="cardLi">{departments[index].name}</li> 
+//        </ul>
+//      </MDBModalContent>
+//    </MDBModalDialog>
+//  </MDBModal> 
+//       </div>
+//     </div>
+    
+//   );
+// }
 
 
 

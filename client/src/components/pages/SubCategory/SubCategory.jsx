@@ -1,20 +1,45 @@
 import "./SubCategory.css";
-import React from "react";
 import GenericCard from "../../featurs/GenericCard/GenericCard";
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col, Container, Button } from 'react-bootstrap';
 import { data } from "../../featurs/GenericCard/data"
+import BottomCard from "../../featurs/home Page featurs/card/bottom-cards/BottomCard";
+import { useDispatch, useSelector } from "react-redux"
+import { useEffect } from "react";
+import { getAll } from "../../services/departmentsServices";
+import { useParams } from "react-router-dom";
 
 function SubCategory() {
+  const { id } = useParams()
+  const dispatch = useDispatch()
+  const departments = useSelector(state => state.department.allDepartments)
+  const subDepartments = useSelector(state => state.subDepartment)
+  console.log(subDepartments)
+
+  useEffect(() => {
+    dispatch(getAll())
+  }, [])
+  const subDepartment = departments
+  console.log(subDepartment);
+
   return (
-    <Container className="sub-category">
-      <Row>
-        {data.map((item) => (
-          <Col md={4}>
-            <GenericCard key={item}/>
-          </Col>
-        ))}
-      </Row>
-    </Container>
+    <>
+      <div className="d-flex justify-content-center mt-3">
+      </div>
+      <Container className="sub_category mb-5">
+        <Row>
+          {departments.slice(0, 6).map((item, key) => (
+            <Col className="g-3" xl={4}>
+              <GenericCard key={key} name={item.subDepartments[0].name} discription={item.subDepartments[0].description} />
+            </Col>
+          ))}
+        </Row> 
+      </Container>
+      <Container>
+        <Row>
+          <BottomCard />
+        </Row>
+      </Container>
+    </>
   );
 };
 

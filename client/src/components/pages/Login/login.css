@@ -1,0 +1,15 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.logInBtn{
+  background-color: #08b9e3;
+  display: block;
+  width:100%
+}
+.g-btn{
+  width: 100%;
+}

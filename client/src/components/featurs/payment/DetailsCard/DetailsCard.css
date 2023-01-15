@@ -1,0 +1,28 @@
+/* .details-col{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+.details-card{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.details-span{
+    direction: rtl;
+}
+.details-p{
+    direction: rtl; 
+}
+.btn-save{
+    background-color:  #08b9e3 !important;
+}
+.tabs{
+    color:  #08b9e3 !important;
+}
+.form-check-input[type=radio]:checked {
+    background-image: none !important;
+    background-color: #fff !important;
+    border-color: #08b9e3 !important;
+}
+.form-check-input[type=radio]:checked:after {
+    border-color: #08b9e3 !important;
+    background-color: #08b9e3 !important;
+}

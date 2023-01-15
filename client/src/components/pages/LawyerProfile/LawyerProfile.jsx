@@ -6,10 +6,17 @@ import './LawyerProfile.css'
 const LawyerProfile = () => {
   return (
     <div className='lawyerContainer'>
+      <div className='row'>
+        <div className='col-7'>
+          
+          <TitleCard/>
+          </div>
+     
+        <div className='col-4'> <ProfileCard/> </div>
+      </div>
       
      
-      <TitleCard/>
-      <ProfileCard/>
+      
 
       
     </div>

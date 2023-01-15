@@ -1,15 +1,30 @@
-.generiCard_div {
-    margin: 10%;
-}
-
-.generiCard {
+.mainCard {
+    border-radius: 0% !important;
+    width: 90%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     color: #08b9e3;
+
 }
 
-.main_card:hover {
-    border: 2px solid #08b9e3 ;
+.mainCardBody {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;
+}
+
+.mainCard:hover .mainCardBody {
+    top: 0% !important;
+    border-color: #08b9e3;
 }

@@ -15,12 +15,11 @@ import {
   InfoWindowF,
   DirectionsRenderer,
 } from "@react-google-maps/api";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function Map({ address }) {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyBuymyezM5emJbmNyCmLLr3bLL7U3oMIu0",
+    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
   });
   async function getGeocodeCoords(address) {
     const result = await geocodingLocationConvert(address);
