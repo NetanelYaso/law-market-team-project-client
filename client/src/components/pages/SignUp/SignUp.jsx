@@ -95,19 +95,9 @@ const SignUp = () => {
               <button type="submit" className="btn logInBtn">
                 SignUp
               </button>
-
-              <div>
-                <h4>or</h4>
-                <GoogleButton
-                  className="g-btn w-100"
-                  type="dark"
-                  onClick={handlegoogleIn}
-                />
-              </div>
-
               <hr />
               <div className="p-4 box mt-3 text-center">
-                Already have an account? <Link to="/login">Log In</Link>
+                Already have an account? <Link to="/login">Login</Link>
               </div>
             </form>
           </div>

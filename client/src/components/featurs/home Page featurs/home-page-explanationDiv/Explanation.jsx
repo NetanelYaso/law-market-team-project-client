@@ -21,6 +21,7 @@ function Explanation() {
               "https://avantaco.com/upload-img/Over_all/over-all-services.gif"
             }
           />
+        
         </Col>
         <Col md={6} className=" p-0">
           <div className="description    ">
