@@ -10,6 +10,7 @@
     color: #08b9e3 !important;
 }
 .nav-tabs .nav-link.active{
+    color: #08b9e3 !important;
     border-color: #08b9e3 !important;
 }
 .nav-item::before{
