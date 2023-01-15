@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import ProfileCard from "./components/featurs/lawyerProfile/ProfileCard/ProfileCard"
 // import PaymentCard from "./components/featurs/payment/PaymentCard/PaymentCard"
+import AdminEditor from "./components/pages/AdminEditor/AdminDataEdit.jsx"
 import HomePage from "./components/pages/Home/homePage"
 import PageNotFound from "./components/pages/PageNotFound/PageNotFound"
 import SubCategory from "./components/pages/SubCategory/SubCategory"
@@ -18,7 +19,7 @@ const Router = () => {
             <Route path="/signUp" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
             {/* <Route path="/payment" element={<PaymentCard/> } /> */}
-            {/* <Route path="/" element={ } /> */}
+            <Route path="/admin_edit_page" element={<AdminEditor/>}/>
             <Route path="*" element={<PageNotFound/> } />
         </Routes>
     )

@@ -10,13 +10,14 @@ const getAll =  createAsyncThunk( "lawyers/getAll",(arg,{rejectWithValue}) => {
     });
 });
 
-const update = createAsyncThunk("lawyers/update",(lawyer) => {
-  console.log(lawyer);
-  return fetch(`${basicAPI}/update/${lawyer.id}`, {
+const update = createAsyncThunk("lawyers/update",async (lawyer) => {
+  const data=lawyer.data
+  return await fetch(`${basicAPI}/update/byId/${lawyer.id}`, {
     method: "PUT",
-    cors:"cors",
-    headers: { "Content-Type": "application/json" },
-    body: { avatar:lawyer.avatar },
+    mode: 'cors',
+    cache: 'default',
+    headers:{"Content-Type": "application/json"},
+    body: JSON.stringify(data),
   })
     .then((res) => res.json())
     .then((res) => console.log(res))
@@ -28,7 +29,9 @@ const update = createAsyncThunk("lawyers/update",(lawyer) => {
 const deleteObj = createAsyncThunk("lawyers/deleteObj",(lawyer) => {
   return fetch(`${basicAPI}/delete`, {
     method: "PUT",
-    headers: { "Content-Type": "application/json" },
+    mode: 'cors',
+    cache: 'default',
+    headers:{"Content-Type": "application/json"},
     body: { lawyer },
   })
     .then((res) => res.json())
