@@ -1,5 +1,5 @@
 import "./HomeCardPage.css";
-import React, { useState } from "react";
+import { useState,useEffect } from "react";
 import {
   MDBModal,
   MDBModalDialog,
@@ -39,12 +39,12 @@ export default function HomeCardPage() {
   }
 
   return (
-    <div className="d-flex justify-content-center raper mt-5 mb-5">
-      <div className="d-flex justify-content-center col-lg-6 col-sm-4">
+    <div className="d-flex justify-content-center raper mt-5 ">
+      <div className=" d-flex justify-content-center col-lg-6 col-sm-4">
         {departments.map((item, key) => {
           return (
-            <div key={key}>
-              <MDBCard className="text-white imagStyle hover-overlay align-items-center ">
+            <div className="p-2" key={key}>
+              <MDBCard className="text-white imagStyle hover-overlay">
                 <MDBCardImage
                   className="imag"
                   overlay
