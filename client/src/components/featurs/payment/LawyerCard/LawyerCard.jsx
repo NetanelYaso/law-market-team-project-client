@@ -26,8 +26,8 @@ const LawyerCard = ()=> {
       </MDBCol>
       <MDBCol>
       <MDBListGroup style={{ minWidth: '18rem' }} light className=" pe-sm-0 text-lg-end text-md-end ps-5">
-      <MDBListGroupItem noBorders className="me-5">פיצוי פיטורין</MDBListGroupItem>
-      <MDBListGroupItem noBorders className="me-5">דמי תברואה </MDBListGroupItem>
+      <MDBListGroupItem noBorders className="me-5 py-2">פיצוי פיטורין</MDBListGroupItem>
+      <MDBListGroupItem noBorders className="me-5 py-2">דמי תברואה </MDBListGroupItem>
         </MDBListGroup>
       </MDBCol>
       </MDBRow>
