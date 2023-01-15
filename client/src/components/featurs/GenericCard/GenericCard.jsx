@@ -3,7 +3,7 @@ import { Card, Button } from 'react-bootstrap';
 import { Link, useNavigate } from "react-router-dom"
 function GenericCard({ name, discription }) {
   const navigate = useNavigate()
-  const navigateTo = () => {
+  const linkTo = () => {
     navigate("/login")
   }
   return (
@@ -13,7 +13,7 @@ function GenericCard({ name, discription }) {
       </div>
       <div className="mainCardBody">
         <p>{discription}</p>
-        <Button onClick={navigateTo}>עוד</Button>
+        <Button onClick={linkTo}>עוד</Button>
       </div>
     </Card>
 
