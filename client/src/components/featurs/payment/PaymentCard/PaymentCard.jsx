@@ -24,23 +24,25 @@ import {
 import ConfirmPayment from './../ConfirmPayment/ConfirmPayment';
 import { useNavigate } from "react-router-dom";
 
-
-
 const PaymentCard = ()=> {
   const [scrollableModal, setScrollableModal] = useState(false);
   const navigate = useNavigate();
   const [price,setPrice]=useState();
+  const [btnPayment,setBtnPayment]=useState(localStorage.getItem("sideOne") && localStorage.getItem("sideTwo")?false:true);
   const [basicActive, setBasicActive] = useState('tab1');
+//   console.log(initialValue);
   const handleBasicClick = (value) => {
     if (value === basicActive) {
       return;
     }
-
     setBasicActive(value);
   };
 
+  
  useEffect(()=>{
   setPrice(document.getElementById("one").innerText.slice(2))
+  console.log(localStorage.getItem("sideOne")?"ran":"sssss");
+  console.log(localStorage.getItem("sideTwo")?"abay":"ddddd");
  },[])
 
 
@@ -77,7 +79,7 @@ const PaymentCard = ()=> {
       <MDBListGroupItem noBorders className="py-2">שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
-        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center  onClick={() => setScrollableModal(!scrollableModal)}>
+        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center disabled={btnPayment}  onClick={() => setScrollableModal(!scrollableModal)}>
         המשך לתשלום
       </MDBBtn>
       </div>
@@ -91,7 +93,7 @@ const PaymentCard = ()=> {
       <MDBListGroupItem noBorders className="py-2">שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
-        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center  onClick={() => setScrollableModal(!scrollableModal)}>
+        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center disabled={btnPayment}  onClick={() => setScrollableModal(!scrollableModal)}>
         המשך לתשלום
       </MDBBtn>
       </div>
@@ -105,7 +107,7 @@ const PaymentCard = ()=> {
       <MDBListGroupItem noBorders className="py-2">שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
-        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center  onClick={() => setScrollableModal(!scrollableModal)}>
+        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center disabled={btnPayment} onClick={() => setScrollableModal(!scrollableModal)}>
         המשך לתשלום
       </MDBBtn>
       </div>
