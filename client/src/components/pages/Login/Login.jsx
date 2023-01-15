@@ -23,8 +23,6 @@ const Login = () => {
     try {
       await dispatch(
         logInOrRegister({ email, password })
-
-   
       );
       navigate("/")
       setEmail(" ");
