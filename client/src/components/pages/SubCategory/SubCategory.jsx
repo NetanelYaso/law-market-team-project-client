@@ -9,25 +9,30 @@ import { getAll } from "../../services/departmentsServices";
 import { useParams } from "react-router-dom";
 
 function SubCategory() {
+  const { id } = useParams()
   const dispatch = useDispatch()
   const departments = useSelector(state => state.department.allDepartments)
+  const subDepartments = useSelector(state => state.subDepartment)
+  console.log(subDepartments)
+
   useEffect(() => {
     dispatch(getAll())
-  },[])
-  
-  console.log(departments);
+  }, [])
+  const subDepartment = departments
+  console.log(subDepartment);
+
   return (
     <>
       <div className="d-flex justify-content-center mt-3">
       </div>
-      <Container className="sub_category">
+      <Container className="sub_category mb-5">
         <Row>
-          {departments.slice(0, 6).map((item) => (
+          {departments.slice(0, 6).map((item, key) => (
             <Col className="g-3" xl={4}>
-              <GenericCard name={item.name} discription={item.discription} />
+              <GenericCard key={key} name={item.name} discription={item.name} />
             </Col>
           ))}
-        </Row>
+        </Row> 
       </Container>
       <Container>
         <Row>
