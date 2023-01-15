@@ -1,5 +1,4 @@
 import "./HomeCardPage.css";
-import GenericCard from "../../../GenericCard";
 import { Row, Col, Container, Button ,Card} from 'react-bootstrap';
 import BottomCard from "../bottom-cards/BottomCard"
 import { useDispatch, useSelector } from "react-redux"

@@ -1,9 +1,7 @@
 import React from "react";
 import "./TitleCard.css";
-import { data } from "../../GenericCard/data";
 import GenericCard from "../../GenericCard/GenericCard";
 const TitleCard = () => {
-  console.log(data);
   return (
     <div className="container">
       <div className="row g-2 mb-3 ">
