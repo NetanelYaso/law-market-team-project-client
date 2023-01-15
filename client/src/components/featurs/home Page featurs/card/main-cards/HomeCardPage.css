@@ -1,15 +1,13 @@
 .imagStyle {
   width: 200px;
   height: 180px;
-  margin: 2px;
+  margin: 0;
 }
 
 .imag {
   background-image: url("https://mdbootstrap.com/img/new/slides/017.webp");
-  background-position: center;
-  height: 200px;
-  width: 200px;
-  margin-bottom: 0px;
+  height: 100%;
+  width: 100%;
 }
 
 .card-img-overlay {
@@ -21,7 +19,7 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.564);
-  height: 50px;
+   height: 50px; 
 }
 
 ul {
@@ -59,4 +57,4 @@ ul li::before {
   align-items: flex-end;
   height: 140px;
   justify-content: start;
-}
+} 
