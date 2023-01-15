@@ -25,6 +25,8 @@ import {
   MDBModalFooter
 } from "mdb-react-ui-kit";
 
+
+
 const DetailsCard = () => {
   const [basicActive, setBasicActive] = useState("tab1");
 
@@ -32,25 +34,6 @@ const DetailsCard = () => {
   const [sideTwo, setSideTwo] = useState({})
 
   const [popUp, setPopUp] = useState(false);
-import "./DetailsCard.css";
-import React, { useState, useEffect } from "react";
-import LawyerCard from "./../LawyerCard/LawyerCard";
-import PaymentCard from "./../PaymentCard/PaymentCard";
-import {
-  MDBContainer,
-  MDBTabs,
-  MDBTabsItem,
-  MDBTabsLink,
-  MDBTabsContent,
-  MDBTabsPane,
-  MDBInput,
-  MDBCheckbox,
-  MDBRadio,
-  MDBTextArea,
-  MDBBtn,
-  MDBRow,
-  MDBCol,
-} from "mdb-react-ui-kit";
 
   const toggleShow = () =>setPopUp(!popUp);
 
