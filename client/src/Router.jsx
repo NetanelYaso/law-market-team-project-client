@@ -5,8 +5,7 @@ import PageNotFound from "./components/pages/PageNotFound/PageNotFound"
 import SubCategory from "./components/pages/SubCategory/SubCategory"
 import Login from "./components/pages/Login/Login"
 import SignUp from "./components/pages/SignUp/SignUp"
-import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute"
-import DetailsCard from "./components/featurs/payment/DetailsCard/DetailsCard"
+import DetailsCard from './components/featurs/payment/DetailsCard/index';
 
 const Router = () => {
     return (
