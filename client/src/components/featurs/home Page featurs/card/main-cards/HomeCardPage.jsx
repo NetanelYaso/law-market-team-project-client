@@ -1,65 +1,45 @@
 import "./HomeCardPage.css";
-import React, { useState } from "react";
-import {
-  MDBModal,
-  MDBModalDialog,
-  MDBModalContent,
-  MDBCard,
-  MDBCardTitle,
-  MDBCardOverlay,
-  MDBCardImage,
-} from "mdb-react-ui-kit";
+import GenericCard from "../../../GenericCard";
+import { Row, Col, Container, Button } from 'react-bootstrap';
+import { data } from "../../../GenericCard/data"
+import BottomCard from "../bottom-cards/BottomCard"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react";
-import { getAll } from "../../../../services/departmentsServices"
+import { getAll } from "../../../../services/departmentsServices";
+import { useParams } from "react-router-dom";
 
-export default function HomeCardPage() {
-  const [centredModal, setCentredModal] = useState(false);
-  const [index, setIndex] = useState(0);
-  const toggleShow = () => setCentredModal(!centredModal);
-  const images = ["https://i.ytimg.com/vi/2hwZQvOG-NU/maxresdefault.jpg",
-  'https://www.קנאביס.com/wp-content/uploads/2012/09/monkey-baby.jpg'
-]
-const dispatch = useDispatch()
-const departments = useSelector(state => state.department.allDepartments)
-useEffect(() => {
-  dispatch(getAll())
-},[])
-console.log(departments);
-const popUpValue = (key)=>{
-  setIndex(key)
- return toggleShow()
-
-}
-
+function HomeCardPage() {
+  const dispatch = useDispatch()
+  const departments = useSelector(state => state.department.allDepartments)
+  useEffect(() => {
+    dispatch(getAll())
+  },[])
+  
+  console.log(departments);
   return (
+    <>
+      <div className="d-flex justify-content-center mt-3">
+      </div>
+      <Container className="sub_category">
+        <Row>
+          {departments.slice(0, 9).map((item) => (
+            <Col className="g-3" xl={4}>
+              <GenericCard name={item.name} discription={item.discription} />
+            </Col>
+          ))}
+        </Row> 
+      </Container>
+      <Container>
+        <Row>
+          </Row>
+      </Container>
+    </>
+  );
+};
 
-    <div className="d-flex justify-content-center raper mt-5">
-      <div className="d-flex justify-content-center col-lg-6 col-sm-4">
-        {departments.map((item, key) => {
-          return (
-            <div key={key}>
-              <MDBCard className="text-white imagStyle hover-overlay align-items-center ">
-                <MDBCardImage
-                  className="imag"
-                  overlay
-                  src ={ item.coverImage.url}
-                  alt="..."
-                />
-                <div>
-                  <MDBCardOverlay className="boxTitel myText "onClick={()=>popUpValue(key)}>
-                    <MDBCardTitle className="textInCard " >
-                      {item.name}
-                    </MDBCardTitle>
-                  </MDBCardOverlay>
-                </div>
-              </MDBCard>
+export default HomeCardPage;
 
-            </div>
-          );
-        })}
-
-{/* <MDBModal
+/* <MDBModal
 className="modal_popUp bg-opacity-50"
   tabIndex="-1"
   show={centredModal}
@@ -79,12 +59,12 @@ className="modal_popUp bg-opacity-50"
       </ul>
     </MDBModalContent>
   </MDBModalDialog>
-</MDBModal> */}
-      </div>
-    </div>
+</MDBModal> */
+//       </div>
+//     </div>
     
-  );
-}
+//   );
+// }
 
 
 
