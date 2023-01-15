@@ -14,3 +14,15 @@
 .btn-save{
     background-color:  #08b9e3 !important;
 }
+.tabs{
+    color:  #08b9e3 !important;
+}
+.form-check-input[type=radio]:checked {
+    background-image: none !important;
+    background-color: #fff !important;
+    border-color: #08b9e3 !important;
+}
+.form-check-input[type=radio]:checked:after {
+    border-color: #08b9e3 !important;
+    background-color: #08b9e3 !important;
+}
