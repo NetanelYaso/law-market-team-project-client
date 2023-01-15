@@ -39,27 +39,27 @@ function HomeCardPage() {
 
 export default HomeCardPage;
 
-/* <MDBModal
-className="modal_popUp bg-opacity-50"
-  tabIndex="-1"
-  show={centredModal}
-  setShow={setCentredModal}
->
-  <MDBModalDialog centered>
-    <MDBModalContent>
-      <figure className="PopUpModel" style={{backgroundImage:`url(${images[index]})`}}>
-        {/* <div className="textInModle">{departments[index].name}</div> */}
-      </figure>
-      <ul className="cardul">
-        {/* <li className="cardLi">{departments[index].name}</li>
-        <li className="cardLi">{departments[index].name}</li>
-        <li className="cardLi">{departments[index].name}</li>
-        <li className="cardLi">{departments[index].name}</li>
-        <li className="cardLi">{departments[index].name}</li> */}
-      </ul>
-    </MDBModalContent>
-  </MDBModalDialog>
-</MDBModal> */
+//  <MDBModal
+// className="modal_popUp bg-opacity-50"
+//   tabIndex="-1"
+//   show={centredModal}
+//   setShow={setCentredModal}
+// >
+//   <MDBModalDialog centered>
+//     <MDBModalContent>
+//       <figure className="PopUpModel" style={{backgroundImage:`url(${images[index]})`}}>
+//          <div className="textInModle">{departments[index].name}</div> 
+//        </figure>
+//        <ul className="cardul">
+//          <li className="cardLi">{departments[index].name}</li>
+//          <li className="cardLi">{departments[index].name}</li>
+//          <li className="cardLi">{departments[index].name}</li>
+//          <li className="cardLi">{departments[index].name}</li>
+//          <li className="cardLi">{departments[index].name}</li> 
+//        </ul>
+//      </MDBModalContent>
+//    </MDBModalDialog>
+//  </MDBModal> 
 //       </div>
 //     </div>
     
