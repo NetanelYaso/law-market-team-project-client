@@ -25,7 +25,7 @@ const LawyerCard = ()=> {
       <p className="">הסכם ממון הינו הסכם בענייני רכוש, בין בני זוג נשואים, לא נשואים (ידועים בציבור) או בני זוג העומדים להינשא, בו מוסדרים ביניהם כל ענייני הרכוש והממון, בהתאם להעדפותיהם האישיות..</p>
       </MDBCol>
       <MDBCol>
-      <MDBListGroup style={{ minWidth: '18rem' }} light className=" pe-sm-0 text-lg-end text-md-end ps-5">
+      <MDBListGroup style={{ minWidth: '18rem' }} light className=" pe-sm-0 text-lg-end text-md-end ps-5 p-0">
       <MDBListGroupItem noBorders className="me-5 py-2">פיצוי פיטורין</MDBListGroupItem>
       <MDBListGroupItem noBorders className="me-5 py-2">דמי תברואה </MDBListGroupItem>
         </MDBListGroup>
