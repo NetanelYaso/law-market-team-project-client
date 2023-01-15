@@ -3,6 +3,7 @@ import { update, deleteObj, getById, logInOrRegister } from "../components/servi
 
 const initialState = {
     isLoading: false,
+    user:""
   };
   
   export const usersSlice = createSlice({
@@ -19,6 +20,7 @@ const initialState = {
         [logInOrRegister.fulfilled]:(state, action)=>{
             state.isLoading=false
             state.user=action.payload.users
+            console.log(action.payload.users);
         },
         [logInOrRegister.rejected]:(state, action)=>{
             state.isLoading=false
