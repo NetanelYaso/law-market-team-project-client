@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 function GenericCard({ name, discription }) {
   const navigate = useNavigate()
   const linkTo = () => {
-    navigate("/login")
+    navigate("/profileCard")
   }
   return (
     <Card className="mainCard">
