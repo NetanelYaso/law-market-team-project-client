@@ -33,7 +33,7 @@ export default function BottomCard() {
 
         {lawyers.slice(0,3).map((item) => (
           <MDBCol xl={4} md={4} className="mb-4 singalCard justify-content-center ">
-            <MDBCard className="singalCard d-flex justify-content-between m-2 h-100">
+            <MDBCard className="singalCard d-flex justify-content-between p-5 m-2 h-100">
               <div className="d-flex justify-content-between align-items-center row  ">
                 <div className="d-flex align-items-center col-12 ">
                    <MDBCardImage
