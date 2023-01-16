@@ -35,7 +35,7 @@ ul {
 
 ul li::before {
   content: "\2022";
-  color: rgb(119, 196, 228);
+  /* color: rgb(119, 196, 228); */
   font-weight: bold;
   display: inline-block;
   width: 1rem;
