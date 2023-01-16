@@ -28,3 +28,8 @@
     top: 0% !important;
     border-color: #08b9e3;
 }
+.title-bg{
+    background-color: rgba(0, 0, 0, 0.489);
+    height: 250%;
+    /*  width: 130px */
+}

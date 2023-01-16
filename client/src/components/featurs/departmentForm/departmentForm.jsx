@@ -10,7 +10,6 @@ import {
 } from "mdb-react-ui-kit";
 import { create } from "../../services/departmentsServices";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 
 function DepartmentForm() {
   
@@ -20,14 +19,9 @@ function DepartmentForm() {
   const [subDepartments, setSubDepartments] = useState([]);
   const [lawyers, setLawyers] = useState([]);
   const [active, setActive] = useState(true);
-  // const [loading, setLoading]= useState(false)
 
   let loading=useSelector((state)=>state.department.value)
   const dispatch= useDispatch()
-
-  // useEffect(()=>{
-  //   console.log(loading);
-  // },[loading])
 
   let AllSubDepartments=[]
   
@@ -86,8 +80,6 @@ function DepartmentForm() {
             type="text"
             onChange={
               (e) => (subDepartments[0]=e.target.value)
-              // (e) => (subDepartments[0] = e.target.value)
-              // setSubDepartments([...subDepartments, e.target.value])
             }
           />
           <MDBTextArea
@@ -103,8 +95,6 @@ function DepartmentForm() {
             type="text"
             onChange={
               (e) => (subDepartments[1]=e.target.value)
-              // (e) => (subDepartments[0] = e.target.value)
-              // setSubDepartments([...subDepartments, e.target.value])
             }
           />
           <MDBTextArea
@@ -120,8 +110,6 @@ function DepartmentForm() {
             type="text"
             onChange={
               (e) => (subDepartments[2]=e.target.value)
-              // (e) => (subDepartments[0] = e.target.value)
-              // setSubDepartments([...subDepartments, e.target.value])
             }
           />
           <MDBTextArea
