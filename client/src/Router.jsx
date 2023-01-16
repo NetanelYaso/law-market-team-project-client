@@ -8,7 +8,7 @@ import Login from "./components/pages/Login/Login"
 import SignUp from "./components/pages/SignUp/SignUp"
 import DetailsCard from './components/featurs/payment/DetailsCard/index';
 import LawyersSelection from "./components/pages/LawyersSelection/LawyersSelection"
-import AboutUs from "./components/pages/AboutUs/AboutUs"
+import AboutUs from "./components/pages/AboutUs/Aboutus"
 
 const Router = () => {
     return (
