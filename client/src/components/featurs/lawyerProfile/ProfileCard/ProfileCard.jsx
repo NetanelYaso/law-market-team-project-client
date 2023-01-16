@@ -1,109 +1,121 @@
-import "../ProfileCard.css";
-import React from "react";
-import { useState } from "react";
+import "./ProfileCard.css";
+import { useEffect } from "react";
+import {
+  MDBContainer,
+  MDBCardImage,
+  MDBRow,
+  MDBCol,
+  MDBListGroup,
+  MDBListGroupItem,
+  MDBIcon,
+} from "mdb-react-ui-kit";
+import { useDispatch, useSelector } from "react-redux";
+import { getAll } from "../../../services/departmentsServices";
+import GenericCard from "../../../featurs/GenericCard/GenericCard";
 
+function ProfileCard() {
+  const dispatch = useDispatch();
+  const departments = useSelector((state) => state.department.allDepartments);
 
-const ProfileCard = () => {
-  const [name, setName] = useState("");
-  const [title, setTitle] = useState("");
+  useEffect(() => {
+    dispatch(getAll());
+  }, []);
+  const subDepartment = departments;
+  console.log(subDepartment);
 
   return (
-    <>
-      <section class="col col-md-5  card-container gradient-custom-2">
-        
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col col-md-7 col-sm-8">
-              <div class="card">
-                <div class="coverImag rounded-top text-white d-flex flex-row">
-                  <div class="profPic ms-4 mt-5 d-flex flex-column">
-                    <img
-                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
-                      alt="Generic placeholder image"
-                      class="MainPhotoProfile img-fluid rounded-circle  mt-4 mb-2"
-                    />
-                  </div>
-                  <div class="nameTxt ms-3">
-                    <h5>Andy Horwitz</h5>
-                    <p>Title</p>
-                  </div>
-                </div>
-                <div class=" text-black"></div>
-                <div className="p-2 d-flex justify-content-between">
-                  <h5>rating</h5>
-                    <div class="rating d-flex " >
-                      <span>
-                        <i class="fa-star fa-sm far"></i>
-                      </span>
-                      <span>
-                        <i class="fa-star fa-sm far"></i>
-                      </span>
-                      <span>
-                        <i class="fa-star fa-sm far"></i>
-                      </span>
-                      <span>
-                        <i class="fa-star fa-sm far"></i>
-                      </span>
-                      <span>
-                        <i class="fa-star fa-sm far"></i>
-                      </span>
-                    </div>
-                 
-                </div>
-                <hr />
-                <div class="card-body p-0 text-black">
-                  <div class="list-group list-group-flush rounded-3">
-                    <span class="list-group-item  d-flex justify-content-between align-items-center ">
-                      
-                      <p class=""><i class="fas fa-map-marker-alt"></i> location</p>
-                      <p>8 km</p>
-                    </span>
-
-                  <span class="list-group-item d-flex justify-content-between align-items-center ">
-                    <p>8 שנים</p>
-                    <p class="">
-                      {" "}
-                      <i class="far fa-calendar-check"></i> ניסיון
-                    </p>
-                  </span>
-
-                  <span class="list-group-item  d-flex justify-content-between align-items-center ">
-                    <p>1 יום</p>
-                    <p class="">
-                      {" "}
-                      <i class="fas fa-reply"></i> תגובה תוך
-                    </p>
-                  </span>
-                  <span class="list-group-item  d-flex justify-content-between align-items-center ">
-                    <p>10 ימים</p>
-                    <p class="">
-                      <i class="fas fa-calendar-check"></i> עבודה מוכנה תוך
-                    </p>
-                  </span>
-                </div>
-              </div>
-              <hr />
-              <div className="buttens mb-3 d-flex justify-content-around">
-                <button
-                  type="button"
-                  class="btn btn-outline-dark"
-                  data-mdb-ripple-color="dark"
+    <div className="profile-card mt-4">
+      <MDBContainer>
+        <MDBRow>
+          <MDBCol className=" " md="4">
+            <img
+              className="img-details w-100 rounded"
+              height="200"
+              src="sign.jpg"
+              alt="..."
+            />
+            <MDBRow>
+              <MDBCol md="4" className="">
+                <MDBCardImage
+                  className="rounded-circle"
+                  width="140"
+                  height="140"
+                  src="https://i.pinimg.com/originals/b7/49/47/b74947543e3a30e0b6b2522033d0562b.jpg"
+                  alt=""
+                />
+              </MDBCol>
+              <MDBCol className="text-lg-end" height="" md="8">
+                <h5 className=" fs-4">דינה יסמין</h5>
+                <span className="">עורך דין בנושא הסכמי ממון</span>
+                {/* <Rating/> */}
+                <p className="">
+                  הסכם ממון הינו הסכם בענייני רכוש, בין בני זוג נשואים, לא
+                  נשואים (ידועים בציבור) או בני זוג העומדים להינשא, בו מוסדרים
+                  ביניהם כל ענייני הרכוש והממון, בהתאם להעדפותיהם האישיות..
+                </p>
+              </MDBCol>
+              <MDBCol>
+                <MDBListGroup
+                  style={{ minWidth: "18rem" }}
+                  light
+                  className=" pe-sm-0 text-lg-end text-md-end ps-5 p-0"
                 >
-                  <a href="">צור קשר</a>
-                </button>
-                <button
-                  type="button"
-                  class="btn text-primary btn-outline-dark"
-                  data-mdb-ripple-color="dark"
-                >
-                  <a href="">קבל הצעה</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+                  <MDBListGroupItem noBorders className="me-5 py-2">
+                    פיצוי פיטורין
+                  </MDBListGroupItem>
+                  <MDBListGroupItem noBorders className="me-5 py-2">
+                    דמי תברואה{" "}
+                  </MDBListGroupItem>
+                  <MDBListGroupItem noBorders className="me-5 py-2">
+                    דמי תברואה{" "}
+                  </MDBListGroupItem>
+                  <MDBListGroupItem noBorders className="me-5 py-2">
+                    דמי תברואה{" "}
+                  </MDBListGroupItem>
+                </MDBListGroup>
+                <MDBRow className=" m-2">
+                  <MDBCol md="7" className="col-6">
+                    <MDBCol className="col-12 m-2">
+                      <MDBIcon fas icon="map-marker-alt" /> מאיפה
+                    </MDBCol>
+                    <MDBCol className="col-12 m-2">
+                      <MDBIcon fas icon="award" /> ניסיון בתחום
+                    </MDBCol>
+                    <MDBCol className="col-12 m-2">
+                      <MDBIcon far icon="comment-dots" /> זמן תגובה ממוצע
+                    </MDBCol>
+                    <MDBCol className="col-12 m-2">
+                      <MDBIcon far icon="calendar-check" /> עבודה מוכנה תוך זמן
+                    </MDBCol>
+                  </MDBCol>
+                  <MDBCol className=" col-6" md="5">
+                    <p className="m-2">ירושלים</p>
+                    <p className="m-2">8 שנים</p>
+                    <p className="m-2">3 שעות</p>
+                    <p className="m-2">10 ימי עסקים</p>
+                  </MDBCol>
+                </MDBRow>
+              </MDBCol>
+            </MDBRow>
+          </MDBCol>
+          <MDBCol className=" " md="8">
+            <MDBRow>
+              {departments.slice(0, 4).map((item, key) => (
+                <MDBCol className="col-lg-5 m-2 p-0 col-12 genericCard">
+                  <GenericCard
+                    className=""
+                    key={key}
+                    name={item.subDepartments[0].name}
+                    discription={item.subDepartments[0].description}
+                  />
+                </MDBCol>
+              ))}
+            </MDBRow>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
+    </div>
   );
-};
+}
 
 export default ProfileCard;

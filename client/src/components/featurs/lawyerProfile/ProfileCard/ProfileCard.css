@@ -1,0 +1,9 @@
+.profile-card{
+    direction:rtl;
+}
+.genericCard:hover{
+    border:2px solid #08b9e3;
+}
+.mainCard{
+width: 100% !important;
+}

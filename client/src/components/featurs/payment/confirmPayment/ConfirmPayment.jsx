@@ -8,7 +8,6 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 const  ConfirmPayment = ({price})=> {
   return (
     <div className="ConfirmPayment">
-      {/* process.env.PUBLIC_ID */}
       <MDBContainer className='text-center'>
         <PayPalScriptProvider options={{"client-id": process.env.PUBLIC_ID}}>
             <PayPalButtons 
