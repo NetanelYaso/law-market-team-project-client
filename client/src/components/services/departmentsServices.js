@@ -11,10 +11,13 @@ const getAll =  createAsyncThunk( "departments/getAll",() => {
 });
 
 const update = createAsyncThunk("departments/update",(department) => {
-  return fetch(`${basicAPI}/byId/${department.id}/update`, {
+  const data=department.data
+  return fetch(`${basicAPI}/update/byId/${department.id}`, {
     method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: { department },
+    mode: 'cors',
+    cache: 'default',
+    headers:{"Content-Type": "application/json"},
+    body: JSON.stringify(data),
   })
     .then((res) => res.json())
     .then((res) => console.log(res))
@@ -26,7 +29,9 @@ const update = createAsyncThunk("departments/update",(department) => {
 const deleteObj = createAsyncThunk("departments/deleteObj",(department) => {
   return fetch(`${basicAPI}/delete`, {
     method: "PUT",
-    headers: { "Content-Type": "application/json" },
+    mode: 'cors',
+    cache: 'default',
+    headers:{"Content-Type": "application/json"},
     body: { department },
   })
     .then((res) => res.json())
