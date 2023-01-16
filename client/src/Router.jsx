@@ -6,6 +6,7 @@ import Login from "./components/pages/Login/Login"
 import SignUp from "./components/pages/SignUp/SignUp"
 import DetailsCard from './components/featurs/payment/DetailsCard/index';
 import HomePage from './components/pages/Home/HomePage';
+import LawyersSelection from "./components/pages/LawyersSelection/LawyersSelection"
 
 const Router = () => {
     return (
