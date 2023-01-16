@@ -7,6 +7,7 @@ import SubCategory from "./components/pages/SubCategory/SubCategory"
 import Login from "./components/pages/Login/Login"
 import SignUp from "./components/pages/SignUp/SignUp"
 import DetailsCard from './components/featurs/payment/DetailsCard/index';
+import HomePage from './components/pages/Home/homePage'
 import LawyersSelection from "./components/pages/LawyersSelection/LawyersSelection"
 import AboutUs from "./components/pages/AboutUs/AboutUs"
 
