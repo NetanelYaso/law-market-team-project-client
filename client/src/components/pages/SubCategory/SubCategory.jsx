@@ -29,7 +29,7 @@ function SubCategory() {
         <Row>
           {departments.slice(0, 6).map((item, key) => (
             <Col className="g-3" xl={4}>
-              <GenericCard key={key} name={item.name} discription={item.name} />
+              <GenericCard key={key} name={item.subDepartments[0].name} discription={item.subDepartments[0].description} />
             </Col>
           ))}
         </Row> 

@@ -16,29 +16,45 @@ import {
   MDBBtn,
   MDBRow,
   MDBCol,
+  MDBModal,
+  MDBModalDialog,
+  MDBModalContent,
+  MDBModalHeader,
+  MDBModalTitle,
+  MDBModalBody,
+  MDBModalFooter
 } from "mdb-react-ui-kit";
+
+
 
 const DetailsCard = () => {
   const [basicActive, setBasicActive] = useState("tab1");
 
-  const [details, setDetails] = useState({});
-  const [inputs, setInputs] = useState({})
+  const [sideOne, setSideOne] = useState({});
+  const [sideTwo, setSideTwo] = useState({})
+
+  const [popUp, setPopUp] = useState(false);
+
+  const toggleShow = () =>setPopUp(!popUp);
+
 
 const changeInputs = (e)=>{
-  setInputs({...inputs,[e.target.name]:e.target.value})
+    setSideTwo({...sideTwo,[e.target.name]:e.target.value})
 }
 
 const handleInputs =()=>{
-  localStorage.setItem("inputs",JSON.stringify(inputs))
+        setPopUp(!popUp)
+    localStorage.setItem("sideTwo",JSON.stringify(sideTwo))
 }
 
 
   const changeDetails = (e) => {
-    setDetails({ ...details, [e.target.name]:e.target.value });
+    setSideOne({ ...sideOne, [e.target.name]:e.target.value });
   };
 
   const handleSubmit = ()=>{
-      localStorage.setItem("details",JSON.stringify(details))
+    setPopUp(!popUp)
+    localStorage.setItem("sideOne",JSON.stringify(sideOne))
   }
 
   const handleBasicClick = (value) => {
@@ -77,6 +93,7 @@ const handleInputs =()=>{
                 <MDBTabsLink
                   onClick={() => handleBasicClick("tab1")}
                   active={basicActive === "tab1"}
+                  className="tabs"
                 >
                   פרטי צד א
                 </MDBTabsLink>
@@ -85,6 +102,7 @@ const handleInputs =()=>{
                 <MDBTabsLink
                   onClick={() => handleBasicClick("tab2")}
                   active={basicActive === "tab2"}
+                  className="tabs"
                 >
                   פרטי צד ב
                 </MDBTabsLink>
@@ -93,7 +111,8 @@ const handleInputs =()=>{
             <MDBTabsContent className="">
               <MDBTabsPane show={basicActive === "tab1"}>
                 <form
-                  className=" "
+                  className=""
+                  onSubmit={(e)=>e.preventDefault()}
                 >
                   <MDBInput
                     id="firstName"
@@ -131,7 +150,7 @@ const handleInputs =()=>{
                   מגדר
                   <br />
                   <MDBRadio
-                    className="mb-4"
+                    className="mb-4 radio"
                     id="inlineRadio1"
                     label="זכר"
                     inline
@@ -141,7 +160,7 @@ const handleInputs =()=>{
                     onChange={(e) => changeDetails(e)}
                   />
                   <MDBRadio
-                    className="mb-4"
+                    className="mb-4 radio"
                     id="inlineRadio2"
                     label="נקבה"
                     inline
@@ -166,7 +185,7 @@ const handleInputs =()=>{
               </MDBTabsPane>
               <MDBTabsPane show={basicActive === "tab2"}>
                 {" "}
-                <form>
+                <form onSubmit={(e)=>e.preventDefault()}>
                   <MDBInput
                     id="firstName"
                     wrapperClass="mb-4"
@@ -240,6 +259,24 @@ const handleInputs =()=>{
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+
+
+                      {/* alert user Status */}
+      <MDBModal show={popUp} setShow={setPopUp} tabIndex='-1'>
+        <MDBModalDialog>
+          <MDBModalContent>
+            <MDBModalHeader>
+              <MDBModalTitle>Modal title</MDBModalTitle>
+            </MDBModalHeader>
+            <MDBModalBody><h1 style={{color:"green"}}>Success</h1></MDBModalBody>
+            <MDBModalFooter>
+              <MDBBtn color='secondary' onClick={toggleShow}>
+                Close
+              </MDBBtn>
+            </MDBModalFooter>
+          </MDBModalContent>
+        </MDBModalDialog>
+      </MDBModal>
     </div>
   );
 };
