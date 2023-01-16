@@ -3,7 +3,9 @@
   height: 180px;
   margin: 0;
 }
-
+.card-title{
+  color: white;
+}
 .imag {
   background-image: url("https://mdbootstrap.com/img/new/slides/017.webp");
   height: 100%;
@@ -39,22 +41,5 @@ ul li::before {
   width: 1rem;
 }
 
-.textInModle {
-  height: 50px;
-  width: 150px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: x-large;
 
-}
 
-.PopUpModel {
-  background-image: url("https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg");
-  background-position: center;
-  display: flex;
-  align-items: flex-end;
-  height: 140px;
-  justify-content: start;
-} 
