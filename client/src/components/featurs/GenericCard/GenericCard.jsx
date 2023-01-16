@@ -1,6 +1,6 @@
 import "./GenericCard.css";
 import { Card, Button } from 'react-bootstrap';
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 function GenericCard({ name, discription }) {
   const navigate = useNavigate()
   const linkTo = () => {

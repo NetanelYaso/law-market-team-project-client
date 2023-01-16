@@ -21,15 +21,15 @@ function Rating({ ratingNum }) {
 
   return (
     <>
-      <MDBContainer className="d-flex justify-content-center pb-3">
+      <MDBContainer className="raiting_color d-flex justify-content-center pb-3">
         {starsOrder[0].map((star) => (
-          <MDBIcon color="warning" fas icon="star" />
+          <MDBIcon fas icon="star" />
         ))}
         {starsOrder[1].map((star) => (
-          <MDBIcon color="warning" fas icon="star-half" />
+          <MDBIcon fas icon="star-half" />
         ))}
         {starsOrder[2].map((star) => (
-          <MDBIcon color="warning" far icon="star" />
+          <MDBIcon far icon="star" />
         ))}
       </MDBContainer>
     </>

@@ -8,8 +8,9 @@ import {
 } from "mdb-react-ui-kit";
 import SearchBar from "../../featurs/SearchBar/SearchBar";
 import LawyerCard from "../../featurs/LawyerCard/LawyerCard";
-import { useState } from "react";
-import { useRef } from "react";
+import { useState,useEffect } from "react";
+import  {useDispatch,useSelector} from "react-redux";
+import  {getAll} from "../../services/lawyersServices"
 
 const infoArray = [
   {
@@ -74,6 +75,13 @@ const infoArray = [
   },
 ];
 function LawyersSelection() {
+
+  // const dispatch = useDispatch()
+  // const Lawyers = useSelector(state => state.lawyers.allLawyers)
+  // useEffect(() => {
+  //   dispatch(getAll())
+  // },[])
+
   const [lawyersArr, setLawyersArr] = useState(infoArray);
   const [searchValue, setSearchValue] = useState("");
   const handleSearch = (value) => {

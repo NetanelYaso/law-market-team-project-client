@@ -21,7 +21,7 @@ import {
   MDBModalFooter,
 
 } from 'mdb-react-ui-kit';
-import ConfirmPayment from './../ConfirmPayment/ConfirmPayment';
+import ConfirmPayment from '../confirmPayment/ConfirmPayment';
 import { useNavigate } from "react-router-dom";
 
 const PaymentCard = ()=> {
@@ -145,3 +145,4 @@ export default PaymentCard;
 
 
 
+//   export default PaymentCard;
