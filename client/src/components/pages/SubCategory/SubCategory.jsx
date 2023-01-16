@@ -5,6 +5,7 @@ import BottomCard from "../../featurs/home page featurs/card/bottom-cards/Bottom
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react";
 import { getAll } from "../../services/departmentsServices";
+import Map from "../../featurs/Map/Map";
 
 function SubCategory() {
   const dispatch = useDispatch()
@@ -33,7 +34,10 @@ function SubCategory() {
         <Row>
           <BottomCard />
         </Row>
-      </Container>
+        <Row>
+          
+        </Row>
+      </Container>-
     </>
   );
 };

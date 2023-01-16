@@ -1,5 +1,4 @@
 import "./LawyerCard.css";
-import React from "react";
 import {
   MDBCard,
   MDBCardImage,
@@ -12,17 +11,17 @@ import {
 import Rating from "../Rating/Rating";
 
 function LawyerCard({ lawyerInfo }) {
-  const { pic, fullName, department, rating } = lawyerInfo;
+  const { avatar, name, departments, reviews } = lawyerInfo;
   return (
     <>
       <MDBCard border="warning hover-shadow">
-        <MDBCardImage src={pic} alt="..." position="top" />
+        <MDBCardImage src={avatar.url} alt="..." position="top" />
         <MDBCardBody>
-          <Rating ratingNum={rating} />
+          <Rating ratingNum={5} />
           <MDBCardTitle className="text-center mb-0 fs-4">
-            {fullName}
+            {name}
           </MDBCardTitle>
-          <MDBCardText className="text-center">{department}</MDBCardText>
+          <MDBCardText className="text-center">{departments[0]}</MDBCardText>
         </MDBCardBody>
         <MDBCardFooter className="px-1">
           <p className="m-0 text-center fs-5">Provided by</p>
