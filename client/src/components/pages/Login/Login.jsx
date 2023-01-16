@@ -23,14 +23,14 @@ const Login = () => {
     try {
       await dispatch(
         logInOrRegister({ email, password })
-      );
-      navigate("/")
-      setEmail(" ");
+      )
+      .then(()=>{
+        console.log(successfulLogIn)
+       if(successfulLogIn==true){ navigate("/")}else{ navigate("/login")}})
       setPassword(" ");
     } catch (err) {
       setError(err.message);
       navigate("/login")
-
     }
   };
   const handlegoogleIn = async (e) => {
