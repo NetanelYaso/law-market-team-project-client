@@ -11,18 +11,17 @@ function GenericCard({ name, discription }) {
     navigate("/profileCard")
   }
   const dispatch = useDispatch()
-  const departments = useSelector(state => state.department.allDepartments)
   useEffect(() => {
     dispatch(getAll())
   },[])
   return (
     <Card className="mainCard">
       <div>
-        <h1>{departments.name}</h1>
+        <h1>{name}</h1>
       </div>
       <div className="mainCardBody">
         <p>{discription}</p>
-        <Button onClick={navigate}>עוד</Button>
+        <Button onClick={linkTo}>עוד</Button>
       </div>
     </Card>
 
