@@ -9,8 +9,8 @@ import SignUp from "./components/pages/SignUp/SignUp"
 import DetailsCard from './components/featurs/payment/DetailsCard/index';
 import HomePage from './components/pages/Home/homePage'
 import LawyersSelection from "./components/pages/LawyersSelection/LawyersSelection"
-
-// import Aboutus from "./components/pages/AboutUs/AboutUs"
+import HomePage from './components/pages/Home/homePage';
+import Aboutus from "./components/pages/AboutUs/AboutUs"
 
 const Router = () => {
     return (
