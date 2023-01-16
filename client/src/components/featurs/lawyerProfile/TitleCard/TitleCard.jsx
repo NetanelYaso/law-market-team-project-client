@@ -1,9 +1,11 @@
 import React from "react";
 import "./TitleCard.css";
-import { data } from "../../GenericCard/data";
 import GenericCard from "../../GenericCard/GenericCard";
 const TitleCard = () => {
+<<<<<<< HEAD
   // console.log(data);
+=======
+>>>>>>> ebb317600ba07e819f2752e7e4a49f9301186092
   return (
     <div className="container">
       <div className="row g-2 mb-3 ">

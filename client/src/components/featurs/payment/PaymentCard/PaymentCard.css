@@ -6,3 +6,13 @@
 .btn-pay{
     background-color: #08b9e3 !important;
 }
+.tab-links{
+    color: #08b9e3 !important;
+}
+.nav-tabs .nav-link.active{
+    color: #08b9e3 !important;
+    border-color: #08b9e3 !important;
+}
+.nav-item::before{
+    display: none;
+}
