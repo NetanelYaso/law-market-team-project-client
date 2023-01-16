@@ -18,7 +18,7 @@ function GenericCard({ name, discription }) {
   return (
     <Card className="mainCard">
       <div>
-        <h1>{departments.name}</h1>
+        <h1>{name}</h1>
       </div>
       <div className="mainCardBody">
         <p>{discription}</p>

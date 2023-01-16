@@ -9,6 +9,7 @@ import SignUp from "./components/pages/SignUp/SignUp"
 import DetailsCard from './components/featurs/payment/DetailsCard/index';
 import LawyersSelection from "./components/pages/LawyersSelection/LawyersSelection"
 import HomePage from './components/pages/Home/homePage';
+import Aboutus from "./components/pages/AboutUs/AboutUs"
 
 const Router = () => {
     return (
@@ -18,6 +19,7 @@ const Router = () => {
             <Route path="/profileCard" element={<ProfileCard />} />
             <Route path="/signUp" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/AboutUs" element={<Aboutus/>} />
             <Route path="/payment" element={<DetailsCard/> } />
             <Route path="*" element={<PageNotFound/> } />
         </Routes>
