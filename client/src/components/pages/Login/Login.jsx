@@ -24,9 +24,7 @@ const Login = () => {
       await dispatch(
         logInOrRegister({ email, password })
       )
-      .then(()=>{
-        console.log(successfulLogIn)
-       if(successfulLogIn==true){ navigate("/")}else{ navigate("/login")}})
+      navigate("/")
       setPassword(" ");
     } catch (err) {
       setError(err.message);
