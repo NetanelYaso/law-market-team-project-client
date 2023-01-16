@@ -17,7 +17,7 @@ function HomeCardPage() {
     dispatch(getAll())
   },[])
   
-  // console.log(departments);
+  console.log(departments);
   return (
     <>
       <div className="d-flex justify-content-center mt-3">
@@ -31,7 +31,9 @@ function HomeCardPage() {
         <img className="homePage_card_img" src={item.coverImage.url}/>
       </div>
       <div className="mainCardBody">
-        <p>{item.discription}</p>
+        <ul>
+        {item.subDepartments.map((sub)=><li>{sub.name}</li>)}
+        </ul>
         <Button onClick={linkTo}>עוד</Button>
       </div>
     </Card>           
