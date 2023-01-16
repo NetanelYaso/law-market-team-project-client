@@ -30,8 +30,8 @@ function Explanation() {
             <span>
             חברתנו עוסקת במתן ליווי משפטי מהימן מקצועי ומוכח בשלל תחומים </span>
               <span> זקוקים לסיוע משפטי ? נדאג לספק לכם אותו בצורה הנוחה ביותר </span>
-            <div>
-            <Button onClick={()=>navigate} className ="me-3 bg-">עורכי הדין שלנו </Button>
+            <div className="explanation-btr">
+            <Button onClick={()=>navigate} className ="me-3 ">עורכי הדין שלנו </Button>
             <Button onClick={()=>navigate}>לקוחות מספרים</Button></div>
           </div></div>
         </Col>

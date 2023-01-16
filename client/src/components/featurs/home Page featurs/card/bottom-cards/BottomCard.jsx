@@ -25,9 +25,8 @@ export default function BottomCard() {
   // console.log(lawyers);
   return (
     <div>
-      <div className="mt-4">
-        <h2 className=" d-flex justify-content-center">מומלצי החודש</h2>
-      </div>
+      {/* <div className="mt-4">
+      </div> */}
       <div className="cardRaper d-flex justify-content-evenly ">
 
 
