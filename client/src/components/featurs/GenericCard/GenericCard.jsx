@@ -1,11 +1,20 @@
 import "./GenericCard.css";
 import { Card, Button } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom"
+import { getAll } from "../../services/departmentsServices";
+import { useEffect } from "react";
+
+import { useDispatch , useSelector } from "react-redux";
 function GenericCard({ name, discription }) {
   const navigate = useNavigate()
   const linkTo = () => {
     navigate("/profileCard")
   }
+  const dispatch = useDispatch()
+  const departments = useSelector(state => state.department.allDepartments)
+  useEffect(() => {
+    dispatch(getAll())
+  },[])
   return (
     <Card className="mainCard">
       <div>
@@ -13,7 +22,7 @@ function GenericCard({ name, discription }) {
       </div>
       <div className="mainCardBody">
         <p>{discription}</p>
-        <Button onClick={linkTo}>עוד</Button>
+        <Button onClick={navigate}>עוד</Button>
       </div>
     </Card>
 
