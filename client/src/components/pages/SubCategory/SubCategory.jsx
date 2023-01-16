@@ -12,16 +12,10 @@ function SubCategory() {
 
   useEffect(() => {
     dispatch(getAll())
-<<<<<<< HEAD
-  },[])
-  
-  // console.log(departments);
-=======
   }, [])
   const subDepartment = departments
   console.log(subDepartment);
 
->>>>>>> ebb317600ba07e819f2752e7e4a49f9301186092
   return (
     <>
       <div className="d-flex justify-content-center mt-3">

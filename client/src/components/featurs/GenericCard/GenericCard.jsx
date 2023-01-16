@@ -3,6 +3,7 @@ import { Card, Button } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom"
 import { getAll } from "../../services/departmentsServices";
 import { useEffect } from "react";
+
 import { useDispatch , useSelector } from "react-redux";
 function GenericCard({ name, discription }) {
   const navigate = useNavigate()
@@ -17,11 +18,11 @@ function GenericCard({ name, discription }) {
   return (
     <Card className="mainCard">
       <div>
-        <h1>{name}</h1>
+        <h1>{departments.name}</h1>
       </div>
       <div className="mainCardBody">
         <p>{discription}</p>
-        <Button onClick={navigateTo}>עוד</Button>
+        <Button onClick={navigate}>עוד</Button>
       </div>
     </Card>
 
