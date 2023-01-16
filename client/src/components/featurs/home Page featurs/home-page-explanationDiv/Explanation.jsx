@@ -4,10 +4,6 @@ import { Col, Row } from "react-bootstrap";
 import {Button} from "react-bootstrap";
 import { Link } from "react-router-dom"
 import{useNavigate} from "react-router-dom"
-// const navigate = () => {
-//     <Link to={"/lawyersCards"}></Link>
-//   }
-
 function Explanation() {
   const navigate= useNavigate()
   return (
