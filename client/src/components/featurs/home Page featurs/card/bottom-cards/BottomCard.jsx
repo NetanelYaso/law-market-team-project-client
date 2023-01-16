@@ -22,7 +22,7 @@ export default function BottomCard() {
     dispatch(getAll());
   }, []);
 
-  console.log(lawyers);
+  // console.log(lawyers);
   return (
     <div>
       <div className="mt-4">

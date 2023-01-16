@@ -3,13 +3,13 @@ import "./TitleCard.css";
 import { data } from "../../GenericCard/data";
 import GenericCard from "../../GenericCard/GenericCard";
 const TitleCard = () => {
-  console.log(data);
+  // console.log(data);
   return (
     <div className="container">
       <div className="row g-2 mb-3 ">
         <h4 className="justify-self-end text-left">נושאים בהם עו''ד ... מתמצאת</h4>
         {data.slice(0, 4).map((item) => (
-          <div className="cardCol col col-md-6 col-sm-6">
+          <div className="cardCol col col-md-6 col-sm-6 ">
             <GenericCard name={item.name} />
           </div>
         ))}

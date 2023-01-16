@@ -15,7 +15,7 @@ function SubCategory() {
     dispatch(getAll())
   },[])
   
-  console.log(departments);
+  // console.log(departments);
   return (
     <>
       <div className="d-flex justify-content-center mt-3">
