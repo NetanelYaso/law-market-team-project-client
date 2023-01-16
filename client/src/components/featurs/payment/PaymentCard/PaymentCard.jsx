@@ -21,26 +21,26 @@ import {
   MDBModalFooter,
 
 } from 'mdb-react-ui-kit';
-import ConfirmPayment from './../confirmPayment/ConfirmPayment';
+import ConfirmPayment from '../confirmPayment/ConfirmPayment';
 import { useNavigate } from "react-router-dom";
-
-
 
 const PaymentCard = ()=> {
   const [scrollableModal, setScrollableModal] = useState(false);
   const navigate = useNavigate();
   const [price,setPrice]=useState();
+  const [btnPayment,setBtnPayment]=useState(localStorage.getItem("sideOne") && localStorage.getItem("sideTwo")?false:true);
   const [basicActive, setBasicActive] = useState('tab1');
+//   console.log(initialValue);
   const handleBasicClick = (value) => {
     if (value === basicActive) {
       return;
     }
-
     setBasicActive(value);
   };
-
  useEffect(()=>{
   setPrice(document.getElementById("one").innerText.slice(2))
+  console.log(localStorage.getItem("sideOne")?"ran":"sssss");
+  console.log(localStorage.getItem("sideTwo")?"abay":"ddddd");
  },[])
 
 
@@ -71,13 +71,13 @@ const PaymentCard = ()=> {
         <MDBTabsPane show={basicActive === 'tab1'} className="text-md-center text-lg-end">
         <p className='fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<span id="one"> $100 </span></p>
         <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center small">
-      <MDBListGroupItem noBorders>פיצויי פיטורין</MDBListGroupItem>
-      <MDBListGroupItem noBorders>דמי הבראה</MDBListGroupItem>
-      <MDBListGroupItem noBorders>הלנת שכר</MDBListGroupItem>
-      <MDBListGroupItem noBorders>שעות נוספות</MDBListGroupItem>
+      <MDBListGroupItem noBorders className="py-2">פיצויי פיטורין</MDBListGroupItem>
+      <MDBListGroupItem noBorders className="py-2">דמי הבראה</MDBListGroupItem>
+      <MDBListGroupItem noBorders className="py-2">הלנת שכר</MDBListGroupItem>
+      <MDBListGroupItem noBorders className="py-2">שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
-        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center  onClick={() => setScrollableModal(!scrollableModal)}>
+        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center disabled={btnPayment}  onClick={() => setScrollableModal(!scrollableModal)}>
         המשך לתשלום
       </MDBBtn>
       </div>
@@ -85,13 +85,13 @@ const PaymentCard = ()=> {
         <MDBTabsPane show={basicActive === 'tab2'} className=" text-md-center text-lg-end">
         <p className=' fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<span id="one"> $175 </span></p>
         <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center small">
-        <MDBListGroupItem noBorders>פיצויי פיטורין</MDBListGroupItem>
-      <MDBListGroupItem noBorders>דמי הבראה</MDBListGroupItem>
-      <MDBListGroupItem noBorders>הלנת שכר</MDBListGroupItem>
-      <MDBListGroupItem noBorders>שעות נוספות</MDBListGroupItem>
+        <MDBListGroupItem noBorders className="py-2">פיצויי פיטורין</MDBListGroupItem>
+      <MDBListGroupItem noBorders className="py-2">דמי הבראה</MDBListGroupItem>
+      <MDBListGroupItem noBorders className="py-2">הלנת שכר</MDBListGroupItem>
+      <MDBListGroupItem noBorders className="py-2">שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
-        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center  onClick={() => setScrollableModal(!scrollableModal)}>
+        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center disabled={btnPayment}  onClick={() => setScrollableModal(!scrollableModal)}>
         המשך לתשלום
       </MDBBtn>
       </div>
@@ -99,13 +99,13 @@ const PaymentCard = ()=> {
         <MDBTabsPane show={basicActive === 'tab3'} className=" text-md-center text-lg-end">
         <p className=' fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<span id="one"> $250 </span></p>
         <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center small">
-        <MDBListGroupItem noBorders>פיצויי פיטורין</MDBListGroupItem>
-      <MDBListGroupItem noBorders>דמי הבראה</MDBListGroupItem>
-      <MDBListGroupItem noBorders>הלנת שכר</MDBListGroupItem>
-      <MDBListGroupItem noBorders>שעות נוספות</MDBListGroupItem>
+        <MDBListGroupItem noBorders className="py-2">פיצויי פיטורין</MDBListGroupItem>
+      <MDBListGroupItem noBorders className="py-2">דמי הבראה</MDBListGroupItem>
+      <MDBListGroupItem noBorders className="py-2">הלנת שכר</MDBListGroupItem>
+      <MDBListGroupItem noBorders className="py-2">שעות נוספות</MDBListGroupItem>
         </MDBListGroup>
         <div class="d-flex align-items-center">
-        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center  onClick={() => setScrollableModal(!scrollableModal)}>
+        <MDBBtn className=" mx-auto w-100 btn-pay mb-4" center disabled={btnPayment}  onClick={() => setScrollableModal(!scrollableModal)}>
         המשך לתשלום
       </MDBBtn>
       </div>
@@ -145,3 +145,4 @@ export default PaymentCard;
 
 
 
+//   export default PaymentCard;

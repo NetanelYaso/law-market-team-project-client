@@ -1,19 +1,14 @@
 import "./SubCategory.css";
 import GenericCard from "../../featurs/GenericCard/GenericCard";
 import { Row, Col, Container, Button } from 'react-bootstrap';
-import { data } from "../../featurs/GenericCard/data"
 import BottomCard from "../../featurs/home Page featurs/card/bottom-cards/BottomCard";
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react";
 import { getAll } from "../../services/departmentsServices";
-import { useParams } from "react-router-dom";
 
 function SubCategory() {
-  const { id } = useParams()
   const dispatch = useDispatch()
   const departments = useSelector(state => state.department.allDepartments)
-  const subDepartments = useSelector(state => state.subDepartment)
-  console.log(subDepartments)
 
   useEffect(() => {
     dispatch(getAll())
