@@ -1,6 +1,5 @@
 import "./HomeCardPage.css";
 import { Row, Col, Container, Button, Card } from "react-bootstrap";
-import BottomCard from "../bottom-cards/BottomCard";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getAll } from "../../../../services/departmentsServices";
@@ -28,7 +27,11 @@ function HomeCardPage() {
               <Card className="mainCard card">
                 <img className="homePage_card_img" src={item.coverImage.url} />
                 <div class="card-img-overlay">
-                  <div className=" title-bg "> <h5 class="card-title d-flex justify-content-center ">{item.name}</h5></div>
+                  <div className=" title-bg ">
+                    <h5 className="card-title">
+                      {item.name}
+                    </h5>
+                  </div>
                 </div>
                 <div className="mainCardBody">
                   <ul>
@@ -36,7 +39,7 @@ function HomeCardPage() {
                       <li>{sub.name}</li>
                     ))}
                   </ul>
-                  <Button onClick={linkTo}>עוד</Button>
+                  <Button className="btn btn-outline-info" onClick={linkTo}>עוד</Button>
                 </div>
               </Card>
             </Col>
@@ -52,29 +55,4 @@ function HomeCardPage() {
 
 export default HomeCardPage;
 
-//  <MDBModal
-// className="modal_popUp bg-opacity-50"
-//   tabIndex="-1"
-//   show={centredModal}
-//   setShow={setCentredModal}
-// >
-//   <MDBModalDialog centered>
-//     <MDBModalContent>
-//       <figure className="PopUpModel" style={{backgroundImage:`url(${images[index]})`}}>
-//          <div className="textInModle">{departments[index].name}</div>
-//        </figure>
-//        <ul className="cardul">
-//          <li className="cardLi">{departments[index].name}</li>
-//          <li className="cardLi">{departments[index].name}</li>
-//          <li className="cardLi">{departments[index].name}</li>
-//          <li className="cardLi">{departments[index].name}</li>
-//          <li className="cardLi">{departments[index].name}</li>
-//        </ul>
-//      </MDBModalContent>
-//    </MDBModalDialog>
-//  </MDBModal>
-//       </div>
-//     </div>
 
-//   );
-// }

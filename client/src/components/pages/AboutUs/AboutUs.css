@@ -1,0 +1,18 @@
+
+.img-div2{
+    background-image:url("https://media.istockphoto.com/id/944503634/photo/law-should-know-concept-the-lawyer-explained-to-the-client-to-plan-the-case-in-court.jpg?s=612x612&w=0&k=20&c=P0DFpJHbcT8xWZFTYtZTparqTeSqRbZCFLz80t9n4MI=") ;
+    background-repeat: no-repeat;
+     background-position: center;
+     /* height: 100%; */
+}
+.imag-div1{
+    background-image:url("https://images.pexels.com/photos/8112178/pexels-photo-8112178.jpeg?auto=compress&cs=tinysrgb&w=600");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    /* height: 300px; */
+
+    }
+    .description{
+        color: #08b9e3;
+    }

@@ -1,15 +1,18 @@
 .imagStyle {
-  width: 200px;
-  height: 180px;
+  /* width: 200px;
+  height: 180px; */
   margin: 0;
 }
 .card-title{
   color: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 .imag {
   background-image: url("https://mdbootstrap.com/img/new/slides/017.webp");
-  height: 100%;
-  width: 100%;
+  /* height: 100%;
+  width: 100%; */
 }
 
 .card-img-overlay {
