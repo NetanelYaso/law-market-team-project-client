@@ -1,7 +1,7 @@
 import "./SubCategory.css";
 import GenericCard from "../../featurs/GenericCard/GenericCard";
 import { Row, Col, Container, Button } from 'react-bootstrap';
-import BottomCard from "../../pages/SubCategory/";
+import BottomCard from "../../featurs/home Page featurs/card/bottom-cards/BottomCard";
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react";
 import { getAll } from "../../services/departmentsServices";
