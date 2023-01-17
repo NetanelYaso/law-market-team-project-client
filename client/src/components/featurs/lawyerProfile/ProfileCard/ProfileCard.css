@@ -16,3 +16,12 @@ width: 100% !important;
     bottom:100%;
 
 }
+.btn-contact{
+    background-color: #08b9e3 !important;
+}
+.btn-contact2{
+    background-color: #fff !important;
+    color: #08b9e3 !important;
+    border: 2px solid #08b9e3 !important;
+
+}

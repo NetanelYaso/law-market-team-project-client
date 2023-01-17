@@ -8,20 +8,31 @@ import {
   MDBListGroup,
   MDBListGroupItem,
   MDBIcon,
+  MDBBtn,
 } from "mdb-react-ui-kit";
 import { useDispatch, useSelector } from "react-redux";
 import { getAll } from "../../../services/departmentsServices";
 import GenericCard from "../../../featurs/GenericCard/GenericCard";
-import {getAll as a} from "../../../services/lawyersServices.js"
+import {getAll as getLawyers} from "../../../services/lawyersServices.js"
+import { useNavigate } from "react-router-dom";
+
 function ProfileCard() {
+  const navigate = useNavigate();
+  const linkTo = () => {
+    navigate("/payment");
+  }
+  const contactUs = ()=>{
+    navigate("/contactUs")
+  }
   const dispatch = useDispatch();
   const departments = useSelector((state) => state.department.allDepartments);
 
   const Lawyers = useSelector(state => state.lawyer.allLawyers)
   useEffect(() => {
-    dispatch(a());
+    dispatch(getLawyers());
   }, [])
 console.log(Lawyers);
+
   useEffect(() => {
     dispatch(getAll());
   }, []);
@@ -106,6 +117,14 @@ console.log(Lawyers);
                     <p className="m-2">10 ימי עסקים</p>
                   </MDBCol>
                 </MDBRow>
+                <MDBRow className="mx-auto">
+                <MDBCol className=" col-6" md="6">
+                <MDBBtn className="btn-contact w-100" onClick={contactUs}>צור קשר</MDBBtn>
+                </MDBCol>
+                <MDBCol className=" col-6" md="6">
+                <MDBBtn className="btn-contact2  w-100" onClick={linkTo}>לקבלת הצעה </MDBBtn>
+                </MDBCol>
+                </MDBRow>
               </MDBCol>
             </MDBRow>
           </MDBCol>
@@ -123,12 +142,14 @@ console.log(Lawyers);
               ))}
             </MDBRow>
             {
-              
+              Lawyers.slice(0,2).map((item, key) =>(
+                <MDBCol>
+                  <MDBCol>{item.reviews[0].name}</MDBCol>
+                  <MDBCol>{item.reviews[0].rating}</MDBCol>
+                  <MDBCol> {item.reviews[0].coment}</MDBCol>
+                </MDBCol>
+              ))
             }
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos non esse a nisi reiciendis eaque ducimus nostrum id vitae dolorem? Iure dolorum officia, veritatis quo natus perferendis ipsa ipsum architecto!
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos non esse a nisi reiciendis eaque ducimus nostrum id vitae dolorem? Iure dolorum officia, veritatis quo natus perferendis ipsa ipsum architecto!
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos non esse a nisi reiciendis eaque ducimus nostrum id vitae dolorem? Iure dolorum officia, veritatis quo natus perferendis ipsa ipsum architecto!
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos non esse a nisi reiciendis eaque ducimus nostrum id vitae dolorem? Iure dolorum officia, veritatis quo natus perferendis ipsa ipsum architecto!
           </MDBCol>
         </MDBRow>
       </MDBContainer>
