@@ -7,7 +7,7 @@ import SignUp from "./components/pages/SignUp/SignUp"
 import DetailsCard from './components/featurs/payment/DetailsCard/index';
 import LawyersSelection from "./components/pages/LawyersSelection/LawyersSelection"
 import HomePage from './components/pages/Home/homePage';
-
+import AdminEditor from "./components/pages/AdminEditor/AdminDataEdit"
 const Router = () => {
     return (
         <Routes>
