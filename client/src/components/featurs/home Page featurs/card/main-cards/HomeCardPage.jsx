@@ -1,6 +1,5 @@
 import "./HomeCardPage.css";
 import { Row, Col, Container, Button, Card } from "react-bootstrap";
-import BottomCard from "../bottom-cards/BottomCard";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getAll } from "../../../../services/departmentsServices";
