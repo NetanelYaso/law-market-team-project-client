@@ -23,7 +23,7 @@ const Router = () => {
       <Route path="/AboutUs" element={<AboutUs />} />
       <Route path="/ContactUs" element={<ContactUs />} />
       <Route
-        path="/AdminEditor"
+        path="/AdminEditor" 
         element={
           <ProtectedRoute>
             <AdminEditor />
