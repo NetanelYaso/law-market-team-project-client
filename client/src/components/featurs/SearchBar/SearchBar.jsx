@@ -5,10 +5,10 @@ import {getAll}from '../../services/departmentsServices'
 import { useEffect } from "react";
 import { useState } from "react";
 
-
+;
 function SearchBar({ placeholder, extraProps }) {
   const dispatch = useDispatch();
-  const departments = useSelector(state=>state.department?.allDepartments)
+  const departments = useSelector(state=>state.departments.AllDepartments)
   const [departmentsArray,setDepartmentsArray] = useState(departments)
   const [searchValue, setSearchValue] = useState("");
   const [loading,setLoading] = useState();
@@ -24,9 +24,8 @@ function SearchBar({ placeholder, extraProps }) {
 
   const handleSearch = (value) => {
     setDepartmentsArray(
-      departments.filter((department) =>
-      department.name.toLowerCase().includes(value.toLowerCase())
-      
+      departments.filter((departments) =>
+      departments.name.toLowerCase().includes(value.toLowerCase())
       )
     );
     
