@@ -21,7 +21,7 @@ import {
   MDBModalFooter,
 
 } from 'mdb-react-ui-kit';
-import ConfirmPayment from '../confirmPayment/ConfirmPayment';
+import ConfirmPayment from '../ConfirmPayment/ConfirmPayment';
 import { useNavigate } from "react-router-dom";
 
 const PaymentCard = ()=> {
@@ -38,9 +38,9 @@ const PaymentCard = ()=> {
     setBasicActive(value);
   };
  useEffect(()=>{
-  setPrice(document.getElementById("one").innerText.slice(2))
-  console.log(localStorage.getItem("sideOne")?"ran":"sssss");
-  console.log(localStorage.getItem("sideTwo")?"abay":"ddddd");
+  const priceString=document.getElementById("one").innerText;
+  setPrice(priceString.slice(1))
+  console.log(price);
  },[])
 
 
@@ -69,7 +69,7 @@ const PaymentCard = ()=> {
       </MDBTabs>
       <MDBTabsContent className='d-flex justify-content-center w-100 '>
         <MDBTabsPane show={basicActive === 'tab1'} className="text-md-center text-lg-end">
-        <p className='fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<span id="one"> $100 </span></p>
+        <p className='fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<h3 className="prices" id="one"> $100 </h3></p>
         <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center small">
       <MDBListGroupItem noBorders className="py-2">פיצויי פיטורין</MDBListGroupItem>
       <MDBListGroupItem noBorders className="py-2">דמי הבראה</MDBListGroupItem>
@@ -83,7 +83,7 @@ const PaymentCard = ()=> {
       </div>
         </MDBTabsPane>
         <MDBTabsPane show={basicActive === 'tab2'} className=" text-md-center text-lg-end">
-        <p className=' fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<span id="one"> $175 </span></p>
+        <p className=' fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<h3 className="prices" id="one"> $175 </h3></p>
         <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center small">
         <MDBListGroupItem noBorders className="py-2">פיצויי פיטורין</MDBListGroupItem>
       <MDBListGroupItem noBorders className="py-2">דמי הבראה</MDBListGroupItem>
@@ -97,7 +97,7 @@ const PaymentCard = ()=> {
       </div>
         </MDBTabsPane>
         <MDBTabsPane show={basicActive === 'tab3'} className=" text-md-center text-lg-end">
-        <p className=' fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<span id="one"> $250 </span></p>
+        <p className=' fs-5 fw-bold'>הסכם ממון בין 2 הצדדים<h3 className="prices" id="one"> $250 </h3></p>
         <MDBListGroup style={{ minWidth: '18rem' }} light className="d-flex justify-content-center small">
         <MDBListGroupItem noBorders className="py-2">פיצויי פיטורין</MDBListGroupItem>
       <MDBListGroupItem noBorders className="py-2">דמי הבראה</MDBListGroupItem>
