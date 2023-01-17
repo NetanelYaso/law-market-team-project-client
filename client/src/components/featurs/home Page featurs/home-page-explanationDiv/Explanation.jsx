@@ -3,13 +3,12 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom"
-import { useNavigate } from "react-router-dom"
+import{useNavigate} from "react-router-dom"
+
 function Explanation() {
   const navigate = useNavigate()
   return (
     <>
-
-
       <Row>
         <Col md={6} className="gif p-0">
           <div className="background_img"></div>
