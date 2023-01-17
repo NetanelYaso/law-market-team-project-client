@@ -10,6 +10,7 @@ import DetailsCard from './components/featurs/payment/DetailsCard/index';
 import LawyersSelection from "./components/pages/LawyersSelection/LawyersSelection"
 import AboutUs from "./components/pages/AboutUs/Aboutus"
 import {ContactUs}  from "./components/pages/ContactUs/ContactUs"
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 const Router = () => {
     return (
