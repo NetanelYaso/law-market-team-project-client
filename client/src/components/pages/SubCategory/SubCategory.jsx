@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react";
 import { getAll } from "../../services/departmentsServices";
 import Map from "../../featurs/Map/Map";
-import BottomCard from './../../featurs/home Page featurs/card/bottom-cards/BottomCard';
+import BottomCard from './../../featurs/home page featurs/card/bottom-cards/BottomCard';
 
 function SubCategory() {
   const dispatch = useDispatch()
