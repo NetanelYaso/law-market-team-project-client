@@ -10,7 +10,7 @@ import LawyersSelection from "./components/pages/LawyersSelection/LawyersSelecti
 import AboutUs from "./components/pages/AboutUs/Aboutus";
 import { ContactUs } from "./components/pages/ContactUs/ContactUs";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-import HomePage from "./components/pages/Home/homePage";
+import HomePage from "./components/pages/Home/HomePage";
 
 const Router = () => {
   return (
