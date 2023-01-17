@@ -1,7 +1,8 @@
 import "./lawyerForm.css";
 import React, { useState } from "react";
 import { MDBContainer, MDBInput, MDBFile, MDBBtn } from "mdb-react-ui-kit";
-import { update } from "../../services/lawyersServices";
+import { update, create } from "../../services/lawyersServices";
+import {useDispatch} from "react-redux"
 
 // ../../services/lawyersServices
 function LawyerForm() {
@@ -16,8 +17,9 @@ function LawyerForm() {
   const [email, setEmail] = useState("");
   const [departments, setDepartments] = useState([]);
 
+  const dispatch=useDispatch()
+
   const lawyer = {
-    id: id,
     // name: name,
     avatar: avatar,
     // experience: experience,
@@ -47,8 +49,7 @@ function LawyerForm() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            console.log(lawyer);
-            update(lawyer);
+            dispatch(create(lawyer));
           }}
         >
           <MDBInput
@@ -56,12 +57,6 @@ function LawyerForm() {
             id="typeText"
             type="text"
             onChange={(e) => setName(e.target.value)}
-          />
-          <MDBInput
-            label="lawyer objId"
-            id="typeText"
-            type="text"
-            onChange={(e) => setId(e.target.value)}
           />
           <MDBInput
             label="lawyer location"

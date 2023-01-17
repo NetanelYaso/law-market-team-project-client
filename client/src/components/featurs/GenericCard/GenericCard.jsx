@@ -1,11 +1,19 @@
 import "./GenericCard.css";
 import { Card, Button } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom"
+import { getAll } from "../../services/departmentsServices";
+import { useEffect } from "react";
+
+import { useDispatch , useSelector } from "react-redux";
 function GenericCard({ name, discription }) {
   const navigate = useNavigate()
   const linkTo = () => {
     navigate("/profileCard")
   }
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getAll())
+  },[])
   return (
     <Card className="mainCard">
       <div>

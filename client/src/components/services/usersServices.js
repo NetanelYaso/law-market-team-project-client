@@ -5,7 +5,9 @@ const basicAPI = "http://localhost:8080/users";
 const update = createAsyncThunk("users/update",(user) => {
   return fetch(`${basicAPI}/byId/${user.id}/update`, {
     method: "PUT",
-    headers: { "Content-Type": "application/json" },
+    mode: 'cors',
+    cache: 'default',
+    headers:{"Content-Type": "application/json"},
     body: { user },
   })
     .then((res) => res.json())
@@ -18,7 +20,9 @@ const update = createAsyncThunk("users/update",(user) => {
 const deleteObj = createAsyncThunk("users/deleteObj",(user) => {
   return fetch(`${basicAPI}/delete`, {
     method: "PUT",
-    headers: { "Content-Type": "application/json" },
+    mode: 'cors',
+    cache: 'default',
+    headers:{"Content-Type": "application/json"},
     body: { user },
   })
     .then((res) => res.json())
@@ -44,7 +48,7 @@ const logInOrRegister = createAsyncThunk("users/logInOrRegister",(user) => {
       mode: 'cors',
       cache: 'default',
       headers:{"Content-Type": "application/json"},
-      body: JSON.stringify(user)
+      body:JSON.stringify(user)
     })
       .then((res) => res.json())
       .then((res) => console.log(res, "success"))

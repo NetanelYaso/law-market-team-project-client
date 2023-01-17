@@ -23,14 +23,12 @@ const Login = () => {
     try {
       await dispatch(
         logInOrRegister({ email, password })
-      );
+      )
       navigate("/")
-      setEmail(" ");
       setPassword(" ");
     } catch (err) {
       setError(err.message);
       navigate("/login")
-
     }
   };
   const handlegoogleIn = async (e) => {

@@ -3,12 +3,10 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {Button} from "react-bootstrap";
 import { Link } from "react-router-dom"
-
-const navigate = () => {
-    <Link to={"/lawyersCards"}></Link>
-  }
+import{useNavigate} from "react-router-dom"
 
 function Explanation() {
+  const navigate= useNavigate()
   return (
     <>
 
@@ -30,9 +28,9 @@ function Explanation() {
             <span>
             חברתנו עוסקת במתן ליווי משפטי מהימן מקצועי ומוכח בשלל תחומים </span>
               <span> זקוקים לסיוע משפטי ? נדאג לספק לכם אותו בצורה הנוחה ביותר </span>
-            <div>
-            <Button onClick={()=>navigate} className ="me-3 bg-">עורכי הדין שלנו </Button>
-            <Button onClick={()=>navigate}>לקוחות מספרים</Button></div>
+            <div className="explanation-btr">
+            <Button onClick={()=>navigate("/LawyersSelection")} className ="me-3 ">עורכי הדין שלנו </Button>
+            <Button onClick={()=>navigate("/AboutUs")}> אודותינו </Button></div>
           </div></div>
         </Col>
       </Row>

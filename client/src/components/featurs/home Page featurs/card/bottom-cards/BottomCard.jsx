@@ -22,30 +22,27 @@ export default function BottomCard() {
     dispatch(getAll());
   }, []);
 
-  console.log(lawyers);
+  // console.log(lawyers);
   return (
     <div>
-      <div className="mt-4">
-        <h2 className=" d-flex justify-content-center">מומלצי החודש</h2>
-      </div>
+      {/* <div className="mt-4">
+      </div> */}
       <div className="cardRaper d-flex justify-content-evenly ">
 
 
         {lawyers.slice(0,3).map((item) => (
-          <MDBCol xl={4} md={4} className="mb-4 singalCard justify-content-center ">
+          <MDBCol xl={4} md={4} className="mb-4 singalCard justify-content-center mt-5 ">
             <MDBCard className="singalCard d-flex justify-content-between p-5 m-2 h-100">
               <div className="d-flex justify-content-between align-items-center row  ">
                 <div className="d-flex align-items-center col-12 ">
                    <MDBCardImage
-                    className="rounded-circle"
+                    className="rounded-circle mb-"
                     src={ item.avatar.url}
                     alt=""
                     style={{ width: "55px", height: "55px" }}
                   />
-                  <div className="ms-3">
+                  <div className="ms-3  ">
                     <h3>עו"ד {item.name}</h3>
-                    <p className="fw-bold mb-1">{item.className}</p>
-                    <p className="text-muted mb-0"> {item.departments}</p>
                   </div>
                 </div>
                 <div>
