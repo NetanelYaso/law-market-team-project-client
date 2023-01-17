@@ -47,6 +47,7 @@ function SearchBar({ placeholder, extraProps }) {
             handleSearch(e.target.value)
           }}
         />
+        <hr />
 
         {searchValue.length > 0?(
         <div className="list-group list-group-light ">
