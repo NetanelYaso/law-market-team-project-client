@@ -10,9 +10,10 @@ import BottomCard from '../../featurs/home Page featurs/card/bottomCards/BottomC
 function SubCategory() {
   const dispatch = useDispatch()
   const departments = useSelector(state => state.department.allDepartments)
-
+  const chosenIndex = useSelector(state => state.department.chosenIndex)
   useEffect(() => {
     dispatch(getAll())
+    console.log(chosenIndex);
   }, [])
   const subDepartment = departments
   console.log(subDepartment);
@@ -23,9 +24,9 @@ function SubCategory() {
       </div>
       <Container className="sub_category mb-5">
         <Row>
-          {departments.slice(0, 6).map((item, key) => (
+          {departments[chosenIndex]?.subDepartments.map((item, key) => (
             <Col className="g-3" xl={4}>
-              <GenericCard key={key} name={item.subDepartments[0].name} discription={item.subDepartments[0].description} />
+              <GenericCard key={key} name={item.name} description={item.description} />
             </Col>
           ))}
         </Row> 

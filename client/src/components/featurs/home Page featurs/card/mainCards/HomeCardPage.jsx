@@ -4,13 +4,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getAll } from "../../../../services/departmentsServices";
 import { useNavigate } from "react-router-dom";
+import {setIndexForSub} from "../../../../../store/departmentStore"
 
 function HomeCardPage() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const linkTo = () => {
+  const linkTo = event => {
+    dispatch(setIndexForSub(parseInt(event.currentTarget.id)))
     navigate("/SubCategory");
   };
-  const dispatch = useDispatch();
   const departments = useSelector((state) => state.department.allDepartments);
   useEffect(() => {
     dispatch(getAll());
@@ -20,7 +22,7 @@ function HomeCardPage() {
       <div className="d-flex justify-content-center mt-3"></div>
       <Container className="sub_category">
         <Row>
-          {departments.map((item) => (
+          {departments.map((item,index) => (
             <Col className="g-3" xl={4}>
               <Card className="mainCard card">
                 <img className="homePage_card_img" src={item.coverImage.url} />
@@ -37,7 +39,7 @@ function HomeCardPage() {
                       <li>{sub.name}</li>
                     ))}
                   </ul>
-                  <Button className="btn btn-outline-info" onClick={linkTo}>עוד</Button>
+                  <Button id={index} onClick={linkTo}>עוד</Button>
                 </div>
               </Card>
             </Col>
