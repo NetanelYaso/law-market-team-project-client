@@ -15,6 +15,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
     "firebase": "^9.15.0",
+    "global": "^4.4.0",
     "mdb-react-ui-kit": "^5.1.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
@@ -23,6 +24,7 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
+    "serve": "^14.1.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
