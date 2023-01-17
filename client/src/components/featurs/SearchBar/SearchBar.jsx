@@ -4,6 +4,7 @@ import {useSelector , useDispatch} from 'react-redux';
 import {getAll}from '../../services/departmentsServices'
 import { useEffect } from "react";
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
 
 ;
 function SearchBar({ placeholder, extraProps }) {
@@ -30,6 +31,11 @@ function SearchBar({ placeholder, extraProps }) {
     );
     
   };
+  const handleFunction = (page)=>{
+    
+
+  }
+
 
   return (
     <>
@@ -47,13 +53,13 @@ function SearchBar({ placeholder, extraProps }) {
             handleSearch(e.target.value)
           }}
         />
-        <hr />
+        <br />
 
         {searchValue.length > 0?(
-        <div className="list-group list-group-light ">
+        <div className="list-group list-group-light">
           {departmentsArray?.map((depart)=>{
             return (
-              <span key={depart.name} className="list-group-item">{depart.name}</span>
+              <span key={depart.name} onClick={()=>{}} className="list-group-item ">{depart.name}</span>
             )
           })}
 
