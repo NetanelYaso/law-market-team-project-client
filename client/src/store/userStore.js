@@ -3,7 +3,8 @@ import { update, deleteObj, getById, logInOrRegister } from "../components/servi
 
 const initialState = {
     isLoading: false,
-    user:""
+    user:"",
+    token:""
   };
   
   export const usersSlice = createSlice({
@@ -11,6 +12,9 @@ const initialState = {
     initialState,
     reducers: {
         logOut:(state)=>{
+            state.token=""
+            state.user=""
+            localStorage.setItem("token","")
         }
     },
     extraRducer:{
@@ -19,7 +23,8 @@ const initialState = {
         },
         [logInOrRegister.fulfilled]:(state, action)=>{
             state.isLoading=false
-            state.user=action.payload.users
+            state.user=action.payload.users.user
+            localStorage.setItem("token",JSON.stringify(action.payload.users.token))
             console.log(action.payload.users);
         },
         [logInOrRegister.rejected]:(state, action)=>{

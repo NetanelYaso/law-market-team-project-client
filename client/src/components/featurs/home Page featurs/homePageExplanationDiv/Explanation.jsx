@@ -32,8 +32,8 @@ function Explanation() {
               </h6>
       
               <div className="explanation_btn mt-5">
-                <button className="navigateBtn me-3 mb-3 btn btn-outline-info" onClick={() => navigate("/LawyersSelection")}>עורכי הדין שלנו </button>
-                <button className="navigateBtn me-3 mb-3 btn btn-outline-info" onClick={() => navigate("/Rating")}>לקוחות מספרים</button></div>
+                <button className="navigateBtn me-3 mb-3 btn btn-outline-info" onClick={() => navigate("/lawyerSelection")}>עורכי הדין שלנו </button>
+                <button className="navigateBtn me-3 mb-3 btn btn-outline-info" onClick={() => navigate("/aboutUs")}>אודות</button></div>
             </div>
           </div>
         </Col>
