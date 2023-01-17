@@ -12,17 +12,24 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { getAll } from "../../../services/departmentsServices";
 import GenericCard from "../../../featurs/GenericCard/GenericCard";
-
+import {getAll as a} from "../../../services/lawyersServices.js"
 function ProfileCard() {
   const dispatch = useDispatch();
   const departments = useSelector((state) => state.department.allDepartments);
 
+  const Lawyers = useSelector(state => state.lawyer.allLawyers)
+  useEffect(() => {
+    dispatch(a());
+  }, [])
+console.log(Lawyers);
   useEffect(() => {
     dispatch(getAll());
   }, []);
   const subDepartment = departments;
   console.log(subDepartment);
 
+
+  
   return (
     <div className="profile-card mt-4">
       <MDBContainer>
@@ -35,17 +42,21 @@ function ProfileCard() {
               alt="..."
             />
             <MDBRow>
-              <MDBCol md="4" className="">
+              <MDBCol md="4" className="text-center position-relative">
+                <MDBCol className="col-6">
                 <MDBCardImage
-                  className="rounded-circle"
-                  width="140"
-                  height="140"
+                  className="rounded-circle position-absolute img-circle "
+                  width="120"
+                  height="120"
                   src="https://i.pinimg.com/originals/b7/49/47/b74947543e3a30e0b6b2522033d0562b.jpg"
                   alt=""
                 />
+                </MDBCol>
+                <MDBCol className="col-6">
+                <h5 className=" fs-4 w-100 position-absolute lawyerName text-white">דינה יסמין</h5>
+                </MDBCol>
               </MDBCol>
-              <MDBCol className="text-lg-end" height="" md="8">
-                <h5 className=" fs-4">דינה יסמין</h5>
+              <MDBCol className="text-lg-end text-center " height="" md="8">
                 <span className="">עורך דין בנושא הסכמי ממון</span>
                 {/* <Rating/> */}
                 <p className="">
@@ -111,6 +122,13 @@ function ProfileCard() {
                 </MDBCol>
               ))}
             </MDBRow>
+            {
+              
+            }
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos non esse a nisi reiciendis eaque ducimus nostrum id vitae dolorem? Iure dolorum officia, veritatis quo natus perferendis ipsa ipsum architecto!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos non esse a nisi reiciendis eaque ducimus nostrum id vitae dolorem? Iure dolorum officia, veritatis quo natus perferendis ipsa ipsum architecto!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos non esse a nisi reiciendis eaque ducimus nostrum id vitae dolorem? Iure dolorum officia, veritatis quo natus perferendis ipsa ipsum architecto!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos non esse a nisi reiciendis eaque ducimus nostrum id vitae dolorem? Iure dolorum officia, veritatis quo natus perferendis ipsa ipsum architecto!
           </MDBCol>
         </MDBRow>
       </MDBContainer>

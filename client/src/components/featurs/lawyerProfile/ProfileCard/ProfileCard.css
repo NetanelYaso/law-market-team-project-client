@@ -7,3 +7,12 @@
 .mainCard{
 width: 100% !important;
 }
+.img-circle{
+    right:10px;
+    bottom: 70%;
+}
+.lawyerName{
+    right:130px;
+    bottom:100%;
+
+}

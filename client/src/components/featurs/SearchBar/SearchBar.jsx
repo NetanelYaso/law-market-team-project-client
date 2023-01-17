@@ -18,13 +18,13 @@ function SearchBar({ placeholder, extraProps }) {
   },[])
 
   useEffect(() => {
-    setDepartmentsArray(department)
-  }, [department]);
+    setDepartmentsArray(departments)
+  }, [departments]);
 
   const handleSearch = (value) => {
     setDepartmentsArray(
-      department.filter((department) =>
-      department.name.toLowerCase().includes(value.toLowerCase())
+      departments.filter((departments) =>
+      departments.name.toLowerCase().includes(value.toLowerCase())
       )
     );
   };
