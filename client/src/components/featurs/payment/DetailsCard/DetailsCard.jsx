@@ -185,7 +185,9 @@ const handleInputs =()=>{
               </MDBTabsPane>
               <MDBTabsPane show={basicActive === "tab2"}>
                 {" "}
-                <form onSubmit={(e)=>e.preventDefault()}>
+                <form 
+                // onSubmit={(e)=>e.preventDefault()}
+                >
                   <MDBInput
                     id="firstName"
                     wrapperClass="mb-4"

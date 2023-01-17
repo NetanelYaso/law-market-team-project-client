@@ -47,21 +47,21 @@ const PaymentCard = ()=> {
   return (
     <div className="payment-card square border border-3">
         <MDBContainer className=' w-100 '>
-      <MDBTabs className='mb-4  d-flex justify-content-center text-center row-cols-3'>
-        <MDBTabsItem className="">
-          <MDBTabsLink className="" onClick={() => handleBasicClick('tab1')} active={basicActive === 'tab1'}>
+      <MDBTabs className='mb-4  d-flex justify-content-center text-center row-cols-3 p-0'>
+        <MDBTabsItem className="tab-item">
+          <MDBTabsLink className="tab-links" onClick={() => handleBasicClick('tab1')} active={basicActive === 'tab1'}>
           <p className=''>שירות בסיס</p>
           <p className=''>$100</p>
           </MDBTabsLink>
         </MDBTabsItem>
         <MDBTabsItem>
-          <MDBTabsLink onClick={() => handleBasicClick('tab2')} active={basicActive === 'tab2'}>
+          <MDBTabsLink className="tab-links" onClick={() => handleBasicClick('tab2')} active={basicActive === 'tab2'}>
           <p className=''>שירות סטנדרט</p>
           <p className=''>$175</p>
           </MDBTabsLink>
         </MDBTabsItem>
         <MDBTabsItem>
-          <MDBTabsLink onClick={() => handleBasicClick('tab3')} active={basicActive === 'tab3'}>
+          <MDBTabsLink className="tab-links" onClick={() => handleBasicClick('tab3')} active={basicActive === 'tab3'}>
           <p className=''>שירות פרימיום </p>
           <p className=''>$250</p>
           </MDBTabsLink>

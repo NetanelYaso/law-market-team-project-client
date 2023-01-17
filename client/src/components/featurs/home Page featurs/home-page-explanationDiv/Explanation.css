@@ -1,22 +1,59 @@
+* {
+  padding: 0%;
+
+}
+
 .gif {
-  width: 100%;
+  width: 50%;
   height: 100%;
-  background-image: url("https://avantaco.com/upload-img/Over_all/over-all-services.gif");
-  background-repeat: no-repeat;
-  padding-left: 0%;
-  padding-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.explanation-btr{
-margin-top: 40px;
+
+.explain_img {
+  width: 70%;
 }
+
+.background_img {
+  width: 25rem;
+  height: 25rem;
+  background-color: #82d3ea;
+  position: absolute;
+  z-index: -1;
+  border-radius: 100%;
+  filter: blur(10px);
+}
+
+.navigateBtn:hover {
+  background-color: #08b9e3;
+  color: white;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+}
+
 .description {
   width: 100%;
   height: 100%;
-  color: rgb(211, 164, 45);
-  /* padding-left: 0%; */
+  padding-left: 0%;
   padding-right: 0%;
-  /* background-color: rgb(10 1 1 / 93%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.ss{
-    height: 100%;
+
+.explanation {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+@media screen and (max-width: 750px){
+  .background_img {
+    width: 10rem;
+    height: 10rem;}
 }

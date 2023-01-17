@@ -39,7 +39,7 @@ function LawyersSelection() {
   return (
     <>
       <MDBContainer className="py-5">
-        <h1 className="text-center text-black-50 pb-3">GET A LAWYER</h1>
+        <h1 className="text-center text-dark-50 pb-3">בחר עורך דין</h1>
         <MDBContainer className="d-flex justify-content-center pb-3">
           <MDBInputGroup
             className={`w-50 bg-light`}
@@ -53,7 +53,7 @@ function LawyersSelection() {
                 setSearchValue(e.target.value);
                 handleSearch(e.target.value);
               }}
-              placeholder={"search for a lawyer"}
+              placeholder={"חפש אותי"}
             />
           </MDBInputGroup>
         </MDBContainer>

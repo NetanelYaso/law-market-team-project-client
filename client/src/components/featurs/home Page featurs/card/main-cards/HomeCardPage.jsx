@@ -29,7 +29,11 @@ function HomeCardPage() {
               <Card className="mainCard card">
                 <img className="homePage_card_img" src={item.coverImage.url} />
                 <div class="card-img-overlay">
-                  <div className=" title-bg "> <h5 class="card-title d-flex justify-content-center ">{item.name}</h5></div>
+                  <div className=" title-bg ">
+                    <h5 className="card-title">
+                      {item.name}
+                    </h5>
+                  </div>
                 </div>
                 <div className="mainCardBody">
                   <ul>
