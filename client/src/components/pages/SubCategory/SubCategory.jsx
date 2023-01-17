@@ -24,11 +24,6 @@ function SubCategory() {
       </div>
       <Container className="sub_category mb-5">
         <Row>
-          {/* {departments.slice(0, 6).map((item, key) => (
-            <Col className="g-3" xl={4}>
-              <GenericCard key={key} name={item.subDepartments[0].name} discription={item.subDepartments[0].description} />
-            </Col>
-          ))} */}
           {departments[chosenIndex]?.subDepartments.map((item, key) => (
             <Col className="g-3" xl={4}>
               <GenericCard key={key} name={item.name} description={item.description} />
