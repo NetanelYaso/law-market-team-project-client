@@ -24,12 +24,13 @@ function Explanation() {
             <div className="explanation">
               <h1>Law market</h1>
               <h4>ליווי משפטי מקצועי</h4>
-              <span>
+              <h6>
                 חברתנו עוסקת במתן ליווי משפטי מהימן מקצועי ומוכח בשלל תחומים
-              </span>
-              <span>
+              </h6>
+              <h6>
                 זקוקים לסיוע משפטי ? נדאג לספק לכם אותו בצורה הנוחה ביותר
-              </span>
+              </h6>
+      
               <div className="explanation_btn mt-5">
                 <button className="navigateBtn me-3 mb-3 btn btn-outline-info" onClick={() => navigate("/LawyersSelection")}>עורכי הדין שלנו </button>
                 <button className="navigateBtn me-3 mb-3 btn btn-outline-info" onClick={() => navigate("/Rating")}>לקוחות מספרים</button></div>
