@@ -1,0 +1,27 @@
+.profile-card{
+    direction:rtl;
+}
+.genericCard:hover{
+    border:2px solid #08b9e3;
+}
+.mainCard{
+width: 100% !important;
+}
+.img-circle{
+    right:10px;
+    bottom: 70%;
+}
+.lawyerName{
+    right:130px;
+    bottom:100%;
+
+}
+.btn-contact{
+    background-color: #08b9e3 !important;
+}
+.btn-contact2{
+    background-color: #fff !important;
+    color: #08b9e3 !important;
+    border: 2px solid #08b9e3 !important;
+
+}
