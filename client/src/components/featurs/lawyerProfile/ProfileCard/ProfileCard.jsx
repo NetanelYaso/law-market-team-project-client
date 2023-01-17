@@ -68,7 +68,7 @@ console.log(Lawyers);
                 </MDBCol>
               </MDBCol>
               <MDBCol className="text-lg-end text-center " height="" md="8">
-                <span className="">עורך דין בנושא הסכמי ממון</span>
+                <p className=" fw-bold">עורך דין בנושא הסכמי ממון</p>
                 {/* <Rating/> */}
                 <p className="">
                   הסכם ממון הינו הסכם בענייני רכוש, בין בני זוג נשואים, לא
