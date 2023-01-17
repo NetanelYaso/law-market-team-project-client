@@ -22,40 +22,34 @@ import {
   MDBModalHeader,
   MDBModalTitle,
   MDBModalBody,
-  MDBModalFooter
+  MDBModalFooter,
 } from "mdb-react-ui-kit";
-
-
 
 const DetailsCard = () => {
   const [basicActive, setBasicActive] = useState("tab1");
 
   const [sideOne, setSideOne] = useState({});
-  const [sideTwo, setSideTwo] = useState({})
+  const [sideTwo, setSideTwo] = useState({});
 
   const [popUp, setPopUp] = useState(false);
 
-  const toggleShow = () =>setPopUp(!popUp);
+  const toggleShow = () => setPopUp(!popUp);
 
-
-const changeInputs = (e)=>{
-    setSideTwo({...sideTwo,[e.target.name]:e.target.value})
-}
-
-const handleInputs =()=>{
-        setPopUp(!popUp)
-    localStorage.setItem("sideTwo",JSON.stringify(sideTwo))
-}
-
-
-  const changeDetails = (e) => {
-    setSideOne({ ...sideOne, [e.target.name]:e.target.value });
+  const changeInputs = (e) => {
+    setSideTwo({ ...sideTwo, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = ()=>{
-    setPopUp(!popUp)
-    localStorage.setItem("sideOne",JSON.stringify(sideOne))
-  }
+  const handleInputs = () => {
+    localStorage.setItem("sideTwo", JSON.stringify(sideTwo));
+  };
+
+  const changeDetails = (e) => {
+    setSideOne({ ...sideOne, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = () => {
+    localStorage.setItem("sideOne", JSON.stringify(sideOne));
+  };
 
   const handleBasicClick = (value) => {
     if (value === basicActive) {
@@ -81,8 +75,10 @@ const handleInputs =()=>{
               alt="..."
             />
             <p className="details-p">
-            <span className=" fs-5 fw-bold details-span">הסכם ממון בין הצדדים</span>
-            <br />
+              <p className=" fs-5 fw-bold details-span">
+                הסכם ממון בין הצדדים
+              </p>
+              <br />
               הסכם ממון הוא חוזה בין בני זוג, המבקשים לעגן בצורה מסודרת, את הפן
               הכספי ביחסיהם. החוזה קובע את אופן חלוקת הרכוש בין בני הזוג במקרה
               של פרידה ומביא לוודאות משפטית, אשר תורמת לחיי זוגיות מאושרים, ללא
@@ -110,10 +106,7 @@ const handleInputs =()=>{
             </MDBTabs>
             <MDBTabsContent className="">
               <MDBTabsPane show={basicActive === "tab1"}>
-                <form
-                  className=""
-                  onSubmit={(e)=>e.preventDefault()}
-                >
+                <form onSubmit={(e) => e.preventDefault()} className="">
                   <MDBInput
                     id="firstName"
                     wrapperClass="mb-4"
@@ -178,14 +171,19 @@ const handleInputs =()=>{
                     required
                     onChange={(e) => changeDetails(e)}
                   />
-                  <MDBBtn onClick={()=>handleSubmit()} type="submit" className="mb-4 btn-save" block>
+                  <MDBBtn
+                    onClick={() => handleSubmit()}
+                    type="submit"
+                    className="mb-4 btn-save"
+                    block
+                  >
                     שמור
                   </MDBBtn>
                 </form>
               </MDBTabsPane>
               <MDBTabsPane show={basicActive === "tab2"}>
                 {" "}
-                <form onSubmit={(e)=>e.preventDefault()}>
+                <form>
                   <MDBInput
                     id="firstName"
                     wrapperClass="mb-4"
@@ -250,7 +248,12 @@ const handleInputs =()=>{
                     required
                     onChange={(e) => changeInputs(e)}
                   />
-                  <MDBBtn onClick={()=>handleInputs()} type="submit" className="mb-4 btn-save" block>
+                  <MDBBtn
+                    onClick={() => handleInputs()}
+                    type="submit"
+                    className="mb-4 btn-save"
+                    block
+                  >
                     שמור
                   </MDBBtn>
                 </form>
@@ -260,17 +263,15 @@ const handleInputs =()=>{
         </MDBRow>
       </MDBContainer>
 
-
-                      {/* alert user Status */}
-      <MDBModal show={popUp} setShow={setPopUp} tabIndex='-1'>
+      {/* alert user Status */}
+      <MDBModal show={popUp} setShow={setPopUp} tabIndex="-1">
         <MDBModalDialog>
           <MDBModalContent>
-            <MDBModalHeader>
-              <MDBModalTitle>Modal title</MDBModalTitle>
-            </MDBModalHeader>
-            <MDBModalBody><h1 style={{color:"green"}}>Success</h1></MDBModalBody>
+            <MDBModalBody>
+              <h1 style={{ color: "green" }}>Success</h1>
+            </MDBModalBody>
             <MDBModalFooter>
-              <MDBBtn color='secondary' onClick={toggleShow}>
+              <MDBBtn color="secondary" onClick={toggleShow}>
                 Close
               </MDBBtn>
             </MDBModalFooter>

@@ -43,6 +43,7 @@ console.log(Lawyers);
   
   return (
     <div className="profile-card mt-4">
+      {Lawyers.slice(0,1).map((item)=>(
       <MDBContainer>
         <MDBRow>
           <MDBCol className=" " md="4">
@@ -52,6 +53,7 @@ console.log(Lawyers);
               src="sign.jpg"
               alt="..."
             />
+            
             <MDBRow>
               <MDBCol md="4" className="text-center position-relative">
                 <MDBCol className="col-6">
@@ -59,12 +61,12 @@ console.log(Lawyers);
                   className="rounded-circle position-absolute img-circle "
                   width="120"
                   height="120"
-                  src="https://i.pinimg.com/originals/b7/49/47/b74947543e3a30e0b6b2522033d0562b.jpg"
+                  src={item.avatar.url}
                   alt=""
                 />
                 </MDBCol>
                 <MDBCol className="col-6">
-                <h5 className=" fs-4 w-100 position-absolute lawyerName text-white">דינה יסמין</h5>
+                <h5 className=" fs-4 w-100 position-absolute lawyerName text-white">{item.name}</h5>
                 </MDBCol>
               </MDBCol>
               <MDBCol className="text-lg-end text-center " height="" md="8">
@@ -111,10 +113,10 @@ console.log(Lawyers);
                     </MDBCol>
                   </MDBCol>
                   <MDBCol className=" col-6" md="5">
-                    <p className="m-2">ירושלים</p>
-                    <p className="m-2">8 שנים</p>
-                    <p className="m-2">3 שעות</p>
-                    <p className="m-2">10 ימי עסקים</p>
+                    <p className="m-2">{item.location}</p>
+                    <p className="m-2">{item.experience}</p>
+                    <p className="m-2">{item.responseTime}</p>
+                    <p className="m-2">{item.workTime}</p>
                   </MDBCol>
                 </MDBRow>
                 <MDBRow className="mx-auto">
@@ -143,16 +145,17 @@ console.log(Lawyers);
             </MDBRow>
             {
               Lawyers.slice(0,2).map((item, key) =>(
-                <MDBCol>
-                  <MDBCol>{item.reviews[0].name}</MDBCol>
-                  <MDBCol>{item.reviews[0].rating}</MDBCol>
-                  <MDBCol> {item.reviews[0].coment}</MDBCol>
+                <MDBCol className=" fw-bolder m-5 pt-5">
+                  <h5 className="">{item.reviews[0].name}</h5>
+                  {/* <MDBCol>{item.reviews[0].rating}</MDBCol> */}
+                  <p className=""> {item.reviews[0].coment}</p>
                 </MDBCol>
               ))
             }
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+      ))}
     </div>
   );
 }
