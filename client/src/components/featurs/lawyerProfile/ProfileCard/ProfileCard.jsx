@@ -31,19 +31,19 @@ function ProfileCard() {
   useEffect(() => {
     dispatch(getLawyers());
   }, [])
-console.log(Lawyers);
+
 
   useEffect(() => {
     dispatch(getAll());
   }, []);
   const subDepartment = departments;
-  console.log(subDepartment);
+
 
 
   
   return (
     <div className="profile-card mt-4">
-      {Lawyers.slice(0,1).map((item)=>(
+      {Lawyers.slice(0,1).map((item,key)=>(
       <MDBContainer>
         <MDBRow>
           <MDBCol className=" " md="4">
@@ -58,6 +58,7 @@ console.log(Lawyers);
               <MDBCol md="4" className="text-center position-relative">
                 <MDBCol className="col-6">
                 <MDBCardImage
+                 key={key}
                   className="rounded-circle position-absolute img-circle "
                   width="120"
                   height="120"
@@ -66,7 +67,7 @@ console.log(Lawyers);
                 />
                 </MDBCol>
                 <MDBCol className="col-6">
-                <h5 className=" fs-4 w-100 position-absolute lawyerName text-white">{item.name}</h5>
+                <h5  className=" fs-4 w-100 position-absolute lawyerName text-white">{item.name}</h5>
                 </MDBCol>
               </MDBCol>
               <MDBCol className="text-lg-end text-center " height="" md="8">
@@ -146,6 +147,7 @@ console.log(Lawyers);
             {
               Lawyers.slice(0,2).map((item, key) =>(
                 <MDBCol className=" fw-bolder m-5 pt-5">
+                  key={key}
                   <h5 className="">{item.reviews[0].name}</h5>
                   {/* <MDBCol>{item.reviews[0].rating}</MDBCol> */}
                   <p className=""> {item.reviews[0].coment}</p>

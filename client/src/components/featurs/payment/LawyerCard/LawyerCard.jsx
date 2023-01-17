@@ -24,14 +24,14 @@ const LawyerCard = ()=> {
   return (
     <div className="lawyer-card square border border-3 mb-4">
       {
-        Lawyers.slice(0,1).map((item)=>(
-      <MDBContainer className=' d-flex justify-content-center text-center '>
+        Lawyers.slice(0,1).map((item,key)=>(
+          <MDBContainer className=' d-flex justify-content-center text-center '>
         <MDBRow>
         <MDBCol md="4" className="">
-      <MDBCardImage className='rounded-circle' width='140' height='140' src={item.avatar.url} alt="" />
+      <MDBCardImage key={key} className='rounded-circle' width='140' height='140' src={item.avatar.url} alt="" />
       </MDBCol>
       <MDBCol className="text-lg-end" height="" md="8">
-      <h5 className=" fs-4">{item.name}</h5>
+      <h5 className=" fs-4" key={key}>{item.name}</h5>
       <p className="">עורך דין בנושא הסכמי ממון</p>
       <p className="">הסכם ממון הינו הסכם בענייני רכוש, בין בני זוג נשואים, לא נשואים (ידועים בציבור) או בני זוג העומדים להינשא, בו מוסדרים ביניהם כל ענייני הרכוש והממון, בהתאם להעדפותיהם האישיות..</p>
       </MDBCol>
