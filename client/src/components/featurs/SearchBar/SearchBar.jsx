@@ -8,7 +8,7 @@ import { useState } from "react";
 
 function SearchBar({ placeholder, extraProps }) {
   const dispatch = useDispatch();
-  const departments = useSelector(state=>state.departments.AllDepartments)
+  const departments = useSelector(state=>state.department.AllDepartments)
   const [departmentsArray,setDepartmentsArray] = useState(departments)
   const [searchValue, setSearchValue] = useState("");
 
