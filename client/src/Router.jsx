@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import ProfileCard from "./components/featurs/lawyerProfile/ProfileCard/ProfileCard"
 import AdminEditor from "./components/pages/AdminEditor/AdminDataEdit.jsx"
-import HomePage from './components/pages/Home/homePage'
+import HomePage from './components/pages/Home/HomePage'
 import PageNotFound from "./components/pages/PageNotFound/PageNotFound"
 import SubCategory from "./components/pages/SubCategory/SubCategory"
 import Login from "./components/pages/Login/Login"
