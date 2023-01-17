@@ -4,12 +4,18 @@ import { getAll, update, deleteObj, getById, create } from "../components/servic
 const initialState = {
     isLoading:false,
     error:"",
-    allLawyers:[]  };
+    allLawyers:[],
+    chosenLawyerIndex:0
+  };
   
   export const lawyersSlice = createSlice({
     name: "lawyers",
     initialState,
-    reducers: {},
+    reducers: {
+        choseLawyer:(state,action)=>{
+            state.chosenLawyerIndex=action.payload
+        }
+    },
     extraReducers:{
         [getAll.pending]:(state)=>{
             state.isLoading=true
@@ -69,6 +75,6 @@ const initialState = {
     }
   })
 
-export const {} = lawyersSlice.actions;
+export const {choseLawyer} = lawyersSlice.actions;
 
 export default lawyersSlice.reducer;

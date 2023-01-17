@@ -15,8 +15,12 @@ import { getAll } from "../../../services/departmentsServices";
 import GenericCard from "../../../featurs/GenericCard/GenericCard";
 import {getAll as getLawyers} from "../../../services/lawyersServices.js"
 import { useNavigate } from "react-router-dom";
+import Map from "../../Map/Map";
+import { lawyersSlice } from "../../../../store/lawyerStore";
+
 
 function ProfileCard() {
+  const lawyerIndex=useSelector((state)=>{state.lawyer.chosenLawyerIndex})
   const navigate = useNavigate();
   const linkTo = () => {
     navigate("/payment");
@@ -130,27 +134,30 @@ console.log(Lawyers);
           </MDBCol>
           <MDBCol className=" " md="8">
             <MDBRow>
-              {departments.slice(0, 4).map((item, key) => (
+              {Lawyers.departments.map((item, key) => (
                 <MDBCol className="col-lg-5 m-2 p-0 col-12 genericCard">
                   <GenericCard
                     className=""
                     key={key}
-                    name={item.subDepartments[0].name}
+                    name={item.name}
                     discription={item.subDepartments[0].description}
                   />
                 </MDBCol>
               ))}
             </MDBRow>
             {
-              Lawyers.slice(0,2).map((item, key) =>(
+              Lawyers[chosenLawyerIndex].reviews.map((item, key) =>(
                 <MDBCol>
-                  <MDBCol>{item.reviews[0].name}</MDBCol>
-                  <MDBCol>{item.reviews[0].rating}</MDBCol>
-                  <MDBCol> {item.reviews[0].coment}</MDBCol>
+                  <MDBCol>{item.name}</MDBCol>
+                  <MDBCol>{item.rating}</MDBCol>
+                  <MDBCol> {item.coment}</MDBCol>
                 </MDBCol>
               ))
             }
           </MDBCol>
+        </MDBRow>
+        <MDBRow className="mt-5">
+         <Map address={Lawyers[chosenLawyerIndex].location} />
         </MDBRow>
       </MDBContainer>
     </div>
