@@ -3,6 +3,7 @@ import "./Header.css";
 import SearchBar from "../SearchBar/SearchBar";
 import {useSelector} from "react-redux"
 import {useUserAuth} from '../../../context/googleAuth'
+import {useNavigate} from 'react-router-dom'
 function Header() {
   let userFromDb = useSelector((state)=>state.user) ;
   let {user} = useUserAuth()
@@ -11,7 +12,7 @@ function Header() {
     <div id="header" className="text-white">
       <Navbar className="shadow-0">
         <Container className="mb-5">
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <img
               src="/LOGO.png"
               height="40"
