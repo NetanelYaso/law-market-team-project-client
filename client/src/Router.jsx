@@ -9,7 +9,7 @@ import DetailsCard from './components/featurs/payment/DetailsCard/index';
 import LawyersSelection from "./components/pages/LawyersSelection/LawyersSelection"
 import AboutUs from "./components/pages/AboutUs/Aboutus"
 import {ContactUs}  from "./components/pages/ContactUs/ContactUs"
-import HomePage from './components/pages/Home/homePage';
+import HomePage from './components/pages/Home/HomePage';
 
 const Router = () => {
     return (
