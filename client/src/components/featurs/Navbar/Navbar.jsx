@@ -22,11 +22,6 @@ export default function Navbar() {
         <MDBCollapse navbar show={showNav}  className="justify-content-center">
           <MDBNavbarNav className="navBar">
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current="page" href="/payment">
-                לרכישת שירות
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
               <MDBNavbarLink href="lawyerSelection">הצוות שלנו</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
