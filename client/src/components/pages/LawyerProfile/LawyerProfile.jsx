@@ -10,8 +10,9 @@ const LawyerProfile = () => {
         <div className='col-7'>
           <TitleCard />
         </div>
-
-        <div className='col-4'> <ProfileCard /> </div>
+        <div className='col-4'>
+          <ProfileCard />
+        </div>
       </div>
 
 

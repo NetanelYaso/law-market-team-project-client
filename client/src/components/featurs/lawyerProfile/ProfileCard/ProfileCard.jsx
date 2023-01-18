@@ -15,8 +15,11 @@ import { getAll } from "../../../services/departmentsServices";
 import GenericCard from "../../../featurs/GenericCard/GenericCard";
 import {getAll as getLawyers} from "../../../services/lawyersServices.js"
 import { useNavigate } from "react-router-dom";
+import Map from "../../Map/Map";
+
 
 function ProfileCard() {
+  const lawyerInfo=useSelector((state)=>state.lawyer.chosenLawyerIndex)
   const navigate = useNavigate();
   const linkTo = () => {
     navigate("/payment");
@@ -24,26 +27,26 @@ function ProfileCard() {
   const contactUs = ()=>{
     navigate("/contactUs")
   }
-  const dispatch = useDispatch();
-  const departments = useSelector((state) => state.department.allDepartments);
+  // const dispatch = useDispatch();
+  // const departments = useSelector((state) => state.department.allDepartments);
 
-  const Lawyers = useSelector(state => state.lawyer.allLawyers)
-  useEffect(() => {
-    dispatch(getLawyers());
-  }, [])
+  // const Lawyers = useSelector(state => state.lawyer.allLawyers)
+  // useEffect(() => {
+  //   dispatch(getLawyers());
+  // }, [])
 
 
-  useEffect(() => {
-    dispatch(getAll());
-  }, []);
-  const subDepartment = departments;
+  // useEffect(() => {
+  //   dispatch(getAll());
+  // }, []);
+  // const subDepartment = departments;
 
 
 
   
   return (
     <div className="profile-card mt-4">
-      {Lawyers.slice(0,1).map((item,key)=>(
+      {/* {lawyerInfo.slice(0,1).map((item,key)=>( */}
       <MDBContainer>
         <MDBRow>
           <MDBCol className=" " md="4">
@@ -58,16 +61,16 @@ function ProfileCard() {
               <MDBCol md="4" className="text-center position-relative">
                 <MDBCol className="col-6">
                 <MDBCardImage
-                 key={key}
+                //  key={key}
                   className="rounded-circle position-absolute img-circle "
                   width="120"
                   height="120"
-                  src={item.avatar.url}
+                  src={lawyerInfo.avatar.url}
                   alt=""
                 />
                 </MDBCol>
                 <MDBCol className="col-6">
-                <h5  className=" fs-4 w-100 position-absolute lawyerName text-white">{item.name}</h5>
+                <h5  className=" fs-4 w-100 position-absolute lawyerName text-white">{lawyerInfo.name}</h5>
                 </MDBCol>
               </MDBCol>
               <MDBCol className="text-lg-end text-center " height="" md="8">
@@ -114,10 +117,10 @@ function ProfileCard() {
                     </MDBCol>
                   </MDBCol>
                   <MDBCol className=" col-6" md="5">
-                    <p className="m-2">{item.location}</p>
-                    <p className="m-2">{item.experience}</p>
-                    <p className="m-2">{item.responseTime}</p>
-                    <p className="m-2">{item.workTime}</p>
+                    <p className="m-2">{lawyerInfo.location}</p>
+                    <p className="m-2">{lawyerInfo.experience}</p>
+                    <p className="m-2">{lawyerInfo.responseTime}</p>
+                    <p className="m-2">{lawyerInfo.workTime}</p>
                   </MDBCol>
                 </MDBRow>
                 <MDBRow className="mx-auto">
@@ -133,31 +136,32 @@ function ProfileCard() {
           </MDBCol>
           <MDBCol className=" " md="8">
             <MDBRow>
-              {departments.slice(0, 4).map((item, key) => (
+              {lawyerInfo.departments.map((item, key) => (
                 <MDBCol className="col-lg-5 m-2 p-0 col-12 genericCard">
                   <GenericCard
                     className=""
                     key={key}
-                    name={item.subDepartments[0].name}
-                    discription={item.subDepartments[0].description}
+                    name={item.name}
                   />
                 </MDBCol>
               ))}
             </MDBRow>
             {
-              Lawyers.slice(0,2).map((item, key) =>(
-                <MDBCol className=" fw-bolder m-5 pt-5">
-                  key={key}
-                  <h5 className="">{item.reviews[0].name}</h5>
-                  {/* <MDBCol>{item.reviews[0].rating}</MDBCol> */}
-                  <p className=""> {item.reviews[0].coment}</p>
+              lawyerInfo.reviews.map((item, key) =>(
+                <MDBCol>
+                  <MDBCol>{item.name}</MDBCol>
+                  <MDBCol>{item.rating}</MDBCol>
+                  <MDBCol> {item.coment}</MDBCol>
                 </MDBCol>
               ))
             }
           </MDBCol>
         </MDBRow>
+        <MDBRow className="mt-5">
+         {/* <Map address={lawyerInfo.location} /> */}
+        </MDBRow>
       </MDBContainer>
-      ))}
+       {/* ))} */}
     </div>
   );
 }

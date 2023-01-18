@@ -8,7 +8,7 @@ import { useDispatch , useSelector } from "react-redux";
 function GenericCard({ name, discription }) {
   const navigate = useNavigate()
   const linkTo = () => {
-    navigate("/profileCard")
+    navigate("/lawyerSelection")
   }
   const dispatch = useDispatch()
   useEffect(() => {

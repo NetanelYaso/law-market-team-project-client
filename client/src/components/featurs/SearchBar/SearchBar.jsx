@@ -17,7 +17,6 @@ function SearchBar({ placeholder, extraProps }) {
   const [loading,setLoading] = useState();
   const navigate=useNavigate()
   // console.log(departments);
-  console.log(indexArray);
   useEffect(()=>{
     dispatch(getAll())
   },[])
