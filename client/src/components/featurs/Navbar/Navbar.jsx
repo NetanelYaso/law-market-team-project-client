@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Navbar.css"
 import {
   MDBContainer,
   MDBNavbar,
@@ -15,19 +16,11 @@ export default function Navbar() {
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <MDBNavbar expand="lg" light bgColor="light">
-      <MDBContainer fluid>
-        <MDBNavbarBrand href="/">כל השירותים</MDBNavbarBrand>
-        <MDBNavbarToggler
-          type="button"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          onClick={() => setShowNav(!showNav)}
-        >
-          <MDBIcon icon="bars" fas />
-        </MDBNavbarToggler>
-        <MDBCollapse navbar show={showNav} >
-          <MDBNavbarNav>
+    <MDBNavbar expand="lg" light bgColor="light" className="d-flex" >
+      <MDBContainer >
+        
+        <MDBCollapse navbar show={showNav}  className="justify-content-center">
+          <MDBNavbarNav className="navBar">
             <MDBNavbarItem>
               <MDBNavbarLink active aria-current="page" href="/payment">
                 לרכישת שירות
@@ -37,20 +30,22 @@ export default function Navbar() {
               <MDBNavbarLink href="lawyerSelection">הצוות שלנו</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href="/ContactUs">יצירת קשר</MDBNavbarLink>
+              <MDBNavbarLink href="ContactUs">אודות</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink
-                disabled
-                href="#"
-                tabIndex={-1}
-                aria-disabled="true"
-              >
-                Disabled
-              </MDBNavbarLink>
+              <MDBNavbarLink href="/ContactUs">יצירת קשר</MDBNavbarLink>
             </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>
+        <MDBNavbarBrand href="/">מסך הבית</MDBNavbarBrand>
+        <MDBNavbarToggler
+          type="button"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onClick={() => setShowNav(!showNav)}
+        >
+          <MDBIcon icon="bars" fas />
+        </MDBNavbarToggler>
       </MDBContainer>
     </MDBNavbar>
   );
