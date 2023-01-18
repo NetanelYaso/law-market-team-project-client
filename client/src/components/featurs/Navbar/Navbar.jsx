@@ -37,7 +37,7 @@ export default function Navbar() {
             </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>
-        <MDBNavbarBrand href="/">כל השירותים</MDBNavbarBrand>
+        <MDBNavbarBrand href="/">מסך הבית</MDBNavbarBrand>
         <MDBNavbarToggler
           type="button"
           aria-expanded="false"
