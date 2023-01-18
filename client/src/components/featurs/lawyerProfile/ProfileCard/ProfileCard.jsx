@@ -65,7 +65,7 @@ function ProfileCard() {
                   className="rounded-circle position-absolute img-circle "
                   width="120"
                   height="120"
-                  src={lawyerInfo.avatar.url}
+                  src={lawyerInfo?.avatar?.url}
                   alt=""
                 />
                 </MDBCol>

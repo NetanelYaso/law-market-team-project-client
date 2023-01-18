@@ -25,7 +25,7 @@ export default function Navbar() {
               <MDBNavbarLink href="lawyerSelection">הצוות שלנו</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href="ContactUs">אודות</MDBNavbarLink>
+              <MDBNavbarLink href="/AboutUs">אודות</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBNavbarLink href="/ContactUs">יצירת קשר</MDBNavbarLink>
