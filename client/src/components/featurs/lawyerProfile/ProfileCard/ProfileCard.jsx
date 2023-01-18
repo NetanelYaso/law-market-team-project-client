@@ -158,7 +158,7 @@ function ProfileCard() {
           </MDBCol>
         </MDBRow>
         <MDBRow className="mt-5">
-         <Map address={lawyerInfo.location} />
+         {/* <Map address={lawyerInfo.location} /> */}
         </MDBRow>
       </MDBContainer>
        {/* ))} */}
