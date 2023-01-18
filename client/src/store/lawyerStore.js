@@ -5,7 +5,7 @@ const initialState = {
     isLoading:false,
     error:"",
     allLawyers:[],
-    chosenLawyerIndex:0
+    chosenLawyerIndex:{}
   };
   
   export const lawyersSlice = createSlice({

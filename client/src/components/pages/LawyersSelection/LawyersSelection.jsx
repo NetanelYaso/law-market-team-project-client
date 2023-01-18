@@ -60,7 +60,7 @@ function LawyersSelection() {
           {lawyersArr.map((info,index) => {
             return (
               <MDBCol className="pb-3" sm={12} md={6} lg={4} xl={3}>
-                <LawyerCard id={index} lawyerInfo={info} />
+                <LawyerCard lawyerId={index} lawyerInfo={info} />
               </MDBCol>
             );
           })}

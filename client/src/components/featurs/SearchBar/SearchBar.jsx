@@ -4,32 +4,46 @@ import {useSelector , useDispatch} from 'react-redux';
 import {getAll}from '../../services/departmentsServices'
 import { useEffect } from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import {setIndexForSub} from "../../../store/departmentStore"
 
 ;
 function SearchBar({ placeholder, extraProps }) {
   const dispatch = useDispatch();
-  const departments = useSelector(state=>state.department.AllDepartments)
+  const [indexArray,setIndexArray]=useState([])
+  const departments = useSelector(state=>state.department.allDepartments)
   const [departmentsArray,setDepartmentsArray] = useState(departments)
   const [searchValue, setSearchValue] = useState("");
   const [loading,setLoading] = useState();
-  console.log(departments);
-  
+  const navigate=useNavigate()
+  // console.log(departments);
   useEffect(()=>{
     dispatch(getAll())
   },[])
 
-  useEffect(() => {
-    setDepartmentsArray(departments)
-  }, [departments]);
+  // useEffect(() => {
+  //   setDepartmentsArray(departments)
+  // }, [departments]);
 
   const handleSearch = (value) => {
+    let arr=[]
+    setIndexArray(arr)
+    console.log(indexArray);
     setDepartmentsArray(
-      departments.filter((departments) =>
-      departments.name.toLowerCase().includes(value.toLowerCase())
+      departments?.filter((department,index) =>{
+        arr.push(index)
+        setIndexArray(arr)
+      return department.name.toLowerCase().includes(value.toLowerCase())}
       )
     );
     
   };
+  const handleFunction = event=>{
+    dispatch(setIndexForSub(indexArray[parseInt(event.currentTarget.id)]))
+    return navigate('/subCategory')
+
+  }
+
 
   return (
     <>
@@ -47,12 +61,13 @@ function SearchBar({ placeholder, extraProps }) {
             handleSearch(e.target.value)
           }}
         />
+        <br />
 
         {searchValue.length > 0?(
-        <div className="list-group list-group-light ">
-          {departmentsArray?.map((depart)=>{
+        <div className="list-group w-100 text-center d-flex flex-direction-column list-group-light">
+          {departmentsArray?.map((depart,index)=>{
             return (
-              <span key={depart.name} className="list-group-item">{depart.name}</span>
+              <span key={depart.name} id={index} onClick={handleFunction} className="list-group-item w-100">{depart.name}</span>
             )
           })}
 
