@@ -21,14 +21,15 @@ import Map from "../../Map/Map";
 function ProfileCard() {
   const lawyerInfo=useSelector((state)=>state.lawyer.chosenLawyerIndex)
   const navigate = useNavigate();
+  console.log(lawyerInfo);
   const linkTo = () => {
     navigate("/payment");
   }
   const contactUs = ()=>{
     navigate("/contactUs")
   }
-  // const dispatch = useDispatch();
-  // const departments = useSelector((state) => state.department.allDepartments);
+  const dispatch = useDispatch();
+  const departments = useSelector((state) => state.department.allDepartments);
 
   // const Lawyers = useSelector(state => state.lawyer.allLawyers)
   // useEffect(() => {
@@ -36,10 +37,10 @@ function ProfileCard() {
   // }, [])
 
 
-  // useEffect(() => {
-  //   dispatch(getAll());
-  // }, []);
-  // const subDepartment = departments;
+  useEffect(() => {
+    dispatch(getAll());
+  }, []);
+  const subDepartment = departments;
 
 
 
@@ -136,7 +137,7 @@ function ProfileCard() {
           </MDBCol>
           <MDBCol className=" " md="8">
             <MDBRow>
-              {lawyerInfo.departments.map((item, key) => (
+              {lawyerInfo?.departments?.map((item, key) => (
                 <MDBCol className="col-lg-5 m-2 p-0 col-12 genericCard">
                   <GenericCard
                     className=""
@@ -147,11 +148,10 @@ function ProfileCard() {
               ))}
             </MDBRow>
             {
-              lawyerInfo.reviews.map((item, key) =>(
-                <MDBCol>
-                  <MDBCol>{item.name}</MDBCol>
-                  <MDBCol>{item.rating}</MDBCol>
-                  <MDBCol> {item.coment}</MDBCol>
+              lawyerInfo?.reviews?.map((item, key) =>(
+                <MDBCol className="aa fw-bolder m-4 p-3">
+                  <h5>{item.name}</h5>
+                  <p> {item.coment}</p>
                 </MDBCol>
               ))
             }
